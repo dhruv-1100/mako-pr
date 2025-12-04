@@ -1,0 +1,934 @@
+20251025-18:30.17-23367(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:78] 2025-11-25 18:30:17.024 | PWD : /home/dp012/Desktop/Project532/mako
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:273] 2025-11-25 18:30:17.024 | starting process 45466
+I [/home/dp012/Desktop/Project532/mako/src/deptran/config.cc:290] 2025-11-25 18:30:17.024 | LoadYML: /home/dp012/Desktop/Project532/mako/examples/../config/1leader_2followers/paxos6_shardidx1.yml
+I [/home/dp012/Desktop/Project532/mako/src/deptran/config.cc:290] 2025-11-25 18:30:17.025 | LoadYML: /home/dp012/Desktop/Project532/mako/examples/../config/occ_paxos.yml
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:282] 2025-11-25 18:30:17.025 | server_infos, number of sites: 6, proc_name: localhost
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.040 | parition id of each Paxos group is 5, site-name: s106, site-id: 20
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.052 | parition id of each Paxos group is 4, site-name: s105, site-id: 16
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.064 | parition id of each Paxos group is 3, site-name: s104, site-id: 12
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.075 | parition id of each Paxos group is 2, site-name: s103, site-id: 8
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.087 | parition id of each Paxos group is 1, site-name: s102, site-id: 4
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:30:17.098 | parition id of each Paxos group is 0, site-name: s101, site-id: 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:294] 2025-11-25 18:30:17.098 | running machine-id: 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.099 | launching site: 4, bind address 0.0.0.0:8002
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.099 | launching site: 8, bind address 0.0.0.0:8003
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.099 | launching site: c, bind address 0.0.0.0:8004
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:103] 2025-11-25 18:30:17.099 | waiting for server setup threads.
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.099 | launching site: 0, bind address 0.0.0.0:8001
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.099 | launching site: 14, bind address 0.0.0.0:8006
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.099 | [service]loc_id: 0, name: s102, proc: localhost, id: 4
+starting server at 0.0.0.0:8002
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.100 | Server s102 ready at 0.0.0.0:8002
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.100 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.100 | connect to site: 127.0.0.1:8001 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.100 | rrr::Client: connect(127.0.0.1:8001): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.100 | [service]loc_id: 0, name: s101, proc: localhost, id: 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.100 | [service]loc_id: 0, name: s104, proc: localhost, id: 12
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.100 | [service]loc_id: 0, name: s103, proc: localhost, id: 8
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:30:17.100 | launching site: 10, bind address 0.0.0.0:8005
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.100 | [service]loc_id: 0, name: s105, proc: localhost, id: 16
+starting server at 0.0.0.0:8005
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.100 | Server s105 ready at 0.0.0.0:8005
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.100 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.100 | connect to site: 127.0.0.1:8001 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.100 | rrr::Client: connect(127.0.0.1:8001): Connection refused
+starting server at 0.0.0.0:8001
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.101 | Server s101 ready at 0.0.0.0:8001
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.101 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.101 | connect to site: 127.0.0.1:8001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.101 | connect to site: 127.0.0.1:8101 (attempt 0)
+starting server at 0.0.0.0:8004
+starting server at 0.0.0.0:8003
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.101 | Server s104 ready at 0.0.0.0:8004
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.101 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.101 | Server s103 ready at 0.0.0.0:8003
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.101 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.101 | connect to site: 127.0.0.1:8001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.101 | connect to site: 127.0.0.1:8001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.102 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.102 | connect to site: 127.0.0.1:8101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.102 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.102 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.102 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:30:17.102 | [service]loc_id: 0, name: s106, proc: localhost, id: 20
+starting server at 0.0.0.0:8006
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:30:17.102 | Server s106 ready at 0.0.0.0:8006
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:30:17.102 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.102 | connect to site: 127.0.0.1:8001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:17.103 | connect to site: 127.0.0.1:8101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:17.103 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.100 | connect to site: 127.0.0.1:8001 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.100 | connect to site: 127.0.0.1:8101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.100 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.101 | connect to site: 127.0.0.1:8001 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.101 | connect to site: 127.0.0.1:8101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.101 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.102 | connect to site: 127.0.0.1:8101 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.102 | connect to site: 127.0.0.1:8101 (attempt 1)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.102 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.102 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.102 | connect to site: 127.0.0.1:8101 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:18.103 | connect to site: 127.0.0.1:8101 (attempt 1)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.103 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:30:18.104 | rrr::Client: connect(127.0.0.1:8101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8101 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.100 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8101 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.101 | site 8 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.101 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.102 | site 20 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8101 (attempt 2)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8101 (attempt 2)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.102 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.103 | site 4 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.103 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8101 (attempt 2)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.104 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.105 | site 12 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.105 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8101 (attempt 2)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.106 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.107 | connect to site: 127.0.0.1:8202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.107 | connect to site: 127.0.0.1:8302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.107 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.107 | connect to site: 127.0.0.1:8003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.107 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.111 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8004 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8104 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.Disk persistence disabled by DISABLE_DISK flag
+112 | connect to site: 127.0.0.1:8204 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8304 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.112 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8005 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8105 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8205 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8305 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8006 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8106 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8206 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.113 | site 0 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:30:19.113 | connect to site: 127.0.0.1:8306 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:30:19.113 | site 16 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:107] 2025-11-25 18:30:19.113 | done waiting for server setup threads.
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.114 | heartbeat setup for s101 on 0.0.0.0:18001
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.114 | heartbeat setup for s102 on 0.0.0.0:18002
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.115 | heartbeat setup for s103 on 0.0.0.0:18003
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.116 | heartbeat setup for s104 on 0.0.0.0:18004
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.117 | heartbeat setup for s105 on 0.0.0.0:18005
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:30:19.118 | heartbeat setup for s106 on 0.0.0.0:18006
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:114] 2025-11-25 18:30:19.118 | server workers' communicators setup
+=== Mako Transaction Tests  ===
+allocator::Initialize()
+  hugepgsize: 2097152
+  use MADV_WILLNEED: 1
+  mmap() region [0x7296cbc00000, 0x72970c600000)
+cpu0 owns [0x7296cbc00000, 0x7296d6800000)
+cpu1 owns [0x7296d6800000, 0x7296e1400000)
+cpu2 owns [0x7296e1400000, 0x7296ec000000)
+cpu3 owns [0x7296ec000000, 0x7296f6c00000)
+cpu4 owns [0x7296f6c00000, 0x729701800000)
+cpu5 owns [0x729701800000, 0x72970c400000)
+Database Benchmark:
+  pid: 45466
+settings:
+  num-cpus    : 8
+  num-threads : 6
+  shardIndex  : 1
+  paxos_proc_name  : localhost
+  nshards     : 2
+  is_micro    : 0
+  is_replicated : 1
+  var-encode  : yes
+  allocator   : jemalloc
+system properties:
+  tuple_prefetch          : no
+  btree_node_prefetch     : yes
+20251025-18:30.22-120505(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+[TRANSPORT] Using default: rrr
+20251025-18:30.22-121577(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-121822(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31111 (listening on 0.0.0.0:31111)
+20251025-18:30.22-121848(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31111
+[TRANSPORT] Using default: rrr
+20251025-18:30.22-121990(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:508): RrrRpcBackend::RunEventLoop: Starting event loop
+20251025-18:30.22-122240(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31112 (listening on 0.0.0.0:31112)
+20251025-18:30.22-122270(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31112
+20251025-18:30.22-122313(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:508): RrrRpcBackend::RunEventLoop: Starting event loop
+new table is createded with name: customer_0, table-id: 1, on shard-server id:0
+new table is createded with name: customer_0, table-id: 201, on shard-server id:1
+20251025-18:30.22-123776(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-124115(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-124260(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-124813(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-124899(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-125045(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-125156(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-126020(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-126297(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-126823(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-127042(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.22-127351(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-130606(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-130782(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-130835(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-131480(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-131853(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-131987(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-132096(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-132386(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-132440(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+[Worker 0] Starting on thread 125988612601408
+[Worker 1] Starting on thread 125988604208704
+[Worker 2] Starting on thread 125988595816000
+[Worker 3] Starting on thread 125988587423296
+[Worker 4] Starting on thread 125988579030592
+[Worker 5] Starting on thread 125988570637888
+[TRANSPORT] Using default: rrr
+[TRANSPORT] Using default: rrr
+20251025-18:30.27-132677(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-132794(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+[TRANSPORT] Using default: rrr
+[TRANSPORT] Using default: rrr
+20251025-18:30.27-133416(us) 45466 * [TRANSPORT] Using default: rrr
+ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-133590(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31104 (listening on 0.0.0.0:31104)
+20251025-18:30.27-133623(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31104
+20251025-18:30.27-133669(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31100 (listening on 0.0.0.0:31100)
+20251025-18:30.27-133740(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31100
+20251025-18:30.27-133788(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31102 (listening on 0.0.0.0:31102)
+20251025-18:30.27-134066(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31103 (listening on 0.0.0.0:31103)
+[TRANSPORT] Using default: rrr
+20251025-18:30.27-134106(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31103
+20251025-18:30.27-134150(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-134520(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31102
+20251025-18:30.27-134821(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-135019(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-135787(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31101 (listening on 0.0.0.0:31101)
+20251025-18:30.27-135840(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31101
+20251025-18:30.27-136050(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-136712(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+20251025-18:30.27-136831(us) 45466 * Initialize      (rrr_rpc_backend.cc:85): RrrRpcBackend initialized on 127.0.0.1:31105 (listening on 0.0.0.0:31105)
+20251025-18:30.27-136868(us) 45466 * FastTransport   (fasttransport.cc:116): FastTransport initialized with rrr/rpc backend on 127.0.0.1:31105
+20251025-18:30.27-137644(us) 45466 * ParseOldFormat  (configuration.cc:66): Using old configuration format
+
+--- Testing Basic Transactions Thread:125988595816000 ---
+
+--- Testing Basic Transactions Thread:125988587423296 ---
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+existing table is createded with name: 
+--- Testing Basic Transactions Thread:125988604208704 ---
+customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+
+--- Testing Basic Transactions Thread:125988570637888 ---
+existing table is createded with name: existing table is createded with name: customer_0, table-id: 1, on shard-server id:customer_00, table-id: 1, on shard-server id:0
+
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+
+--- Testing Basic Transactions Thread:125988612601408 ---
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+
+--- Testing Basic Transactions Thread:125988579030592 ---
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[[32mPASS[0m] Write 5 records
+[[32mPASS[0m] Read and verify 5 records
+[[32mPASS[0m] Write 5 records
+[[32mPASS[0m] Write 5 records
+[[32mPASS[0m] Write 5 records
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988570637888 ===
+existing table is createded with name: customer_0, table-id: [[32mPASS[0m] Write 5 records
+1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[[32mPASS[0m] Read and verify 5 records
+[[32mPASS[0m] Read and verify 5 records
+[[32mPASS[0m] Read and verify 5 records
+[[32mPASS[0m] Read and verify 5 records
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 0 COMMITTED
+[[32mPASS[0m] Write 5 records
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988612601408 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 0 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 1 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 2 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 3 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 4 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 5 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 6 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 7 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 8 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] txn 9 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] SUMMARY: 0 commits, 10 aborts
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988587423296 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 1 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 0 ABORTED
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988595816000 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988579030592 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[[32mPASS[0m] Read and verify 5 records
+[[32mPASS[0m] Read and verify 5 records on remote shards
+Worker completed
+
+[TEST_SINGLE_KEY] === Testing Single Key Contention Thread:125988604208704 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 0 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 1 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 2 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 3 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 4 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 5 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 2 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 3 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 4 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 5 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 6 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 7 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 8 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] txn 9 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 501] SUMMARY: 2 commits, 8 aborts
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988570637888 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1250 txn 0 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 6 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 7 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 8 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] txn 9 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 101] SUMMARY: 0 commits, 10 aborts
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988604208704 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 1 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 0 ABORTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1251 txn 1 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1252 txn 2 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 0 ABORTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_250 txn 0 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_251 txn 1 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1253 txn 3 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1254 txn 4 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1250 txn 5 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 2 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 1 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 1 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 2 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 3 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 4 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 5 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 6 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 7 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 8 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] txn 9 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 401] SUMMARY: 0 commits, 10 aborts
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988579030592 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1251 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1252 txn 7 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_252 txn 2 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_253 txn 3 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 3 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 2 ABORTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1253 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] key=overlap_key_1254 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 501] SUMMARY: 10 commits, 0 aborts
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988570637888 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_254 txn 4 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 4 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1000 txn 0 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1001 txn 1 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 3 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 4 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 5 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 6 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 7 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 8 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] txn 9 ABORTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 201] SUMMARY: 0 commits, 10 aborts
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988595816000 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_250 txn 5 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_251 txn 6 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 0 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_252 txn 7 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 5 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_253 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1002 txn 2 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 1 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1003 txn 3 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_500 txn 0 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_501 txn 1 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] key=overlap_key_254 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 101] SUMMARY: 10 commits, 0 aborts
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988604208704 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 0 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 1 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 2 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 3 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 4 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 5 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 6 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 7 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 8 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] txn 9 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 101] SUMMARY: 0 commits, 10 aborts
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988604208704 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 2 (local:1 remote:0) COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_502 txn 2 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_503 txn 3 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1004 txn 4 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 101] SUMMARY: 10 commits, 0 aborts
+[Worker 1] Completed
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 3 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_504 txn 4 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 8 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 4 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1000 txn 5 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1001 txn 6 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] txn 9 COMMITTED
+[TEST_SINGLE_KEY] [Shard 1 Worker 301] SUMMARY: 9 commits, 1 aborts
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988587423296 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_750 txn 0 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 5 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_500 txn 5 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_501 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1002 txn 7 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1003 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_751 txn 1 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_752 txn 2 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 6 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_502 txn 7 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_503 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_753 txn 3 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_754 txn 4 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_750 txn 5 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 7 (local:1 remote:0) COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] key=overlap_key_1004 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 401] SUMMARY: 10 commits, 0 aborts
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988579030592 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_751 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_752 txn 7 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] key=overlap_key_504 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 201] SUMMARY: 10 commits, 0 aborts
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988595816000 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 0 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 1 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 2 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 3 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 4 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 5 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 6 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 7 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 8 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] txn 9 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 201] SUMMARY: 0 commits, 10 aborts
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988595816000 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 0 (local:1 remote:0) COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 8 (local:1 remote:0) ABORTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_753 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] key=overlap_key_754 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 301] SUMMARY: 10 commits, 0 aborts
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988587423296 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 0 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 1 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 2 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 3 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 4 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 5 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 6 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 7 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 8 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] txn 9 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 301] SUMMARY: 0 commits, 10 aborts
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988587423296 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 1 (local:1 remote:0) COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 201] SUMMARY: 10 commits, 0 aborts
+[Worker 2] Completed
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] txn 9 (local:1 remote:0) ABORTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 501] SUMMARY: 8 commits, 2 aborts
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988570637888 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 301] SUMMARY: 10 commits, 0 aborts
+[Worker 3] Completed
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 2 (local:1 remote:0) COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 501] SUMMARY: 10 commits, 0 aborts
+[Worker 5] Completed
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 3 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 4 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 5 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 6 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 7 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 8 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] txn 9 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 401] SUMMARY: 10 commits, 0 aborts
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988579030592 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 401] SUMMARY: 10 commits, 0 aborts
+[Worker 4] Completed
+[TEST_SINGLE_KEY] [Shard 1 Worker 1] Final read: key 'contention_key_shared' EXISTS with value: worker_301_iter_9
+
+[TEST_OVERLAP_KEYS] === Testing Overlapping Keys Thread:125988612601408 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_0 txn 0 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_1 txn 1 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_2 txn 2 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_3 txn 3 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_4 txn 4 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_0 txn 5 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_1 txn 6 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_2 txn 7 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_3 txn 8 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] key=overlap_key_4 txn 9 COMMITTED
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] SUMMARY: 10 commits, 0 aborts
+[TEST_OVERLAP_KEYS] [Shard 1 Worker 1] Final read: 5 total keys exist across all groups
+
+[TEST_CROSS_SHARD] === Testing Cross-Shard Contention Thread:125988612601408 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 0 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 1 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 2 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 3 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 4 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 5 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 6 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 7 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 8 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] txn 9 (local:1 remote:0) COMMITTED
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] SUMMARY: 10 commits, 0 aborts
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] Final read: local key EXISTS on shard 1
+[TEST_CROSS_SHARD] [Shard 1 Worker 1] Final read: remote key EXISTS on shard 0
+
+[TEST_RW_CONTENTION] === Testing Read-Write Contention Thread:125988612601408 ===
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_0 txn 0 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_1 txn 1 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_2 txn 2 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_0 txn 3 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_1 txn 4 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_2 txn 5 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_0 txn 6 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_1 txn 7 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_2 txn 8 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] READ key=rw_key_0 txn 9 COMMITTED
+[TEST_RW_CONTENTION] [Shard 1 Worker 1] SUMMARY: 10 commits, 0 aborts
+[Worker 0] Completed
+existing table is createded with name: customer_0, table-id: 1, on shard-server id:0
+existing table is createded with name: customer_0, table-id: 201, on shard-server id:1
+
+=== Database contents (125 rows) ===
+contention_key_shared => worker_301_iter_9
+cross_shard_local => worker_1_iter_9
+overlap_key_1 => worker_1_iter_6
+overlap_key_1000 => worker_401_iter_5
+overlap_key_1002 => worker_401_iter_7
+overlap_key_1004 => worker_401_iter_9
+overlap_key_1251 => worker_501_iter_6
+overlap_key_1253 => worker_501_iter_8
+overlap_key_250 => worker_101_iter_5
+overlap_key_252 => worker_101_iter_7
+overlap_key_254 => worker_101_iter_9
+overlap_key_3 => worker_1_iter_8
+overlap_key_500 => worker_201_iter_5
+overlap_key_502 => worker_201_iter_7
+overlap_key_504 => worker_201_iter_9
+overlap_key_751 => worker_301_iter_6
+overlap_key_753 => worker_301_iter_8
+test_key2_w101_1_remote => test_value2_w101_1
+test_key2_w101_3_remote => test_value2_w101_3
+test_key2_w1_0_remote => test_value2_w1_0
+test_key2_w1_2_remote => test_value2_w1_2
+test_key2_w1_4_remote => test_value2_w1_4
+test_key2_w201_0_remote => test_value2_w201_0
+test_key2_w201_2_remote => test_value2_w201_2
+test_key2_w201_4_remote => test_value2_w201_4
+test_key2_w301_1_remote => test_value2_w301_1
+test_key2_w301_3_remote => test_value2_w301_3
+test_key2_w401_0_remote => test_value2_w401_0
+test_key2_w401_2_remote => test_value2_w401_2
+test_key2_w401_4_remote => test_value2_w401_4
+test_key2_w501_1_remote => test_value2_w501_1
+test_key2_w501_3_remote => test_value2_w501_3
+test_key_w101_0 => test_value_w101_0
+test_key_w101_2 => test_value_w101_2
+test_key_w101_4 => test_value_w101_4
+test_key_w1_1 => test_value_w1_1
+test_key_w1_3 => test_value_w1_3
+test_key_w201_1 => test_value_w201_1
+test_key_w201_3 => test_value_w201_3
+test_key_w301_0 => test_value_w301_0
+test_key_w301_2 => test_value_w301_2
+test_key_w301_4 => test_value_w301_4
+test_key_w401_1 => test_value_w401_1
+test_key_w401_3 => test_value_w401_3
+test_key_w501_0 => test_value_w501_0
+test_key_w501_2 => test_value_w501_2
+test_key_w501_4 => test_value_w501_4
+cross_shard_remote => worker_1_iter_9
+overlap_key_0 => worker_1_iter_5
+overlap_key_1001 => worker_401_iter_6
+overlap_key_1003 => worker_401_iter_8
+overlap_key_1250 => worker_501_iter_5
+overlap_key_1252 => worker_501_iter_7
+overlap_key_1254 => worker_501_iter_9
+overlap_key_2 => worker_1_iter_7
+overlap_key_251 => worker_101_iter_6
+overlap_key_253 => worker_101_iter_8
+overlap_key_4 => worker_1_iter_9
+overlap_key_501 => worker_201_iter_6
+overlap_key_503 => worker_201_iter_8
+overlap_key_750 => worker_301_iter_5
+overlap_key_752 => worker_301_iter_7
+overlap_key_754 => worker_301_iter_9
+rw_key_0 => writer_0_9
+rw_key_2 => writer_0_8
+test_key2_w0_0_remote => test_value2_w0_0
+test_key2_w0_2_remote => test_value2_w0_2
+test_key2_w0_4_remote => test_value2_w0_4
+test_key2_w100_1_remote => test_value2_w100_1
+test_key2_w100_3_remote => test_value2_w100_3
+test_key2_w101_0_remote => test_value2_w101_0
+test_key2_w101_2_remote => test_value2_w101_2
+test_key2_w101_4_remote => test_value2_w101_4
+test_key2_w1_1_remote => test_value2_w1_1
+test_key2_w1_3_remote => test_value2_w1_3
+test_key2_w200_0_remote => test_value2_w200_0
+test_key2_w200_2_remote => test_value2_w200_2
+test_key2_w200_4_remote => test_value2_w200_4
+test_key2_w201_1_remote => test_value2_w201_1
+test_key2_w201_3_remote => test_value2_w201_3
+test_key2_w300_1_remote => test_value2_w300_1
+test_key2_w300_3_remote => test_value2_w300_3
+test_key2_w301_0_remote => test_value2_w301_0
+test_key2_w301_2_remote => test_value2_w301_2
+test_key2_w301_4_remote => test_value2_w301_4
+test_key2_w400_0_remote => test_value2_w400_0
+test_key2_w400_2_remote => test_value2_w400_2
+test_key2_w400_4_remote => test_value2_w400_4
+test_key2_w401_1_remote => test_value2_w401_1
+test_key2_w401_3_remote => test_value2_w401_3
+test_key2_w500_1_remote => test_value2_w500_1
+test_key2_w500_3_remote => test_value2_w500_3
+test_key2_w501_0_remote => test_value2_w501_0
+test_key2_w501_2_remote => test_value2_w501_2
+test_key2_w501_4_remote => test_value2_w501_4
+test_key_w0_1 => test_value_w0_1
+test_key_w0_3 => test_value_w0_3
+test_key_w100_0 => test_value_w100_0
+test_key_w100_2 => test_value_w100_2
+test_key_w100_4 => test_value_w100_4
+test_key_w101_1 => test_value_w101_1
+test_key_w101_3 => test_value_w101_3
+test_key_w1_0 => test_value_w1_0
+test_key_w1_2 => test_value_w1_2
+test_key_w1_4 => test_value_w1_4
+test_key_w200_1 => test_value_w200_1
+test_key_w200_3 => test_value_w200_3
+test_key_w201_0 => test_value_w201_0
+test_key_w201_2 => test_value_w201_2
+test_key_w201_4 => test_value_w201_4
+test_key_w300_0 => test_value_w300_0
+test_key_w300_2 => test_value_w300_2
+test_key_w300_4 => test_value_w300_4
+test_key_w301_1 => test_value_w301_1
+test_key_w301_3 => test_value_w301_3
+test_key_w400_1 => test_value_w400_1
+test_key_w400_3 => test_value_w400_3
+test_key_w401_0 => test_value_w401_0
+test_key_w401_2 => test_value_w401_2
+test_key_w401_4 => test_value_w401_4
+test_key_w500_0 => test_value_w500_0
+test_key_w500_2 => test_value_w500_2
+test_key_w500_4 => test_value_w500_4
+test_key_w501_1 => test_value_w501_1
+test_key_w501_3 => test_value_w501_3
+[STOP_SERVER] Stopping 2 server transports
+[STOP_SERVER] Stopping server transport 0
+20251025-18:30.44-216420(us) 45466 * Stop            (rrr_rpc_backend.cc:589): RrrRpcBackend::Stop: BEGIN - Setting stop flag
+20251025-18:30.44-216647(us) 45466 * Stop            (rrr_rpc_backend.cc:592): RrrRpcBackend::Stop: Waiting for event loop to exit...
+20251025-18:30.44-216687(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:573): RrrRpcBackend::RunEventLoop: Stop flag detected, exiting event loop
+20251025-18:30.44-216769(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:577): RrrRpcBackend::RunEventLoop: Exited cleanly
+20251025-18:30.44-216794(us) 45466 * erpc_server     (rpc_setup.cc:121): the erpc_server is terminated on shardIdx:1, alpha:0!
+20251025-18:30.44-226716(us) 45466 * Stop            (rrr_rpc_backend.cc:608): RrrRpcBackend::Stop: Event loop exited successfully
+20251025-18:30.44-226854(us) 45466 * Stop            (rrr_rpc_backend.cc:612): RrrRpcBackend::Stop: Signaling 3 request queues to stop
+20251025-18:30.44-226872(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 4
+20251025-18:30.44-226889(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 2
+20251025-18:30.44-226905(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 0
+20251025-18:30.44-226954(us) 45466 * Stop            (rrr_rpc_backend.cc:620): RrrRpcBackend::Stop: Signaling 3 response queues to stop
+20251025-18:30.44-226970(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 4
+20251025-18:30.44-226985(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 2
+20251025-18:30.44-227000(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 0
+20251025-18:30.44-227015(us) 45466 * Stop            (rrr_rpc_backend.cc:631): RrrRpcBackend::Stop: Server cleanup deferred to destructor
+20251025-18:30.44-227030(us) 45466 * Stop            (rrr_rpc_backend.cc:634): RrrRpcBackend::Stop: Closing client connections
+20251025-18:30.44-227075(us) 45466 * Stop            (rrr_rpc_backend.cc:638): RrrRpcBackend::Stop: Found 0 client connections to close
+20251025-18:30.44-227108(us) 45466 * Stop            (rrr_rpc_backend.cc:658): RrrRpcBackend::Stop: Closed 0 client connections
+20251025-18:30.44-227124(us) 45466 * Stop            (rrr_rpc_backend.cc:670): RrrRpcBackend stats: msg_size_resp_sent: 4130 bytes, counter: 245, avg: 16.857143
+20251025-18:30.44-227144(us) 45466 * Stop            (rrr_rpc_backend.cc:673): RrrRpcBackend::Stop: END
+[STOP_SERVER] Server transport 0 stopped
+[STOP_SERVER] Stopping server transport 1
+20251025-18:30.44-227195(us) 45466 * Stop            (rrr_rpc_backend.cc:589): RrrRpcBackend::Stop: BEGIN - Setting stop flag
+20251025-18:30.44-227210(us) 45466 * Stop            (rrr_rpc_backend.cc:592): RrrRpcBackend::Stop: Waiting for event loop to exit...
+20251025-18:30.44-227366(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:573): RrrRpcBackend::RunEventLoop: Stop flag detected, exiting event loop
+20251025-18:30.44-227423(us) 45466 * RunEventLoop    (rrr_rpc_backend.cc:577): RrrRpcBackend::RunEventLoop: Exited cleanly
+20251025-18:30.44-227439(us) 45466 * erpc_server     (rpc_setup.cc:121): the erpc_server is terminated on shardIdx:1, alpha:1!
+20251025-18:30.44-237329(us) 45466 * Stop            (rrr_rpc_backend.cc:608): RrrRpcBackend::Stop: Event loop exited successfully
+20251025-18:30.44-237380(us) 45466 * Stop            (rrr_rpc_backend.cc:612): RrrRpcBackend::Stop: Signaling 3 request queues to stop
+20251025-18:30.44-237396(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 5
+20251025-18:30.44-237440(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 3
+20251025-18:30.44-237457(us) 45466 * Stop            (rrr_rpc_backend.cc:615): RrrRpcBackend::Stop: Stopping request queue for server_id 1
+20251025-18:30.44-237470(us) 45466 * Stop            (rrr_rpc_backend.cc:620): RrrRpcBackend::Stop: Signaling 3 response queues to stop
+20251025-18:30.44-237482(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 5
+20251025-18:30.44-237494(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 3
+20251025-18:30.44-237507(us) 45466 * Stop            (rrr_rpc_backend.cc:623): RrrRpcBackend::Stop: Stopping response queue for server_id 1
+20251025-18:30.44-237565(us) 45466 * Stop            (rrr_rpc_backend.cc:631): RrrRpcBackend::Stop: Server cleanup deferred to destructor
+20251025-18:30.44-237580(us) 45466 * Stop            (rrr_rpc_backend.cc:634): RrrRpcBackend::Stop: Closing client connections
+20251025-18:30.44-237597(us) 45466 * Stop            (rrr_rpc_backend.cc:638): RrrRpcBackend::Stop: Found 0 client connections to close
+20251025-18:30.44-237610(us) 45466 * Stop            (rrr_rpc_backend.cc:658): RrrRpcBackend::Stop: Closed 0 client connections
+20251025-18:30.44-237622(us) 45466 * Stop            (rrr_rpc_backend.cc:670): RrrRpcBackend stats: msg_size_resp_sent: 1967 bytes, counter: 132, avg: 14.901515
+20251025-18:30.44-237665(us) 45466 * Stop            (rrr_rpc_backend.cc:673): RrrRpcBackend::Stop: END
+[STOP_SERVER] Server transport 1 stopped
+[STOP_SERVER] All server transports stopped
+20251025-18:30.44-237701(us) 45466 ! send_end_signal (mako.hh:832):      ######--------------###### send endLlogs #####---------------######
+20251025-18:30.44-237826(us) 45466 * db_close        (mako.hh:859):      Leader sent end signal, waiting 3 seconds for propagation...
+20251025-18:30.44-288762(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+20251025-18:30.44-289131(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+20251025-18:30.44-289468(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+20251025-18:30.44-289580(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+20251025-18:30.44-289716(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+20251025-18:30.44-289833(us) 45466 ! operator()      (mako.hh:391):      Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.288 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.289 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.289 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.289 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.289 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:30:44.289 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:975] 2025-11-25 18:30:49.238 | shutdown Server Control Service after task finish total submit 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:30:49.238 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:308] 2025-11-25 18:30:49.240 | all server workers have shut down.

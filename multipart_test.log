@@ -1,0 +1,1044 @@
+/home/dp012/Desktop/Project532/mako/./run.py:1139: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yml = yaml.load(f)
+DEBUG: logger initialized
+INFO: process c101 0 127.0.0.1:12100
+INFO: process s101 1 127.0.0.1:12101
+INFO: process s201 2 127.0.0.1:12102
+INFO: process s301 3 127.0.0.1:12103
+INFO: add_site: s101, server, 8100
+INFO: add_site: s201, server, 8101
+INFO: add_site: s301, server, 8102
+INFO: add_site: c101, client, 12100
+INFO: process infos: {'c101': <__main__.ProcessInfo object at 0x74a9212f04c0>, 's101': <__main__.ProcessInfo object at 0x74a9212f02b0>, 's201': <__main__.ProcessInfo object at 0x74a9212f06a0>, 's301': <__main__.ProcessInfo object at 0x74a9212f0670>}
+INFO: No taskset, auto scheduling
+DEBUG: before server_controller.start
+DEBUG: {'c101': <__main__.ProcessInfo object at 0x74a9212f04c0>, 's101': <__main__.ProcessInfo object at 0x74a9212f02b0>, 's201': <__main__.ProcessInfo object at 0x74a9212f06a0>, 's301': <__main__.ProcessInfo object at 0x74a9212f0670>}
+INFO: starting c101 @ 127.0.0.1
+DEBUG: running: cd /home/dp012/Desktop/Project532/mako;  mkdir -p /home/dp012/Desktop/Project532/mako/log;   ./build/deptran_server -b -d 10 -f 'test_det_multipart.yml' -P 'c101' -p 12100 -t 10 &
+INFO: starting s101 @ 127.0.0.1
+DEBUG: running: cd /home/dp012/Desktop/Project532/mako;  mkdir -p /home/dp012/Desktop/Project532/mako/log;   ./build/deptran_server -b -d 10 -f 'test_det_multipart.yml' -P 's101' -p 12101 -t 10 &
+INFO: starting s201 @ 127.0.0.1
+DEBUG: running: cd /home/dp012/Desktop/Project532/mako;  mkdir -p /home/dp012/Desktop/Project532/mako/log;   ./build/deptran_server -b -d 10 -f 'test_det_multipart.yml' -P 's201' -p 12102 -t 10 &
+INFO: starting s301 @ 127.0.0.1
+DEBUG: running: cd /home/dp012/Desktop/Project532/mako;  mkdir -p /home/dp012/Desktop/Project532/mako/log;   ./build/deptran_server -b -d 10 -f 'test_det_multipart.yml' -P 's301' -p 12103 -t 10 &
+DEBUG: after server_controller.start
+DEBUG: in setup_heartbeat
+INFO: Waiting for server init ...
+DEBUG: in server_heart_beat
+DEBUG: sites: [<__main__.SiteInfo object at 0x74a9212f0790>, <__main__.SiteInfo object at 0x74a9212f0880>, <__main__.SiteInfo object at 0x74a9212f08b0>]
+DEBUG: in connect_rpc 0
+INFO: start connect to server ctrl rpc for site s101 @ 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+  *** begin stack trace ***
+0    ./build/deptran_server(+0x19ce78) [0x626ac4a7ae78]
+1    ./build/deptran_server(+0x69a4d) [0x626ac4947a4d]
+2    ./build/deptran_server(+0x16d9a4) [0x626ac4a4b9a4]
+3    ./build/deptran_server(+0x1558a4) [0x626ac4a338a4]
+4    ./build/deptran_server(+0x34908) [0x626ac4912908]
+5    /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdc253) [0x711b7bcdc253]
+6    /lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x711b7b894ac3]
+  ***  end stack trace  ***
+  *** begin stack trace ***
+  *** begin stack trace ***
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+0    ./build/deptran_server(+0x19ce78) [0x56ddc94e7e78]
+1    ./build/deptran_server(+0x69a4d) [0x56ddc93b4a4d]
+2    ./build/deptran_server(+0x16d9a4) [0x56ddc94b89a4]
+3    ./build/deptran_server(+0x1558a4) [0x56ddc94a08a4]
+4    ./build/deptran_server(+0x34908) [0x56ddc937f908]
+5    /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdc253) [0x7bbb5d0dc253]
+6    /lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7bbb5cc94ac3]
+  ***  end stack trace  ***
+0    ./build/deptran_server(+0x19ce78) [0x62cdfeed6e78]
+1    ./build/deptran_server(+0x69a4d) [0x62cdfeda3a4d]
+2    ./build/deptran_server(+0x16d9a4) [0x62cdfeea79a4]
+3    ./build/deptran_server(+0x1558a4) [0x62cdfee8f8a4]
+4    ./build/deptran_server(+0x34908) [0x62cdfed6e908]
+5    /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdc253) [0x7b1e328dc253]
+6    /lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7b1e32494ac3]
+  ***  end stack trace  ***
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.478 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+D [../src/rrr/reactor/reactor.cc:41] 2025-12-02 06:50:46.479 | create a coroutine scheduler
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.579 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.679 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.780 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.880 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.980 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.081 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.181 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.282 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.382 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.483 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.583 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.684 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.784 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.884 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.985 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.085 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.186 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.286 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.387 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.487 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.588 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.688 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.788 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.889 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.989 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.090 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.190 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.291 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.391 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.492 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.592 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.693 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.794 | rrr::Client: connect(127.0.0.1:18100): Connection DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.895 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.995 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.096 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.196 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.296 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.397 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.497 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.598 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.698 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.799 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.900 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.000 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.101 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.201 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.301 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.402 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.502 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.603 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.703 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.804 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.905 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.006 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.107 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.207 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.308 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.409 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.510 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.610 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.711 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.812 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.912 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.012 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.113 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.214 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.314 | rrr::Client: conDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+nect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.414 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.515 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.616 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.717 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.817 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.919 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.020 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.120 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.221 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.321 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.421 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.522 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.623 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.724 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.824 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.925 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.025 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.126 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.226 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.327 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.427 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.528 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.628 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.729 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.830 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.931 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.031 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.132 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.233 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.334 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.435 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.536 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.640 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.741 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+I [../src/deptran/s_main.cc:124] 2025-12-02 06:50:46.461 | PWD : 
+I [../src/deptran/s_main.cc:136] 2025-12-02 06:50:46.461 | starting process 157129
+I [../src/deptran/config.cc:290] 2025-12-02 06:50:46.461 | LoadYML: test_det_multipart.yml
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:667] 2025-12-02 06:50:46.463 | group size: 3
+I [../src/deptran/config.cc:691] 2025-12-02 06:50:46.463 | client forwarding: 0
+I [../src/deptran/s_main.cc:25] 2025-12-02 06:50:46.463 | client_setup_heartbeat in client_setup_heartbeat
+I [../src/deptran/s_main.cc:41] 2025-12-02 06:50:46.463 | Start control server on port 12100
+I [../src/deptran/s_main.cc:49] 2025-12-02 06:50:46.464 | client enabled, number of sites: 1
+I [../src/deptran/communicator.cc:14] 2025-12-02 06:50:46.464 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:46.464 | connect to site: 127.0.0.1:8100 (attempt 0)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:46.464 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:47.464 | connect to site: 127.0.0.1:8100 (attempt 1)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:47.464 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:48.464 | connect to site: 127.0.0.1:8100 (attempt 2)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:48.465 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:49.465 | connect to site: 127.0.0.1:8100 (attempt 3)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:49.465 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:50.465 | connect to site: 127.0.0.1:8100 (attempt 4)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:50.465 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:51.465 | connect to site: 127.0.0.1:8100 (attempt 5)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:51.465 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:52.465 | connect to site: 127.0.0.1:8100 (attempt 6)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:52.466 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:53.466 | connect to site: 127.0.0.1:8100 (attempt 7)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:53.466 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:54.466 | connect to site: 127.0.0.1:8100 (attempt 8)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:54.466 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:55.466 | connect to site: 127.0.0.1:8100 (attempt 9)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:55.466 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:56.468 | connect to site: 127.0.0.1:8100 (attempt 10)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.468 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:57.468 | connect to site: 127.0.0.1:8100 (attempt 11)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.469 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/commuDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+02 06:50:56.841 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:56.942 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.042 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.143 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.243 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.344 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.444 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.545 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.646 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.746 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.848 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:57.949 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.050 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.151 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.252 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.353 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.453 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.554 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.654 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.755 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.856 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.956 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.057 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.159 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.259 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.360 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.460 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.561 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.661 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.764 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.864 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.965 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.065 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.165 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.266 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../srDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+c/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.367 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.467 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.568 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.669 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.772 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.872 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.973 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.073 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.174 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.274 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.375 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.475 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.576 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.676 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.776 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.877 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.978 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.079 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.180 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.282 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.383 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.483 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.584 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.684 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.784 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.886 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.986 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.087 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.187 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.288 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.389 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.490 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.591 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.691 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.792 | rrr::Client: connect(127.0.0.1:1DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+8100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.893 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.994 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.094 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.195 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.295 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.396 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.496 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.597 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.697 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.798 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.900 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.000 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.103 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.204 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.304 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.405 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.509 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.609 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.710 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.811 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.911 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.012 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.113 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.213 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.313 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.415 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.516 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.616 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.716 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.817 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.917 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.017 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.118 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.219 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.319 DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+| rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.420 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.520 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.627 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.727 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.828 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.930 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.030 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.131 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.232 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.333 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.433 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.534 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.634 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.735 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.835 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.936 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.036 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.137 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.237 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.338 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.439 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.539 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.640 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.740 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.841 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.942 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.043 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.143 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.243 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.344 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.445 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.546 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.646 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.747 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/clientDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+.cpp:179] 2025-12-02 06:51:10.848 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.948 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.049 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.150 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.251 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.352 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.453 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.554 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.655 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.755 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.856 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.956 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.057 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.157 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.258 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.359 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.460 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.560 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.661 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.762 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.863 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.964 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.065 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.166 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.266 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.367 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.468 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.569 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.670 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.770 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.871 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.971 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.072 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.172 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.273 | rrr::Client: connect(127.0.0.1:18100): ConnectioDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+nicator.cc:174] 2025-12-02 06:50:58.469 | connect to site: 127.0.0.1:8100 (attempt 12)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:58.469 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:50:59.469 | connect to site: 127.0.0.1:8100 (attempt 13)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:50:59.469 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:00.470 | connect to site: 127.0.0.1:8100 (attempt 14)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:00.470 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:01.470 | connect to site: 127.0.0.1:8100 (attempt 15)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:01.470 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:02.471 | connect to site: 127.0.0.1:8100 (attempt 16)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:02.471 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:03.471 | connect to site: 127.0.0.1:8100 (attempt 17)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:03.471 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:04.471 | connect to site: 127.0.0.1:8100 (attempt 18)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:04.471 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:05.471 | connect to site: 127.0.0.1:8100 (attempt 19)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:05.472 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:06.472 | connect to site: 127.0.0.1:8100 (attempt 20)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:06.472 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:07.472 | connect to site: 127.0.0.1:8100 (attempt 21)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:07.472 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:08.472 | connect to site: 127.0.0.1:8100 (attempt 22)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:08.472 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:09.472 | connect to site: 127.0.0.1:8100 (attempt 23)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:09.473 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:10.473 | connect to site: 127.0.0.1:8100 (attempt 24)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:10.473 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:11.473 | connect to site: 127.0.0.1:8100 (attempt 25)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:11.473 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:12.473 | connect to site: 127.0.0.1:8100 (attempt 26)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:12.473 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:13.473 | connect to site: 127.0.0.1:8100 (attempt 27)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:13.474 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:14.474 | connect to site: 127.0.0.1:8100 (attempt 28)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.474 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.cc:174] 2025-12-02 06:51:15.474 | connect to site: 127.0.0.1:8100 (attempt 29)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.474 | rrr::Client: connect(127.0.0.1:8100): Connection refused
+I [../src/deptran/communicator.ccDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+n refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.374 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.474 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.575 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.675 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.777 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.877 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:14.979 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.080 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.181 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.282 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.383 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.484 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.585 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.685 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.786 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.887 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:15.987 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.087 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.188 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.289 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.389 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.490 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.591 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.692 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.793 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.895 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:16.995 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.097 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.199 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.299 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.401 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.502 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.602 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.703 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.804 | rrr::Client: cDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+onnect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:17.905 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.006 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.107 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.208 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.309 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.409 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.510 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.610 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.711 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.811 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:18.912 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.014 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.115 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.216 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.317 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.418 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.519 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.619 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.720 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.820 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:19.921 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.021 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.122 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.223 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.324 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.424 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.525 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.626 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.727 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.827 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:20.928 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.028 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.129 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.230 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-1DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+2-02 06:51:21.331 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.432 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.533 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.633 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.734 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.834 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:21.936 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.041 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.143 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.244 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.346 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.446 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.548 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.649 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.750 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.850 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:22.951 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.052 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.153 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.254 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.355 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.456 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.557 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.657 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.757 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.858 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:23.959 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.059 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.159 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.260 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.360 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.461 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.562 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.662 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.763 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.864 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:24.965 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.065 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.165 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.266 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.366 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.467 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.569 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.670 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.771 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.871 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:25.972 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.072 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.173 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.274 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.375 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.476 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.578 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.680 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.782 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.884 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:26.985 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.085 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.186 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.286 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.387 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.488 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.588 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.689 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.790 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.891 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:27.991 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.092 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.192 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.293 | rrr::Client: connect(127.0.0.1DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.394 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.495 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.595 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.696 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.797 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.898 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:28.999 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.099 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.200 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.301 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.401 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.502 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.603 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.703 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.804 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:29.906 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.007 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.107 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.208 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.308 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.409 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.510 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.610 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.710 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.811 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:30.912 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.013 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.113 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.215 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.316 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.417 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.518 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.618 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.719 | rrr::Client: connect(127.0.0.1:18100): Connection refused
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 06:51:31.81DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18100

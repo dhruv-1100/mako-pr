@@ -1,0 +1,7 @@
+mode:
+  cc: deterministic # concurrency control
+  ab: multi_paxos # atomic broadcast
+  read_only: deterministic
+  batch: false
+  retry: 20
+  ongoing: 1 # per client

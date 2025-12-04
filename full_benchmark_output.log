@@ -1,0 +1,68 @@
+
+Starting Performance Evaluation
+Duration per benchmark: 60s
+Total estimated time: ~3.0 minutes
+
+
+============================================================
+Running benchmark: Baseline 2PL (Single-Node)
+Config: test_baseline_2pl.yml
+Duration: 60s
+============================================================
+
+
+------------------------------------------------------------
+Results for Baseline 2PL (Single-Node):
+  Commits: 0
+  Total Txns: 0
+  TPS: 0.00
+  Success: True
+------------------------------------------------------------
+
+
+============================================================
+Running benchmark: Deterministic (Single-Node)
+Config: test_det.yml
+Duration: 60s
+============================================================
+
+
+------------------------------------------------------------
+Results for Deterministic (Single-Node):
+  Commits: 12158
+  Total Txns: 12158
+  TPS: 202.63
+  Success: True
+------------------------------------------------------------
+
+
+============================================================
+Running benchmark: Deterministic (Multi-Node, 3 replicas)
+Config: test_det_multi.yml
+Duration: 60s
+============================================================
+
+
+------------------------------------------------------------
+Results for Deterministic (Multi-Node, 3 replicas):
+  Commits: 11526
+  Total Txns: 11526
+  TPS: 192.10
+  Success: True
+------------------------------------------------------------
+
+
+============================================================
+BENCHMARK COMPARISON SUMMARY
+============================================================
+
+Configuration                  TPS             Commits   
+------------------------------------------------------------
+Baseline 2PL (Single-Node)         0.00 TPS         0  
+Deterministic (Single-Node)      202.63 TPS     12158  
+Deterministic (Multi-Node, 3 replicas)   192.10 TPS     11526  
+------------------------------------------------------------
+
+Results saved to benchmark_results.json
+
+Benchmark evaluation complete!

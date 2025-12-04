@@ -1,0 +1,35 @@
+{
+  "Baseline 2PL (Single-Node)": {
+    "config": "test_baseline_2pl.yml",
+    "label": "Baseline 2PL (Single-Node)",
+    "commits": 0,
+    "total_txns": 0,
+    "duration": 60,
+    "actual_duration": 94.98675560951233,
+    "tps": 0.0,
+    "success": true,
+    "timestamp": "2025-12-02T06:35:24.077343"
+  },
+  "Deterministic (Single-Node)": {
+    "config": "test_det.yml",
+    "label": "Deterministic (Single-Node)",
+    "commits": 12158,
+    "total_txns": 12158,
+    "duration": 60,
+    "actual_duration": 69.97001004219055,
+    "tps": 202.63333333333333,
+    "success": true,
+    "timestamp": "2025-12-02T06:36:34.066150"
+  },
+  "Deterministic (Multi-Node, 3 replicas)": {
+    "config": "test_det_multi.yml",
+    "label": "Deterministic (Multi-Node, 3 replicas)",
+    "commits": 11526,
+    "total_txns": 11526,
+    "duration": 60,
+    "actual_duration": 73.18044686317444,
+    "tps": 192.1,
+    "success": true,
+    "timestamp": "2025-12-02T06:37:47.252606"
+  }
+}

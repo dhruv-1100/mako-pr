@@ -1,0 +1,53 @@
+site:
+  # each line is a partition (Paxos group), the first is the master site_name:port
+  # the last column is the learner
+  # - ["s101:8001", "s201:8101", "s301:8201", "s401:8301"]
+  server:
+    - ["s101:12501", "s201:12601", "s301:12701", "s401:12801"]
+    - ["s102:12502", "s202:12602", "s302:12702", "s402:12802"]
+    - ["s103:12503", "s203:12603", "s303:12703", "s403:12803"]
+    - ["s104:12504", "s204:12604", "s304:12704", "s404:12804"]
+    - ["s105:12505", "s205:12605", "s305:12705", "s405:12805"]
+    - ["s106:12506", "s206:12606", "s306:12706", "s406:12806"]
+    - ["s107:12507", "s207:12607", "s307:12707", "s407:12807"]
+
+# s101: localhost
+# s201: p1
+# s301: p2
+# s401: learner 
+process:
+  s101: localhost
+  s201: p1
+  s301: p2
+  s401: learner
+  s102: localhost
+  s202: p1
+  s302: p2
+  s402: learner
+  s103: localhost
+  s203: p1
+  s303: p2
+  s403: learner
+  s104: localhost
+  s204: p1
+  s304: p2
+  s404: learner
+  s105: localhost
+  s205: p1
+  s305: p2
+  s405: learner
+  s106: localhost
+  s206: p1
+  s306: p2
+  s406: learner
+  s107: localhost
+  s207: p1
+  s307: p2
+  s407: learner
+
+# process_name - host_addr map
+host:
+  localhost: 127.0.0.1
+  p1: 127.0.0.1
+  p2: 127.0.0.1
+  learner: 127.0.0.1

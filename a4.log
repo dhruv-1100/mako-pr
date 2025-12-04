@@ -1,0 +1,111 @@
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:78] 2025-11-25 18:25:50.243 | PWD : /home/dp012/Desktop/Project532/mako
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:273] 2025-11-25 18:25:50.243 | starting process 44097
+I [/home/dp012/Desktop/Project532/mako/src/deptran/config.cc:290] 2025-11-25 18:25:50.243 | LoadYML: /home/dp012/Desktop/Project532/mako/examples/../config/1leader_2followers/paxos3_shardidx0.yml
+I [/home/dp012/Desktop/Project532/mako/src/deptran/config.cc:290] 2025-11-25 18:25:50.244 | LoadYML: /home/dp012/Desktop/Project532/mako/examples/../config/occ_paxos.yml
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:282] 2025-11-25 18:25:50.244 | server_infos, number of sites: 3, proc_name: learner
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:25:50.257 | parition id of each Paxos group is 2, site-name: s403, site-id: 11
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:25:50.268 | parition id of each Paxos group is 1, site-name: s402, site-id: 7
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:288] 2025-11-25 18:25:50.280 | parition id of each Paxos group is 0, site-name: s401, site-id: 3
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:294] 2025-11-25 18:25:50.280 | running machine-id: 3
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:25:50.280 | launching site: 3, bind address 0.0.0.0:7301
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:103] 2025-11-25 18:25:50.280 | waiting for server setup threads.
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:25:50.280 | launching site: 7, bind address 0.0.0.0:7302
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:25:50.280 | [service]loc_id: 3, name: s401, proc: learner, id: 3
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:25:50.280 | [service]loc_id: 3, name: s402, proc: learner, id: 7
+starting server at 0.0.0.0:7301
+starting server at 0.0.0.0:7302
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:25:50.281 | Server s401 ready at 0.0.0.0:7301
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:25:50.281 | Server s402 ready at 0.0.0.0:7302
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:25:50.281 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:25:50.281 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:50.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:50.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:88] 2025-11-25 18:25:50.281 | launching site: b, bind address 0.0.0.0:7303
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:192] 2025-11-25 18:25:50.281 | [service]loc_id: 3, name: s403, proc: learner, id: 11
+starting server at 0.0.0.0:7303
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:215] 2025-11-25 18:25:50.281 | Server s403 ready at 0.0.0.0:7303
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:14] 2025-11-25 18:25:50.281 | setup paxos communicator
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:50.281 | connect to site: 127.0.0.1:7101 (attempt 0)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:50.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:51.281 | connect to site: 127.0.0.1:7101 (attempt 1)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:51.281 | connect to site: 127.0.0.1:7101 (attempt 1)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:51.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:51.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:51.284 | connect to site: 127.0.0.1:7101 (attempt 1)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:51.284 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:52.281 | connect to site: 127.0.0.1:7101 (attempt 2)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:52.281 | connect to site: 127.0.0.1:7101 (attempt 2)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:52.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:52.281 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:52.284 | connect to site: 127.0.0.1:7101 (attempt 2)
+E [/home/dp012/Desktop/Project532/mako/src/rrr/rpc/client.cpp:179] 2025-11-25 18:25:52.284 | rrr::Client: connect(127.0.0.1:7101): Connection refused
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7101 (attempt 3)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.282 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:25:53.283 | site 7 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7101 (attempt 3)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.283 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:25:53.283 | site 3 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.284 | connect to site: 127.0.0.1:7101 (attempt 3)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.284 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.284 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/communicator.cc:174] 2025-11-25 18:25:53.285 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:100] 2025-11-25 18:25:53.285 | site 11 launched!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:107] 2025-11-25 18:25:53.285 | done waiting for server setup threads.
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:25:53.285 | heartbeat setup for s401 on 0.0.0.0:17301
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:25:53.285 | heartbeat setup for s402 on 0.0.0.0:17302
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:249] 2025-11-25 18:25:53.286 | heartbeat setup for s403 on 0.0.0.0:17303
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:114] 2025-11-25 18:25:53.286 | server workers' communicators setup
+learner, received ending: 0, num_workers:3, received msg: 0, end_received_leader:0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:734] 2025-11-25 18:25:53.286 | start a heartbeatBackground, addr:127.0.0.1:17001
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:25:53.891 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:25:53.892 | Recieved a zero length log
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:134] 2025-11-25 18:25:53.893 | Recieved a zero length log
+learner, received ending: 3, received msg: 303
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:975] 2025-11-25 18:25:57.286 | shutdown Server Control Service after task finish total submit 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:25:57.286 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:25:57.286 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/benchmark_control_rpc.cc:43] 2025-11-25 18:25:57.286 | Shutdown Server Control Service
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:308] 2025-11-25 18:25:57.287 | all server workers have shut down.
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:282] 2025-11-25 18:25:57.287 | site s401 deleting services, num: 1 0 0 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:747] 2025-11-25 18:25:57.293 | heartbeatBackground is ended!
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos/server.h:47] 2025-11-25 18:25:57.338 | site par 0, loc 3: prepare 0, accept 0, commit 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:282] 2025-11-25 18:25:57.338 | site s402 deleting services, num: 1 0 0 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos/server.h:47] 2025-11-25 18:25:57.389 | site par 1, loc 3: prepare 0, accept 0, commit 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:282] 2025-11-25 18:25:57.389 | site s403 deleting services, num: 1 0 0 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos/server.h:47] 2025-11-25 18:25:57.439 | site par 2, loc 3: prepare 0, accept 0, commit 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:641] 2025-11-25 18:25:57.439 | Ending worker with n_tot 0 and n_current 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:641] 2025-11-25 18:25:57.444 | Ending worker with n_tot 0 and n_current 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_worker.cc:641] 2025-11-25 18:25:57.450 | Ending worker with n_tot 0 and n_current 0
+I [/home/dp012/Desktop/Project532/mako/src/deptran/paxos_main_helper.cc:321] 2025-11-25 18:25:57.455 | exit process.
+[learner committed]: 303(follower/learner), 0(leader), endReceived: 3, leaderEndReceived:0
+[[32mPASS[0m] committed logs count verify

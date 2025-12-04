@@ -1,0 +1,269 @@
+/home/dp012/Desktop/Project532/mako/./run.py:1139: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yml = yaml.load(f)
+DEBUG: logger initialized
+INFO: process localhost 0 127.0.0.1:12000
+INFO: add_site: s1, server, 8101
+INFO: add_site: s2, server, 8102
+INFO: add_site: s3, server, 8103
+INFO: add_site: c1, client, 12000
+INFO: process infos: {'localhost': <__main__.ProcessInfo object at 0x74ac300a44c0>}
+INFO: No taskset, auto scheduling
+DEBUG: before server_controller.start
+DEBUG: {'localhost': <__main__.ProcessInfo object at 0x74ac300a44c0>}
+INFO: starting localhost @ 127.0.0.1
+DEBUG: running: cd /home/dp012/Desktop/Project532/mako;  mkdir -p /home/dp012/Desktop/Project532/mako/log;   ./build/deptran_server -b -d 10 -f 'test_det_multi.yml' -P 'localhost' -p 12000 -t 10 &
+DEBUG: after server_controller.start
+DEBUG: in setup_heartbeat
+INFO: Waiting for server init ...
+DEBUG: in server_heart_beat
+DEBUG: sites: [<__main__.SiteInfo object at 0x74ac300a4640>, <__main__.SiteInfo object at 0x74ac300a4fd0>, <__main__.SiteInfo object at 0x74ac300a4a00>]
+DEBUG: in connect_rpc 0
+INFO: start connect to server ctrl rpc for site s1 @ 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+I [../src/deptran/s_main.cc:124] 2025-12-02 05:59:07.988 | PWD : 
+I [../src/deptran/s_main.cc:136] 2025-12-02 05:59:07.988 | starting process 149155
+I [../src/deptran/config.cc:290] 2025-12-02 05:59:07.988 | LoadYML: test_det_multi.yml
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:667] 2025-12-02 05:59:07.990 | group size: 1
+I [../src/deptran/config.cc:691] 2025-12-02 05:59:07.990 | client forwarding: 0
+I [../src/deptran/s_main.cc:25] 2025-12-02 05:59:07.990 | client_setup_heartbeat in client_setup_heartbeat
+I [../src/deptran/s_main.cc:41] 2025-12-02 05:59:07.990 | Start control server on port 12000
+I [../src/deptran/s_main.cc:66] 2025-12-02 05:59:07.991 | server enabled, number of sites: 3
+I [../src/deptran/s_main.cc:72] 2025-12-02 05:59:07.991 | launching site: 0, bind address 0.0.0.0:8101
+I [../src/deptran/s_main.cc:72] 2025-12-02 05:59:07.991 | launching site: 1, bind address 0.0.0.0:8102
+I [../src/deptran/s_main.cc:72] 2025-12-02 05:59:07.991 | launching site: 2, bind address 0.0.0.0:8103
+I [../src/deptran/server_worker.cc:79] 2025-12-02 05:59:07.000 | start data population for site 0
+I [../src/deptran/server_worker.cc:79] 2025-12-02 05:59:08.001 | start data population for site 2
+I [../src/deptran/server_worker.cc:79] 2025-12-02 05:59:08.003 | start data population for site 1
+I [../src/deptran/server_worker.cc:106] 2025-12-02 05:59:09.641 | data populated for site: 0, partition: 0
+I [../src/deptran/s_main.cc:82] 2025-12-02 05:59:09.641 | table popped for site 0
+I [../src/deptran/server_worker.cc:121] 2025-12-02 05:59:09.641 | enter SetupService for s1 @ 0.0.0.0:8101
+I [../src/deptran/server_worker.cc:172] 2025-12-02 05:59:09.643 | Server s1 ready at 0.0.0.0:8101
+I [../src/deptran/s_main.cc:85] 2025-12-02 05:59:09.643 | start communication for site 0
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:09.643 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.643 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.643 | connect to site: 127.0.0.1:8102 (attempt 0)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 05:59:09.643 | rrr::Client: connect(127.0.0.1:8102): Connection refused
+I [../src/deptran/server_worker.cc:106] 2025-12-02 05:59:09.651 | data populated for site: 2, partition: 0
+I [../src/deptran/s_main.cc:82] 2025-12-02 05:59:09.651 | table popped for site 2
+I [../src/deptran/server_worker.cc:121] 2025-12-02 05:59:09.651 | enter SetupService for s3 @ 0.0.0.0:8103
+I [../src/deptran/server_worker.cc:172] 2025-12-02 05:59:09.651 | Server s3 ready at 0.0.0.0:8103
+I [../src/deptran/s_main.cc:85] 2025-12-02 05:59:09.651 | start communication for site 2
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:09.651 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.651 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.652 | connect to site: 127.0.0.1:8102 (attempt 0)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-02 05:59:09.652 | rrr::Client: connect(127.0.0.1:8102): Connection refused
+I [../src/deptran/server_worker.cc:106] 2025-12-02 05:59:09.823 | data populated for site: 1, partition: 0
+I [../src/deptran/s_main.cc:82] 2025-12-02 05:59:09.823 | table popped for site 1
+I [../src/deptran/server_worker.cc:121] 2025-12-02 05:59:09.823 | enter SetupService for s2 @ 0.0.0.0:8102
+I [../src/deptran/server_worker.cc:172] 2025-12-02 05:59:09.824 | Server s2 ready at 0.0.0.0:8102
+I [../src/deptran/sDEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18101
+INFO: Connected to site s1 @ 127.0.0.1
+DEBUG: in connect_rpc 1
+INFO: start connect to server ctrl rpc for site s2 @ 127.0.0.1:18102
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18102
+INFO: Connected to site s2 @ 127.0.0.1
+DEBUG: in connect_rpc 2
+INFO: start connect to server ctrl rpc for site s3 @ 127.0.0.1:18103
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:18103
+INFO: Connected to site s3 @ 127.0.0.1
+INFO: call sync_server_ready on site 0
+INFO: site s1 ready
+INFO: call sync_server_ready on site 1
+_main.cc:85] 2025-12-02 05:59:09.824 | start communication for site 1
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:09.825 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:09.825 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:09.825 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/s_main.cc:87] 2025-12-02 05:59:09.825 | site 1 launched!
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.643 | connect to site: 127.0.0.1:8102 (attempt 1)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.643 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:10.643 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.644 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.644 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.644 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/s_main.cc:87] 2025-12-02 05:59:10.644 | site 0 launched!
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.652 | connect to site: 127.0.0.1:8102 (attempt 1)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.652 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:10.652 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.652 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.652 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.652 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/s_main.cc:87] 2025-12-02 05:59:10.652 | site 2 launched!
+I [../src/deptran/s_main.cc:98] 2025-12-02 05:59:10.992 | waiting for server setup threads.
+I [../src/deptran/s_main.cc:102] 2025-12-02 05:59:10.992 | done waiting for server setup threads.
+I [../src/deptran/server_worker.cc:32] 2025-12-02 05:59:10.992 | heartbeat setup for s1 on 0.0.0.0:18101
+I [../src/deptran/server_worker.cc:32] 2025-12-02 05:59:10.993 | heartbeat setup for s2 on 0.0.0.0:18102
+I [../src/deptran/server_worker.cc:32] 2025-12-02 05:59:10.993 | heartbeat setup for s3 on 0.0.0.0:18103
+I [../src/deptran/s_main.cc:109] 2025-12-02 05:59:10.993 | server workers' communicators setup
+I [../src/deptran/s_main.cc:49] 2025-12-02 05:59:10.993 | client enabled, number of sites: 1
+I [../src/deptran/communicator.cc:14] 2025-12-02 05:59:10.993 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.993 | connect to site: 127.0.0.1:8101 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.993 | connect to site: 127.0.0.1:8102 (attempt 0)
+I [../src/deptran/communicator.cc:174] 2025-12-02 05:59:10.993 | connect to site: 127.0.0.1:8103 (attempt 0)
+I [../src/deptran/communicator.cc:75] 2025-12-02 05:59:10.998 | Done waiting to connect to client leaders.
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.335 | Coroutine created: 0x779498002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.335 | Reactor::CreateRunCoroutine running coro: 0x779498002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.335 | Coroutine destroyed: 0x779498002790, task: 0x779498002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.338 | Coroutine created: 0x77947c002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12INFO: site s2 ready
+INFO: call sync_server_ready on site 2
+INFO: site s3 ready
+INFO: Waiting for server init ... Done
+DEBUG: top server heartbeat loop
+DEBUG: in connect_rpc 3
+INFO: start connect to client ctrl rpc for site c1 @ 127.0.0.1:12000
+DEBUG: SiteInfo.connect_rpc: rpc_client bind_addr: 127.0.0.1:12000
+INFO: Connected to client site c1 @ 127.0.0.1
+INFO: Clients all ready
+DEBUG: txn: b'NEW_ORDER' - 10
+DEBUG: txn: b'PAYMENT' - 20
+DEBUG: txn: b'ORDER_STATUS' - 30
+DEBUG: txn: b'DELIVERY' - 40
+DEBUG: txn: b'STOCK_LEVEL' - 50
+INFO: client start send successfully.
+INFO: Clients started
+DEBUG: in benchmark_record
+INFO: contact 1 client rpc proxies
+DEBUG: top client heartbeat; timeout 5
+DEBUG: before recording period: 10
+DEBUG: mid_pre_commit_txn (+0): 0
+DEBUG: before recording period: 20
+DEBUG: mid_pre_commit_txn (+0): 0
+DEBUG: before recording period: 30
+DEBUG: mid_pre_commit_txn (+0): 0
+DEBUG: before recording period: 40
+DEBUG: mid_pre_commit_txn (+0): 0
+DEBUG: before recording period: 50
+DEBUG: mid_pre_commit_txn (+0): 0
+DEBUG: timing from server: run_sec 0.00; run_nsec 1146820.00
+DEBUG: avg timing from 1 servers: run_sec 0.00; run_nsec 1146820.00
+INFO: Progress: 0
+INFO: total_time: 0.00114682
+-02 05:59:11.338 | Reactor::CreateRunCoroutine running coro: 0x77947c002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.338 | Coroutine destroyed: 0x77947c002790, task: 0x77947c002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.339 | Coroutine created: 0x779490002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.339 | Reactor::CreateRunCoroutine running coro: 0x779490002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.340 | Coroutine destroyed: 0x779490002790, task: 0x779490002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.341 | Coroutine created: 0x779498002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.341 | Reactor::CreateRunCoroutine running coro: 0x779498002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.341 | Coroutine destroyed: 0x779498002790, task: 0x779498002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.341 | Coroutine created: 0x77947c002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.341 | Reactor::CreateRunCoroutine running coro: 0x77947c002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.341 | Coroutine destroyed: 0x77947c002790, task: 0x77947c002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.342 | Coroutine created: 0x779490002790
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.342 | Reactor::CreateRunCoroutine running coro: 0x779490002790
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.342 | Coroutine destroyed: 0x779490002790, task: 0x779490002820
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.443 | Coroutine created: 0x7795040010d0
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.443 | Reactor::CreateRunCoroutine running coro: 0x7795040010d0
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.443 | Coroutine destroyed: 0x7795040010d0, task: 0x779504001160
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.444 | Coroutine created: 0x7795040010d0
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.444 | Reactor::CreateRunCoroutine running coro: 0x7795040010d0
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.444 | Coroutine destroyed: 0x7795040010d0, task: 0x779504001160
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.445 | Coroutine created: 0x7795040010d0
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.445 | Reactor::CreateRunCoroutine running coro: 0x7795040010d0
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.445 | Coroutine destroyed: 0x7795040010d0, task: 0x779504001160
+I [../src/deptran/client_worker.cc:158] 2025-12-02 05:59:11.446 | closed loop clients.
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.446 | Coroutine created: 0x7795088f8cf0
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.446 | Reactor::CreateRunCoroutine running coro: 0x7795088f8cf0
+I [../src/deptran/deterministic/coordinator.cc:15] 2025-12-02 05:59:11.446 | CoordinatorDeterministic::DoTxAsync start
+I [../src/bench/tpcc/procedure.cc:30] 2025-12-02 05:59:11.446 | TpccProcedure::Init start
+I [../src/rrr/reactor/coroutine.cc:12] 2025-12-02 05:59:11.447 | Coroutine created: 0x7795040010d0
+I [../src/rrr/reactor/reactor.cc:75] 2025-12-02 05:59:11.447 | Reactor::CreateRunCoroutine running coro: 0x7795040010d0
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:11.447 | Coroutine destroyed: 0x7795040010d0, task: 0x779504001160
+I [../src/bench/tpcc/procedure.cc:47] 2025-12-02 05:59:11.452 | TpccProcedure::Init leaf_procs_ retrieved
+I [../src/bench/tpcc/procedure.cc:69] 2025-12-02 05:59:11.452 | TpccProcedure::Init end
+I [../src/deptran/deterministic/coordinator.cc:22] 2025-12-02 05:59:11.452 | TxData created
+I [../src/deptran/deterministic/coordinator.cc:37] 2025-12-02 05:59:11.452 | Pieces bundled: 25
+I [../src/deptran/deterministic/coordinator.cc:80] 2025-12-02 05:59:11.452 | Sending Dispatch to Sequencer
+I [../src/deptran/rcc/../procedure.h:155] 2025-12-02 05:59:11.452 | VecPieceData::ToMarshal size: 25
+I [../src/rrr/reactor/coroutine.cc:16] 2025-12-02 05:59:INFO: 
+Progress: 0%
+TOTAL: elapsed time: 0.0
+RATIO    NAME            start    finish    attempts    commits    TPS
+-------  ------------  -------  --------  ----------  ---------  -----
+----     NEW_ORDER           0         0           0          0      0
+----     PAYMENT             0         0           0          0      0
+----     ORDER_STATUS        0         0           0          0      0
+----     DELIVERY            0         0           0          0      0
+----     STOCK_LEVEL         0         0           0          0      0
+----     Total               0         0           0          0      0
+
+INTERVAL: elapsed time: 0.0
+RATIO    NAME            start    finish    attempts    commits    TPS    min lt    max lt    50.0% LATENCY    90.0% LATENCY    99.0% LATENCY    99.9% LATENCY    50.0% ATT_LT    90.0% ATT_LT    99.0% ATT_LT    99.9% ATT_LT    50.0% N_TRY    90.0% N_TRY    99.0% N_TRY    99.9% N_TRY
+-------  ------------  -------  --------  ----------  ---------  -----  --------  --------  ---------------  ---------------  ---------------  ---------------  --------------  --------------  --------------  --------------  -------------  -------------  -------------  -------------
+----     NEW_ORDER           0         0           0          0      0   99999.9   99999.9          99999.9          99999.9          99999.9          99999.9         99999.9         99999.9         99999.9         99999.9        99999.9        99999.9        99999.9        99999.9
+----     PAYMENT             0         0           0          0      0   99999.9   99999.9          99999.9          99999.9          99999.9          99999.9         99999.9         99999.9         99999.9         99999.9        99999.9        99999.9        99999.9        99999.9
+----     ORDER_STATUS        0         0           0          0      0   99999.9   99999.9          99999.9          99999.9          99999.9          99999.9         99999.9         99999.9         99999.9         99999.9        99999.9        99999.9        99999.9        99999.9
+----     DELIVERY            0         0           0          0      0   99999.9   99999.9          99999.9          99999.9          99999.9          99999.9         99999.9         99999.9         99999.9         99999.9        99999.9        99999.9        99999.9        99999.9
+----     STOCK_LEVEL         0         0           0          0      0   99999.9   99999.9          99999.9          99999.9          99999.9          99999.9         99999.9         99999.9         99999.9         99999.9        99999.9        99999.9        99999.9        99999.9
+----     Total               0         0           0          0      0       0         0                0                0                0                0               0               0
+	Total asking finish: 95527159621760
+----------------------------------------------------------------------
+
+DEBUG: top server heartbeat loop
+INFO: Duration: 4.48 seconds
+INFO: shutting down...
+ERROR: Traceback (most recent call last):
+  File "/home/dp012/Desktop/Project532/mako/./run.py", line 813, in server_heart_beat
+    time.sleep(self.timeout / 4)
+  File "/home/dp012/Desktop/Project532/mako/./run.py", line 47, in signal_handler
+    sys.exit(0)
+SystemExit: 0
+
+You pressed Ctrl+C!
+DEBUG: Existing Server or Client Processes:
+----------
+Server: 127.0.0.1
+-------------
+b'dp012     149155    1635  149155  0    8 1178522 2053068 3 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149156  1    8 1178522 2053068 2 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149157  0    8 1178522 2053068 1 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149176  1    8 1178522 2053068 3 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149177  1    8 1178522 2053068 3 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149178  1    8 1178522 2053068 2 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149187  1    8 1178522 2053068 3 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149155    1635  149188  0    8 1178522 2053068 7 05:59 pts/4  00:00:00 ./build/deptran_server -b -d 10 -f test_det_multi.yml -P localhost -p 12000 -t 10\ndp012     149235  149151  149235  0    1  2494  3456   0 05:59 pts/4    00:00:00 /bin/bash -c ps -eLF | grep "deptran_server"\ndp012     149237  149235  149237  0    1  2304  2560   2 05:59 pts/4    00:00:00 grep deptran_server\n'
+INFO: waiting for killall commands to finish.
+INFO: done waiting for killall commands to finish.
+DEBUG: Existing Server or Client After Kill:
+----------
+Server: 127.0.0.1
+-------------
+b'dp012     149155    1635  149155  0    2     0     0   3 05:59 pts/4    00:00:00 [deptran_server] <defunct>\ndp012     149155    1635  149157  0    2     0     0   2 05:59 pts/4    00:00:00 [deptran_server]\ndp012     149241  149151  149241  0    1  2494  3456   5 05:59 pts/4    00:00:00 /bin/bash -c ps -eLF | grep "deptran_server"\ndp012     149243  149241  149243  0    1  2304  2560   5 05:59 pts/4    00:00:00 grep deptran_server\n'
+You pressed Ctrl+C!
+D [../src/rrr/rpc/client.cpp:184] 2025-12-02 05:59:11.342 | rrr::Client: connected to 127.0.0.1:12000
+D [../src/rrr/reactor/reactor.cc:41] 2025-12-02 05:59:11.343 | create a coroutine scheduler

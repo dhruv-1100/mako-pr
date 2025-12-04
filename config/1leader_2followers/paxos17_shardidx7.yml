@@ -1,0 +1,103 @@
+site:
+  # each line is a partition (Paxos group), the first is the master site_name:port
+  # the last column is the learner
+  # - ["s101:8001", "s201:8101", "s301:8201", "s401:8301"]
+  server:
+    - ["s101:11501", "s201:11601", "s301:11701", "s401:11801"]
+    - ["s102:11502", "s202:11602", "s302:11702", "s402:11802"]
+    - ["s103:11503", "s203:11603", "s303:11703", "s403:11803"]
+    - ["s104:11504", "s204:11604", "s304:11704", "s404:11804"]
+    - ["s105:11505", "s205:11605", "s305:11705", "s405:11805"]
+    - ["s106:11506", "s206:11606", "s306:11706", "s406:11806"]
+    - ["s107:11507", "s207:11607", "s307:11707", "s407:11807"]
+    - ["s108:11508", "s208:11608", "s308:11708", "s408:11808"]
+    - ["s109:11509", "s209:11609", "s309:11709", "s409:11809"]
+    - ["s110:11510", "s210:11610", "s310:11710", "s410:11810"]
+    - ["s111:11511", "s211:11611", "s311:11711", "s411:11811"]
+    - ["s112:11512", "s212:11612", "s312:11712", "s412:11812"]
+    - ["s113:11513", "s213:11613", "s313:11713", "s413:11813"]
+    - ["s114:11514", "s214:11614", "s314:11714", "s414:11814"]
+    - ["s115:11515", "s215:11615", "s315:11715", "s415:11815"]
+    - ["s116:11516", "s216:11616", "s316:11716", "s416:11816"]
+    - ["s117:11517", "s217:11617", "s317:11717", "s417:11817"]
+
+# s101: localhost
+# s201: p1
+# s301: p2
+# s401: learner 
+process:
+  s101: localhost
+  s201: p1
+  s301: p2
+  s401: learner
+  s102: localhost
+  s202: p1
+  s302: p2
+  s402: learner
+  s103: localhost
+  s203: p1
+  s303: p2
+  s403: learner
+  s104: localhost
+  s204: p1
+  s304: p2
+  s404: learner
+  s105: localhost
+  s205: p1
+  s305: p2
+  s405: learner
+  s106: localhost
+  s206: p1
+  s306: p2
+  s406: learner
+  s107: localhost
+  s207: p1
+  s307: p2
+  s407: learner
+  s108: localhost
+  s208: p1
+  s308: p2
+  s408: learner
+  s109: localhost
+  s209: p1
+  s309: p2
+  s409: learner
+  s110: localhost
+  s210: p1
+  s310: p2
+  s410: learner
+  s111: localhost
+  s211: p1
+  s311: p2
+  s411: learner
+  s112: localhost
+  s212: p1
+  s312: p2
+  s412: learner
+  s113: localhost
+  s213: p1
+  s313: p2
+  s413: learner
+  s114: localhost
+  s214: p1
+  s314: p2
+  s414: learner
+  s115: localhost
+  s215: p1
+  s315: p2
+  s415: learner
+  s116: localhost
+  s216: p1
+  s316: p2
+  s416: learner
+  s117: localhost
+  s217: p1
+  s317: p2
+  s417: learner
+
+# process_name - host_addr map
+host:
+  localhost: 127.0.0.1
+  p1: 127.0.0.1
+  p2: 127.0.0.1
+  learner: 127.0.0.1

@@ -1,0 +1,31 @@
+# Deterministic Mode Micro Benchmark Configuration
+
+mode: deterministic
+
+site:
+  server:
+    - ["localhost", 8000]
+    - ["localhost", 8001]
+    - ["localhost", 8002]
+  client:
+    - ["localhost", 9000]
+
+process:
+  server:
+    - ["localhost", 8000]
+    - ["localhost", 8001]
+    - ["localhost", 8002]
+  client:
+    - ["localhost", 9000]
+
+# Benchmark settings
+bench:
+  workload: micro
+  weight:
+    - 50 # read
+    - 50 # write
+  population: 100000
+  duration: 10
+
+# Deterministic specific settings (if any)
+# sequencer_id: 0 # Assuming partition 0 is sequencer

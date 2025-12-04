@@ -1,0 +1,118 @@
+site:
+  # each line is a partition (Paxos group), the first is the master site_name:port
+  # the last column is the learner
+  # - ["s101:8001", "s201:8101", "s301:8201", "s401:8301"]
+  server:
+    - ["s101:9501", "s201:9601", "s301:9701", "s401:9801"]
+    - ["s102:9502", "s202:9602", "s302:9702", "s402:9802"]
+    - ["s103:9503", "s203:9603", "s303:9703", "s403:9803"]
+    - ["s104:9504", "s204:9604", "s304:9704", "s404:9804"]
+    - ["s105:9505", "s205:9605", "s305:9705", "s405:9805"]
+    - ["s106:9506", "s206:9606", "s306:9706", "s406:9806"]
+    - ["s107:9507", "s207:9607", "s307:9707", "s407:9807"]
+    - ["s108:9508", "s208:9608", "s308:9708", "s408:9808"]
+    - ["s109:9509", "s209:9609", "s309:9709", "s409:9809"]
+    - ["s110:9510", "s210:9610", "s310:9710", "s410:9810"]
+    - ["s111:9511", "s211:9611", "s311:9711", "s411:9811"]
+    - ["s112:9512", "s212:9612", "s312:9712", "s412:9812"]
+    - ["s113:9513", "s213:9613", "s313:9713", "s413:9813"]
+    - ["s114:9514", "s214:9614", "s314:9714", "s414:9814"]
+    - ["s115:9515", "s215:9615", "s315:9715", "s415:9815"]
+    - ["s116:9516", "s216:9616", "s316:9716", "s416:9816"]
+    - ["s117:9517", "s217:9617", "s317:9717", "s417:9817"]
+    - ["s118:9518", "s218:9618", "s318:9718", "s418:9818"]
+    - ["s119:9519", "s219:9619", "s319:9719", "s419:9819"]
+    - ["s120:9520", "s220:9620", "s320:9720", "s420:9820"]
+
+# s101: localhost
+# s201: p1
+# s301: p2
+# s401: learner 
+process:
+  s101: localhost
+  s201: p1
+  s301: p2
+  s401: learner
+  s102: localhost
+  s202: p1
+  s302: p2
+  s402: learner
+  s103: localhost
+  s203: p1
+  s303: p2
+  s403: learner
+  s104: localhost
+  s204: p1
+  s304: p2
+  s404: learner
+  s105: localhost
+  s205: p1
+  s305: p2
+  s405: learner
+  s106: localhost
+  s206: p1
+  s306: p2
+  s406: learner
+  s107: localhost
+  s207: p1
+  s307: p2
+  s407: learner
+  s108: localhost
+  s208: p1
+  s308: p2
+  s408: learner
+  s109: localhost
+  s209: p1
+  s309: p2
+  s409: learner
+  s110: localhost
+  s210: p1
+  s310: p2
+  s410: learner
+  s111: localhost
+  s211: p1
+  s311: p2
+  s411: learner
+  s112: localhost
+  s212: p1
+  s312: p2
+  s412: learner
+  s113: localhost
+  s213: p1
+  s313: p2
+  s413: learner
+  s114: localhost
+  s214: p1
+  s314: p2
+  s414: learner
+  s115: localhost
+  s215: p1
+  s315: p2
+  s415: learner
+  s116: localhost
+  s216: p1
+  s316: p2
+  s416: learner
+  s117: localhost
+  s217: p1
+  s317: p2
+  s417: learner
+  s118: localhost
+  s218: p1
+  s318: p2
+  s418: learner
+  s119: localhost
+  s219: p1
+  s319: p2
+  s419: learner
+  s120: localhost
+  s220: p1
+  s320: p2
+  s420: learner
+
+# process_name - host_addr map
+host:
+  localhost: 127.0.0.1
+  p1: 127.0.0.1
+  p2: 127.0.0.1
+  learner: 127.0.0.1
