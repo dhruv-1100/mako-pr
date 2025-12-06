@@ -222,7 +222,7 @@ class TxnInfo(object):
         tries = self.mid_total_try - self.mid_pre_total_try
         commit_txn = self.mid_commit_txn - self.mid_pre_commit_txn
         self.mid_time /= num_clients
-        tps = commit_txn / self.mid_time
+        tps = commit_txn / self.mid_time if self.mid_time > 0 else 0
 
         logger.info("mid_commit_txn: {}".format(self.mid_commit_txn))
         logger.info("mid_pre_commit_txn: {}".format(self.mid_pre_commit_txn))
@@ -452,7 +452,8 @@ class ClientController(object):
         self.num_proxies = len(rpc_proxy)
 
         while (len(rpc_proxy) != len(self.finish_set)):
-            logger.debug("top client heartbeat; timeout {}".format(self.timeout))
+            logger.debug("top client heartbeat; timeout {}; finish_set={}/{}".format(
+                self.timeout, len(self.finish_set), len(rpc_proxy)))
             for k in self.txn_infos.keys():
                 self.txn_infos[k].clear()
             self.start_txn = 0
@@ -475,7 +476,8 @@ class ClientController(object):
                 period_time = res.period_sec + res.period_nsec / ONE_BILLION
                 for txn_type in res.txn_info.keys():
                     if txn_type not in self.txn_infos:
-                        self.txn_infos[txn_type] = TxnInfo(txn_type, self.txn_names[txn_type], self.txn_names[txn_type] == self.interest_txn)
+                        txn_name = self.txn_names.get(txn_type, "UNKNOWN_{}".format(txn_type))
+                        self.txn_infos[txn_type] = TxnInfo(txn_type, txn_name, txn_name == self.interest_txn)
                     self.start_txn += res.txn_info[txn_type].start_txn
                     self.total_txn += res.txn_info[txn_type].total_txn
                     self.total_try += res.txn_info[txn_type].total_try
@@ -502,6 +504,7 @@ class ClientController(object):
                 self.run_nsec += res.run_nsec
                 self.n_asking += res.n_asking
                 if (res.is_finish == 1):
+                    logger.info("Client {} reported is_finish=1, run_sec={:.2f}".format(i, res.run_sec))
                     self.finish_set.add(i)
                 i += 1
 
@@ -711,8 +714,10 @@ class ServerController(object):
 
         # let all clients start running the benchmark
         client_controller.client_run(do_sample, do_sample_lock)
+        logger.info("Benchmark finished, signaling heartbeat to stop...")
         cond.acquire()
         s_init_finish.value = 0
+        cond.notify()  # Notify the heartbeat subprocess
         cond.release()
         return server_process
 
@@ -752,7 +757,12 @@ class ServerController(object):
             avg_r_sz = 0.0
             avg_cpu_util = 0.0
             sample_result = []
+            reconnect_failures = 0
+            MAX_RECONNECT_FAILURES = 5
             while (not g_exit):
+                if reconnect_failures >= MAX_RECONNECT_FAILURES:
+                    logger.error("Too many reconnection failures (%d), exiting heartbeat loop", reconnect_failures)
+                    break
                 logger.debug("top server heartbeat loop")
                 do_statistics = False
                 do_sample_lock.acquire()
@@ -768,51 +778,59 @@ class ServerController(object):
                 statistics = dict()
                 cpu_util = [0.0] * len(sites)
                 futures = []
-
-                try:
-                    for site in sites:
-#                        logger.debug("ping %s", site.name)
+                for site in sites:
+                    f = None
+                    try:
                         if do_statistics:
-                            futures.append(site.rpc_proxy.async_server_heart_beat_with_data())
+                            f = site.rpc_proxy.async_server_heart_beat_with_data()
                         else:
-                            futures.append(site.rpc_proxy.async_server_heart_beat())
-                except Exception as e:
-                    if "ENOTCONN" in str(e):
-                        # Transient connection error - log and retry a few times
-                        if not hasattr(self, '_heartbeat_failures'):
-                            self._heartbeat_failures = 0
-                        self._heartbeat_failures += 1
-                        logger.warning("server heart beat disconnected (attempt %d, will retry)", self._heartbeat_failures)
-                        if self._heartbeat_failures >= 5:
-                            logger.warning("Too many heartbeat failures, stopping heartbeat")
-                            break
-                        time.sleep(1)  # Wait before retry
-                        continue  # Retry the loop
+                            f = site.rpc_proxy.async_server_heart_beat()
+                    except Exception as e:
+                        if "ENOTCONN" in str(e):
+                            logger.warning("Heartbeat failed for %s, reconnecting...", site.name)
+                            try:
+                                site.connect_rpc(1)
+                                if do_statistics:
+                                    f = site.rpc_proxy.async_server_heart_beat_with_data()
+                                else:
+                                    f = site.rpc_proxy.async_server_heart_beat()
+                            except Exception as e2:
+                                logger.warning("Reconnection failed for %s: %s", site.name, str(e2))
+                                reconnect_failures += 1
+                        else:
+                            logger.error("Heartbeat error for %s: %s", site.name, str(e))
+                            reconnect_failures += 1
                     else:
-                        logger.fatal("server heart beat failure: %s", str(e))
-                        break
-                
-                # Reset failure counter on success
-                self._heartbeat_failures = 0
-
+                        reconnect_failures = 0  # Reset on success
+                    futures.append(f)
 
                 i = 0
                 while (i < len(futures)):
+                    if futures[i] is None:
+                        i += 1
+                        continue
+
                     if do_statistics:
-                        ret = futures[i].result
-                        r_cnt_sum += ret.r_cnt_sum
-                        r_cnt_num += ret.r_cnt_num
-                        r_sz_sum += ret.r_sz_sum
-                        r_sz_num += ret.r_sz_num
-                        cpu_util[i] = ret.cpu_util
-                        logger.info("CPU {}: {}".format(i, ret.cpu_util))
-                        for k, v in ret.statistics.items():
-                            if k not in statistics:
-                                statistics[k] = ServerResponse(v)
-                            else:
-                                statistics[k].add_one(v)
+                        try:
+                            ret = futures[i].result
+                            r_cnt_sum += ret.r_cnt_sum
+                            r_cnt_num += ret.r_cnt_num
+                            r_sz_sum += ret.r_sz_sum
+                            r_sz_num += ret.r_sz_num
+                            cpu_util[i] = ret.cpu_util
+                            logger.info("CPU {}: {}".format(i, ret.cpu_util))
+                            for k, v in ret.statistics.items():
+                                if k not in statistics:
+                                    statistics[k] = ServerResponse(v)
+                                else:
+                                    statistics[k].add_one(v)
+                        except Exception as e:
+                            logger.warning("Failed to get heartbeat result: %s", str(e))
                     else:
-                        futures[i].wait()
+                        try:
+                            futures[i].wait()
+                        except Exception as e:
+                            logger.warning("Failed to wait for heartbeat: %s", str(e))
                     i += 1
                 if do_statistics:
                     total_result = []
@@ -839,7 +857,7 @@ class ServerController(object):
                     cond.release()
                     break
                 cond.release()
-                time.sleep(self.timeout / 4)
+                time.sleep(min(self.timeout / 4, 1))  # Sleep at most 1 second for faster response
 
             for single_record in sample_result:
                 logger.info("SERVREC: %s; " + str(single_record[0]) + ": VALUE: " +

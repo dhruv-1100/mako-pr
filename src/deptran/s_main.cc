@@ -18,7 +18,7 @@ static rusty::Arc<rrr::PollThreadWorker> cli_poll_thread_worker_g;
 static rrr::Server *cli_hb_server_g = nullptr;
 
 static vector<ServerWorker> svr_workers_g = {};
-vector<unique_ptr<ClientWorker>> client_workers_g = {};
+extern vector<unique_ptr<ClientWorker>> client_workers_g;  // Defined in paxos_main_helper.cc
 static std::vector<std::thread> client_threads_g = {}; // TODO remove this?
 
 void client_setup_heartbeat(int num_clients) {  // HERE!!!

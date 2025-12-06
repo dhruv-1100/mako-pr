@@ -33,6 +33,7 @@ protected:
   };
   
   std::map<cmdid_t, PendingRequest> pending_requests_;
+  std::map<cmdid_t, TxnOutput> buffered_outputs_;
   std::recursive_mutex mtx_pending_;
 };
 

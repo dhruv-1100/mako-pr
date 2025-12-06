@@ -201,6 +201,7 @@ option(DISABLE_DISK "Disable disk persistence" ON)
 option(FAIL_NEW_VERSION "Enable fail new version" ON)
 option(SIMULATE_ONE_SHARD_PER_THREAD "Simulate one shard per thread" OFF)
 option(TRACKING_ROLLBACK "Enable rollback tracking" OFF)
+option(ASAN "Enable AddressSanitizer for memory debugging" OFF)
 
 # Masstree configuration
 set(MASSTREE_CONFIG "CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER} --enable-max-key-len=1024")
@@ -327,6 +328,10 @@ endif()
 if(TRACKING_ROLLBACK)
   list(APPEND CXXFLAGS -DTRACKING_ROLLBACK)
 endif()
+if(ASAN)
+  message(STATUS "AddressSanitizer (ASAN) enabled")
+  list(APPEND CXXFLAGS -fsanitize=address -fno-omit-frame-pointer -g)
+endif()
 list(APPEND CXXFLAGS
   -include ${W}/masstree/config.h
   -DREAD_MY_WRITES=${STO_RMW}
@@ -355,6 +360,9 @@ set(LDFLAGS
 )
 if(GPROF)
   list(APPEND LDFLAGS -pg -static-libstdc++ -static-libgcc)
+endif()
+if(ASAN)
+  list(APPEND LDFLAGS -fsanitize=address)
 endif()
 
 set(LZ4LDFLAGS
@@ -636,6 +644,10 @@ set_target_properties(txlog PROPERTIES
 # Add deptran_server executable
 add_executable(deptran_server src/deptran/s_main.cc)
 target_link_libraries(deptran_server txlog)
+target_compile_options(deptran_server PRIVATE ${BENCH_CXXFLAGS})
+if(ASAN)
+  target_link_options(deptran_server PRIVATE -fsanitize=address)
+endif()
 target_include_directories(deptran_server PRIVATE
     src
     src/rrr

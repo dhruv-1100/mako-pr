@@ -39,11 +39,14 @@ void ClientWorker::ForwardRequestDone(Coordinator* coo,
     free_coordinators_.push_back(coo);
   } else if (!have_more_time) {
     Log_debug("times up. stop.");
-    Log_debug("n_concurrent_ = %d", n_concurrent_);
-//    finish_mutex.lock();
+    if (config_->client_type_ == Config::Closed) {
+      std::lock_guard<std::mutex> lock(coordinator_mutex);
+      free_coordinators_.push_back(coo);
+    }
     n_concurrent_--;
     if (n_concurrent_ == 0) {
       Log_debug("all coordinators finished... signal done");
+//      finish_mutex.lock();
 //      finish_cond.signal();
     } else {
       Log_debug("waiting for %d more coordinators to finish", n_concurrent_);

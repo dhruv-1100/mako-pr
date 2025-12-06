@@ -58,13 +58,21 @@ void CoordinatorDeterministic::DoTxAsync(TxRequest &req) {
     Log_info("CoordinatorDeterministic::DoTxAsync callback");
     int32_t ret;
     TxnOutput outputs;
-    fu->get_reply() >> ret >> outputs;
+    TxReply reply;
+    try {
+        fu->get_reply() >> ret >> outputs;
+    } catch (std::exception& e) {
+        Log_error("DoTxAsync callback exception: %s", e.what());
+        reply.res_ = REJECT;
+        delete tx_data;
+        callback(reply);
+        return;
+    }
     
     // Handle output
     // We need to pass the output back to the client callback.
     // TxData has the callback.
     
-    TxReply reply;
     reply.res_ = ret;
     for (auto& pair : outputs) {
         reply.output_.insert(pair.second.begin(), pair.second.end());

@@ -73,6 +73,12 @@ int Config::CreateConfig(int argc, char **argv) {
   int c;
   optind = 1;
   string filename;
+  
+  Log_info("CreateConfig: argc=%d", argc);
+  for (int i=0; i<argc; i++) {
+      Log_info("argv[%d]=%s", i, argv[i]);
+  }
+
   while ((c = getopt(argc, argv, "bc:d:f:h:i:k:p:P:r:s:S:t:H:T:n:A:")) != -1) {
     switch (c) {
       case 'b': // heartbeat to controller
@@ -212,6 +218,7 @@ int Config::CreateConfig(int argc, char **argv) {
     logging_path);
   config_s->proc_name_ = proc_name;
   config_s->config_paths_ = config_paths;
+  Log_info("CreateConfig: Final duration=%d", duration);
   config_s->Load();
   return SUCCESS;
 }
