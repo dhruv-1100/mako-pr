@@ -1,5 +1,6 @@
 #include "deptran/constants.h"
 #include "deptran/deterministic/scheduler.h"
+#include "deptran/procedure.h"
 #include <gtest/gtest.h>
 
 using namespace janus;
@@ -7,21 +8,29 @@ using namespace janus;
 // Mock or subclass to access protected members if necessary
 class TestSchedulerDeterministic : public SchedulerDeterministic {
 public:
-  using SchedulerDeterministic::SchedulerDeterministic;
+  TestSchedulerDeterministic() : SchedulerDeterministic() {
+      // Overwrite app_next_ to avoid calling the real ExecuteNext
+      app_next_ = [this](int slot, shared_ptr<Marshallable> cmd) -> int {
+          std::lock_guard<std::recursive_mutex> lock(mtx_pending_);
+          pending_txns_[slot] = cmd;
+          MockExecuteNext();
+          return 0;
+      };
+  }
 
   // Expose protected members for testing
   int32_t GetNextSlot() const { return next_slot_to_execute_; }
   void SetNextSlot(int32_t slot) { next_slot_to_execute_ = slot; }
   size_t GetPendingSize() const { return pending_txns_.size(); }
 
-  // Mock Execute logic to avoid full system dependency
-  void DoExecute(shared_ptr<TxRequest> req) {
-    // In a real test, this would verify execution.
-    // For now, we just simulate success.
-    executed_txns_.push_back(req->txn_id_);
+  void MockExecuteNext() {
+      std::lock_guard<std::recursive_mutex> lock(mtx_pending_);
+      while (pending_txns_.count(next_slot_to_execute_)) {
+          // Simulate execution
+          pending_txns_.erase(next_slot_to_execute_);
+          next_slot_to_execute_++;
+      }
   }
-
-  std::vector<txnid_t> executed_txns_;
 };
 
 class DeterministicSchedulerTest : public ::testing::Test {
@@ -29,84 +38,123 @@ protected:
   TestSchedulerDeterministic *scheduler;
 
   void SetUp() override {
-    scheduler = new TestSchedulerDeterministic(
-        nullptr); // Frame is not used in basic logic
+    // Initialize Config to avoid crash in TxLogServer constructor
+    const char* argv[] = {"test_deterministic", "-f", "../config/deterministic_single.yml"};
+    int argc = 3;
+    Config::CreateConfig(argc, (char**)argv);
+    scheduler = new TestSchedulerDeterministic(); 
   }
 
   void TearDown() override { delete scheduler; }
+  
+  shared_ptr<VecPieceData> CreateTx(txnid_t txn_id, int slot) {
+      auto vpd = make_shared<VecPieceData>();
+      vpd->sp_vec_piece_data_ = make_shared<vector<shared_ptr<TxPieceData>>>();
+      auto piece = make_shared<TxPieceData>();
+      piece->root_id_ = txn_id;
+      piece->timestamp_ = slot; // Slot is stored in timestamp_
+      vpd->sp_vec_piece_data_->push_back(piece);
+      return vpd;
+  }
 };
 
 TEST_F(DeterministicSchedulerTest, InitialState) {
-  EXPECT_EQ(scheduler->GetNextSlot(), 0);
+  EXPECT_EQ(scheduler->GetNextSlot(), 1); // Initial slot is 1
   EXPECT_EQ(scheduler->GetPendingSize(), 0);
 }
 
 TEST_F(DeterministicSchedulerTest, SequentialExecution) {
   // Simulate receiving transactions in order
-  auto req0 = std::make_shared<TxRequest>();
-  req0->txn_id_ = 100;
+  auto tx1 = CreateTx(100, 1);
+  auto tx2 = CreateTx(101, 2);
 
-  auto req1 = std::make_shared<TxRequest>();
-  req1->txn_id_ = 101;
+  // Add slot 1
+  shared_ptr<Marshallable> cmd1 = tx1;
+  scheduler->OnCommit(1, 0, cmd1); 
 
-  // Add slot 0
-  scheduler->OnCommit(0, 0, req0); // slot 0
-
-  // Should have executed slot 0 (logic in OnCommit calls ExecuteNext)
-  // Note: In the real implementation, ExecuteNext might be async or require the
-  // event loop. Here we assume the logic allows for immediate processing or
-  // we'd need to trigger it. Given the implementation uses
-  // Reactor::CreateSpEvent, we might need to mock the reactor or manually
-  // trigger the check if possible. However, for this unit test structure, we
-  // are verifying the *logic* of ExecuteNext.
-
-  // Let's manually trigger ExecuteNext if it's not automatic in this isolated
-  // test env But OnCommit calls ExecuteNext.
-
-  // If we can't easily run the full event loop, we might need to verify
-  // internal state changes or mock the event triggering.
-
-  // For the purpose of this "dry run" test file:
-  EXPECT_EQ(scheduler->GetPendingSize(),
-            0); // Should be removed after execution
-                // EXPECT_EQ(scheduler->GetNextSlot(), 1); // Should advance
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+  EXPECT_EQ(scheduler->GetPendingSize(), 0);
+  
+  // Add slot 2
+  shared_ptr<Marshallable> cmd2 = tx2;
+  scheduler->OnCommit(2, 0, cmd2);
+  
+  EXPECT_EQ(scheduler->GetNextSlot(), 3);
+  EXPECT_EQ(scheduler->GetPendingSize(), 0);
 }
 
 TEST_F(DeterministicSchedulerTest, OutOfOrderExecution) {
-  // Simulate receiving slot 2, then 0, then 1
-  auto req0 = std::make_shared<TxRequest>();
-  req0->txn_id_ = 100;
-  auto req1 = std::make_shared<TxRequest>();
-  req1->txn_id_ = 101;
-  auto req2 = std::make_shared<TxRequest>();
-  req2->txn_id_ = 102;
+  // Simulate receiving slot 3, then 1, then 2
+  auto tx1 = CreateTx(100, 1);
+  auto tx2 = CreateTx(101, 2);
+  auto tx3 = CreateTx(102, 3);
 
-  // Receive slot 2
-  scheduler->OnCommit(2, 0, req2);
-  EXPECT_EQ(scheduler->GetNextSlot(), 0); // Should wait for 0
-  EXPECT_EQ(scheduler->GetPendingSize(), 1);
-
-  // Receive slot 0
-  scheduler->OnCommit(0, 0, req0);
-  // Should execute 0, still wait for 1
-  // EXPECT_EQ(scheduler->GetNextSlot(), 1);
-  // EXPECT_EQ(scheduler->GetPendingSize(), 1); // Slot 2 still pending
+  // Receive slot 3
+  shared_ptr<Marshallable> cmd3 = tx3;
+  scheduler->OnCommit(3, 0, cmd3);
+  EXPECT_EQ(scheduler->GetNextSlot(), 1); // Should wait for 1
+  EXPECT_EQ(scheduler->GetPendingSize(), 0); // PaxosServer buffers it, not Scheduler
 
   // Receive slot 1
-  scheduler->OnCommit(1, 0, req1);
-  // Should execute 1 and then 2
-  // EXPECT_EQ(scheduler->GetNextSlot(), 3);
-  // EXPECT_EQ(scheduler->GetPendingSize(), 0);
+  shared_ptr<Marshallable> cmd1 = tx1;
+  scheduler->OnCommit(1, 0, cmd1);
+  // Should execute 1, still wait for 2
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+  EXPECT_EQ(scheduler->GetPendingSize(), 0); // Slot 3 still buffered in PaxosServer
+  
+  // Receive slot 2
+  shared_ptr<Marshallable> cmd2 = tx2;
+  scheduler->OnCommit(2, 0, cmd2);
+  // Should execute 2 and 3
+  EXPECT_EQ(scheduler->GetNextSlot(), 4);
+  EXPECT_EQ(scheduler->GetPendingSize(), 0);
 }
 
 TEST_F(DeterministicSchedulerTest, DuplicateSlots) {
-  auto req0 = std::make_shared<TxRequest>();
-  req0->txn_id_ = 100;
+  auto tx1 = CreateTx(100, 1);
+  shared_ptr<Marshallable> cmd1 = tx1;
 
-  scheduler->OnCommit(0, 0, req0);
-  // EXPECT_EQ(scheduler->GetNextSlot(), 1);
+  // First commit
+  scheduler->OnCommit(1, 0, cmd1);
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
 
-  // Receive slot 0 again (should be ignored or handled gracefully)
-  scheduler->OnCommit(0, 0, req0);
-  // EXPECT_EQ(scheduler->GetNextSlot(), 1);
+  // Duplicate commit - should be ignored and not crash
+  scheduler->OnCommit(1, 0, cmd1);
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+}
+
+TEST_F(DeterministicSchedulerTest, GapExecution) {
+  // Slots: 1, 3, 5
+  auto tx1 = CreateTx(100, 1);
+  auto tx3 = CreateTx(102, 3);
+  auto tx5 = CreateTx(104, 5);
+  
+  auto tx2 = CreateTx(101, 2);
+  auto tx4 = CreateTx(103, 4);
+
+  shared_ptr<Marshallable> cmd1 = tx1;
+  shared_ptr<Marshallable> cmd3 = tx3;
+  shared_ptr<Marshallable> cmd5 = tx5;
+  shared_ptr<Marshallable> cmd2 = tx2;
+  shared_ptr<Marshallable> cmd4 = tx4;
+
+  // 1 arrives
+  scheduler->OnCommit(1, 0, cmd1);
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+
+  // 3 arrives (gap 2)
+  scheduler->OnCommit(3, 0, cmd3);
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+
+  // 5 arrives (gap 4)
+  scheduler->OnCommit(5, 0, cmd5);
+  EXPECT_EQ(scheduler->GetNextSlot(), 2);
+
+  // 2 arrives -> executes 2, 3. Stops at 4.
+  scheduler->OnCommit(2, 0, cmd2);
+  EXPECT_EQ(scheduler->GetNextSlot(), 4);
+
+  // 4 arrives -> executes 4, 5.
+  scheduler->OnCommit(4, 0, cmd4);
+  EXPECT_EQ(scheduler->GetNextSlot(), 6);
 }

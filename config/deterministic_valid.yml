@@ -1,0 +1,10 @@
+shards: 1
+warehouses: 1
+memlocalhost: 8000
+memlearner: 8001
+memp1: 8002
+memp2: 8003
+
+localhost:
+  - ip: 127.0.0.1
+    port: 8100

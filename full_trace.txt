@@ -1,0 +1,86 @@
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.448 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.448 | ServerConnection::handle_read rpc_id: 0x5ef034ca
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.448 | ServerConnection::handle_read creating coroutine for rpc_id: 0x5ef034ca
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.448 | Coroutine created: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.448 | Reactor::CreateRunCoroutine running coro: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.448 | Coroutine::Run start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.448 | Coroutine::BoostRunWrapper start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.448 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.448 | Coroutine destroyed: 0x7429840010d0, task: 0x742984001160
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.452 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.452 | ServerConnection::handle_read rpc_id: 0x3061ef9b
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.452 | ServerConnection::handle_read creating coroutine for rpc_id: 0x3061ef9b
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.452 | Coroutine created: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.452 | Reactor::CreateRunCoroutine running coro: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.452 | Coroutine::Run start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.452 | Coroutine::BoostRunWrapper start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.452 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.452 | Coroutine destroyed: 0x7429840010d0, task: 0x742984001160
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.454 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.454 | ServerConnection::handle_read rpc_id: 0x38d34624
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.454 | ServerConnection::handle_read creating coroutine for rpc_id: 0x38d34624
+ome/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.454 | Coroutine created: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.454 | Reactor::CreateRunCoroutine running coro: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.454 | Coroutine::Run start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.454 | Coroutine::BoostRunWrapper start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.454 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.454 | Coroutine destroyed: 0x7429840010d0, task: 0x742984001160
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.454 | Coroutine created: 0x742988000d10
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.454 | Reactor::CreateRunCoroutine running coro: 0x742988000d10
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.454 | Coroutine::Run start: 0x742988000d10
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.454 | Coroutine::BoostRunWrapper start: 0x742988000d10
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.455 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.455 | ServerConnection::handle_read rpc_id: 0x4728d6a2
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.455 | ServerConnection::handle_read creating coroutine for rpc_id: 0x4728d6a2
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.455 | Coroutine created: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.455 | Reactor::CreateRunCoroutine running coro: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.455 | Coroutine::Run start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.455 | Coroutine::BoostRunWrapper start: 0x7429840010d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.455 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.455 | Coroutine destroyed: 0x7429840010d0, task: 0x742984DEBUG: before recording period: 10
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.340 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.340 | ServerConnection::handle_read rpc_id: 0x6c9f29cb
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.340 | ServerConnection::handle_read creating coroutine for rpc_id: 0x6c9f29cb
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.341 | Coroutine created: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.341 | Reactor::CreateRunCoroutine running coro: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.341 | Coroutine::Run start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.341 | Coroutine::BoostRunWrapper start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.341 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.341 | Coroutine destroyed: 0x7b74cc002950, task: 0x7b74cc0029e0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.344 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.344 | ServerConnection::handle_read rpc_id: 0x5fb0a2b8
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.344 | ServerConnection::handle_read creating coroutine for rpc_id: 0x5fb0a2b8
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.344 | Coroutine created: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.344 | Reactor::CreateRunCoroutine running coro: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.344 | Coroutine::Run start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.344 | Coroutine::BoostRunWrapper start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.344 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 10:47:39.344 | Coroutine destroyed: 0x7b74cc002950, task: 0x7b74cc0029e0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 10:47:39.461 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 10:47:39.461 | ServerConnection::handle_read rpc_id: 0x3f492ad8
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 10:47:39.461 | ServerConnection::handle_read creating coroutine for rpc_id: 0x3f492ad8
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.461 | Coroutine created: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.461 | Reactor::CreateRunCoroutine running coro: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.461 | Coroutine::Run start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.461 | Coroutine::BoostRunWrapper start: 0x7b74cc002950
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 10:47:39.461 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc_rpc.h:1024] 2025-12-04 10:47:39.461 | ClassicService::__Dispatch__wrapper__ called
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc_rpc.h:1045] 2025-12-04 10:47:39.461 | ClassicService::__Dispatch__wrapper__ calling Dispatch
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:45] 2025-12-04 10:47:39.462 | ClassicServiceImpl::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 10:47:39.462 | Coroutine created: 0x7b74cc031ab0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 10:47:39.462 | Reactor::CreateRunCoroutine running coro: 0x7b74cc031ab0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 10:47:39.462 | Coroutine::Run start: 0x7b74cc031ab0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 10:47:39.462 | Coroutine::BoostRunWrapper start: 0x7b74cc031ab0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:65] 2025-12-04 10:47:39.462 | ClassicServiceImpl::Dispatch coroutine start cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:70] 2025-12-04 10:47:39.462 | ClassicServiceImpl::Dispatch calling dtxn_sched->Dispatch
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:33] 2025-12-04 10:47:39.462 | SchedulerDeterministic::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:39] 2025-12-04 10:47:39.462 | SchedulerDeterministic::Dispatch slot_id=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:42] 2025-12-04 10:47:39.462 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:48] 2025-12-04 10:47:39.462 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0, n_replicas=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:59] 2025-12-04 10:47:39.462 | SchedulerDeterministic::Dispatch created paxos_coord_
+E [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:79] 2025-12-04 10:47:39.463 | Coroutine Run failed: vector::_M_range_check: __n (which is 3) >= this->size() (which is 3)
+E [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:79] 2025-12-04 10:47:39.463 | Coroutine Run failed: vector::_M_range_check: __n (which is 3) >= this->size() (which is 3)
+1    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN3rrr9CoroutineD1Ev+0xf2) [0x7b74ffe3aea2]
+3    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN3rrr9Coroutine15BoostRunWrapperERN5boost11coroutines26detail14push_coroutineIvEE+0x6e) [0x742994c3b19e]
+4    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZZN5boost11coroutines26detail14pull_coroutineIvE13control_blockC4INS_7context21basic_fixedsize_stackINS6_12stack_traitsEEESt5_BindIFMN3rrr9CoroutineEFvRNS1_14push_coroutineIvEEEPSC_St12_PlaceholderILi1EEEEEENS6_12preallocatedEOT_OT0_ENUlONS6_5fiberEE_clEST_+0x83) [0x742994c3bd33]
+5    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN5boost7context6detail11fiber_entryINS1_12fiber_recordINS0_5fiberENS0_21basic_fixedsize_stackINS0_12stack_traitsEEEZNS_11coroutines26detail14pull_coroutineIvE13control_blockC4IS7_St5_BindIFMN3rrr9CoroutineEFvRNS9_14push_coroutineIvEEEPSG_St12_PlaceholderILi1EEEEEENS0_12preallocatedEOT_OT0_EUlOS4_E_EEEEvNS1_10transfer_tE+0x43) [0x742994c3c003]

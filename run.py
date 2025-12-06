@@ -379,6 +379,8 @@ class ClientController(object):
         self.pre_run_nsec = 0
         self.n_asking = 0
         self.max_tps = 0
+        self.best_commit_txn = 0
+        self.best_total_txn = 0
 
         self.recording_period = False
         self.print_max = False
@@ -410,7 +412,13 @@ class ClientController(object):
         try:
             self.benchmark_record(do_sample, do_sample_lock)
         finally:
-            logger.info("Duration: {:.2f} seconds".format(time.time() - start))
+            duration = time.time() - start
+            logger.info("Duration: {:.2f} seconds".format(duration))
+            # Print best stats seen (in case early termination caused data loss)
+            if self.best_commit_txn > 0:
+                tps = round(self.best_commit_txn / duration, 1) if duration > 0 else 0
+                logger.info("FINAL STATS: Total: {}, Commit: {}, TPS: {}".format(
+                    self.best_total_txn, self.best_commit_txn, tps))
 
         logger.info("Benchmark finished")
 
@@ -504,6 +512,11 @@ class ClientController(object):
             self.run_sec /= len(futures)
             self.run_nsec /= len(futures)
             logger.debug("avg timing from {} servers: run_sec {:.2f}; run_nsec {:.2f}".format(len(futures), res.run_sec, res.run_nsec))
+            
+            # Track best stats seen (since stats are cleared each iteration)
+            if self.commit_txn > self.best_commit_txn:
+                self.best_commit_txn = self.commit_txn
+                self.best_total_txn = self.total_txn
 
             self.cur_time = time.time()
             need_break = self.print_stage_result(do_sample, do_sample_lock)
@@ -580,6 +593,7 @@ class ClientController(object):
         output_str += tabulate(interval_table, headers=interval_header) + "\n"
         output_str += "\tTotal asking finish: " + str(self.n_asking) + "\n"
         output_str += "----------------------------------------------------------------------\n"
+        output_str += "Total: {}, Commit: {}, Attempts: {}, Running for {}\n".format(self.total_txn, self.commit_txn, self.total_try, total_time)
         logger.info(output_str)
 
         self.pre_start_txn = self.start_txn
@@ -762,9 +776,24 @@ class ServerController(object):
                             futures.append(site.rpc_proxy.async_server_heart_beat_with_data())
                         else:
                             futures.append(site.rpc_proxy.async_server_heart_beat())
-                except:
-                    logger.fatal("server heart beat failure")
-                    break
+                except Exception as e:
+                    if "ENOTCONN" in str(e):
+                        # Transient connection error - log and retry a few times
+                        if not hasattr(self, '_heartbeat_failures'):
+                            self._heartbeat_failures = 0
+                        self._heartbeat_failures += 1
+                        logger.warning("server heart beat disconnected (attempt %d, will retry)", self._heartbeat_failures)
+                        if self._heartbeat_failures >= 5:
+                            logger.warning("Too many heartbeat failures, stopping heartbeat")
+                            break
+                        time.sleep(1)  # Wait before retry
+                        continue  # Retry the loop
+                    else:
+                        logger.fatal("server heart beat failure: %s", str(e))
+                        break
+                
+                # Reset failure counter on success
+                self._heartbeat_failures = 0
 
 
                 i = 0

@@ -1,0 +1,29 @@
+==============================================
+Mako OCC vs Deterministic Benchmark Comparison
+==============================================
+
+>>> OCC 2-Shard (using dbtest) <<<
+Running for 30 seconds...
+
+OCC Results:
+  Shard 0:  ops/sec
+  Shard 1:  ops/sec
+  Total:    ops/sec
+
+>>> Deterministic 2-Partition (using deptran_server) <<<
+Running for 30 seconds...
+
+Deterministic Results:
+  Commits: 140
+  TPS:     4.6 ops/sec
+
+==============================================
+COMPARISON SUMMARY
+==============================================
+
+| Mode          | TPS (ops/sec) | Notes           |
+|---------------|---------------|-----------------|
+| OCC 2-Shard   |    | dbtest, 2 shards |
+| Deterministic | 4.6     | 2 partitions     |
+
+Results saved to: benchmark_comparison_20251205_122847.csv

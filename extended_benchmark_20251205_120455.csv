@@ -1,0 +1,4 @@
+config,config_name,iteration,success,commits,tps,latency_median_us,latency_p99_us,duration
+deterministic_2p,Deterministic (2 partitions),1,True,0,0,0,0,15
+deterministic_1p,Deterministic (1 partition),1,True,0,0,0,0,15
+occ_1p,OCC (1 partition),1,True,2676,178,0,0,15

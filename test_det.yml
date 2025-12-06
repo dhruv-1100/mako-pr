@@ -172,9 +172,8 @@ site:
     - ["c1"]
 
 process:
-  s1: s1
-  c1: c1
+  s1: localhost
+  c1: localhost
 
 host:
-  s1: 127.0.0.1
-  c1: 127.0.0.1
+  localhost: 127.0.0.1

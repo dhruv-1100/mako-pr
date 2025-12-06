@@ -1,0 +1,7 @@
+mode,mode_name,run,success,commits,tps,duration
+occ,OCC + 2PC (multi_paxos),1,True,0,0,30
+occ,OCC + 2PC (multi_paxos),2,True,0,0,30
+occ,OCC + 2PC (multi_paxos),3,True,0,0,30
+deterministic,Deterministic (multi_paxos),1,True,0,0,30
+deterministic,Deterministic (multi_paxos),2,True,0,0,30
+deterministic,Deterministic (multi_paxos),3,True,0,0,30

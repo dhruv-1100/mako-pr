@@ -1,0 +1,18 @@
+sites:
+  - name: s1
+    ip: 127.0.0.1
+    port: 8000
+  - name: s2
+    ip: 127.0.0.1
+    port: 8001
+  - name: s3
+    ip: 127.0.0.1
+    port: 8002
+  - name: c1
+    ip: 127.0.0.1
+    port: 9000
+
+shard_map:
+  - [s1, s2, s3]
+
+warehouses: 1

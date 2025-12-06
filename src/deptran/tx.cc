@@ -61,12 +61,39 @@ mdb::Row* Tx::Query(mdb::Table *tbl,
       ret_row = it->second;
     } else {
       auto rs = mdb_txn()->query(tbl, mb);
+      if (!rs.has_next()) {
+          std::string key_str;
+          for (int i = 0; i < mb.count(); i++) {
+              if (mb[i].len == 4) {
+                  key_str += std::to_string(*(int32_t*)mb[i].data) + ", ";
+              } else {
+                  key_str += std::string(mb[i].data, mb[i].len) + ", ";
+              }
+          }
+          fprintf(stderr, "Tx::Query failed: Table %s, RowContextId %ld, Key: [%s]\n", tbl->Name().c_str(), row_context_id, key_str.c_str());
+          fflush(stderr);
+          verify(0);
+      }
       verify(rs.has_next());
       ret_row = rs.next();
       row_map[row_context_id] = ret_row;
     }
   } else {
-    ret_row = mdb_txn_->query(tbl, mb).next();
+    auto rs = mdb_txn_->query(tbl, mb);
+    if (!rs.has_next()) {
+         std::string key_str;
+         for (int i = 0; i < mb.count(); i++) {
+             if (mb[i].len == 4) {
+                 key_str += std::to_string(*(int32_t*)mb[i].data) + ", ";
+             } else {
+                 key_str += std::string(mb[i].data, mb[i].len) + ", ";
+             }
+         }
+         fprintf(stderr, "Tx::Query failed (no context): Table %s, Key: [%s]\n", tbl->Name().c_str(), key_str.c_str());
+         fflush(stderr);
+         verify(0);
+    }
+    ret_row = rs.next();
   }
   return ret_row;
 }

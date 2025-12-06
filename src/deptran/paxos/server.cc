@@ -35,8 +35,9 @@ void PaxosServer::OnAccept(const slotid_t slot_id,
                            ballot_t *max_ballot,
                            const function<void()> &cb) {
   std::lock_guard<std::recursive_mutex> lock(mtx_);
-  Log_info("multi-paxos scheduler accept for slot_id: %llx", slot_id);
   auto instance = GetInstance(slot_id);
+  Log_info("multi-paxos scheduler accept for slot_id: %llx, ballot: %llx, max_seen: %llx, max_accepted: %llx", 
+           slot_id, ballot, instance->max_ballot_seen_, instance->max_ballot_accepted_);
   verify(instance->max_ballot_accepted_ < ballot);
   if (instance->max_ballot_seen_ <= ballot) {
     instance->max_ballot_seen_ = ballot;
@@ -57,14 +58,17 @@ void PaxosServer::OnCommit(const slotid_t slot_id,
   Log_info("multi-paxos scheduler decide for slot: %lx", slot_id);
   auto instance = GetInstance(slot_id);
   instance->committed_cmd_ = cmd;
+  Log_info("PaxosServer::OnCommit slot %d, executed %d", slot_id, max_executed_slot_);
   if (slot_id > max_committed_slot_) {
     max_committed_slot_ = slot_id;
   }
-  verify(slot_id > max_executed_slot_);
+  if (slot_id <= max_executed_slot_) {
+      return;
+  }
   for (slotid_t id = max_executed_slot_ + 1; id <= max_committed_slot_; id++) {
     auto next_instance = GetInstance(id);
     if (next_instance->committed_cmd_) {
-      app_next_(slot_id,next_instance->committed_cmd_);
+      app_next_(id,next_instance->committed_cmd_);
       Log_info("apply multi-paxos par:%d loc:%d executed slot %lx now", partition_id_, loc_id_, id);
       max_executed_slot_++;
       n_commit_++;

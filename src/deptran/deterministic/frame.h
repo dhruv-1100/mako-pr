@@ -17,6 +17,7 @@ public:
   CreateRpcServices(uint32_t site_id, TxLogServer *dtxn_sched,
                     rusty::Arc<rrr::PollThreadWorker> poll_thread_worker,
                     ServerControlServiceImpl *scsi) override;
+  Communicator *CreateCommo(rusty::Arc<rrr::PollThreadWorker> poll_thread_worker) override;
 };
 
 } // namespace janus

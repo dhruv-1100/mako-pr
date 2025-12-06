@@ -1,0 +1,26 @@
+======================================================================
+Extended Benchmark Evaluation: Deterministic vs OCC
+======================================================================
+Duration: 15s per run
+Iterations: 1
+======================================================================
+
+>>> Deterministic (2 partitions) <<<
+  Iteration 1/1... OK |      0 commits |    0 tps
+
+>>> Deterministic (1 partition) <<<
+  Iteration 1/1... OK |      0 commits |    0 tps
+
+>>> OCC (1 partition) <<<
+  Iteration 1/1... OK |     99 commits |    6 tps
+
+======================================================================
+SUMMARY (Averages across iterations)
+======================================================================
+Config                         |    Commits |      TPS |  Lat(median)
+----------------------------------------------------------------------
+Deterministic (2 partitions)   |          0 |      0.0 |          0 us
+Deterministic (1 partition)    |          0 |      0.0 |          0 us
+OCC (1 partition)              |         99 |      6.0 |          0 us
+======================================================================
+Results saved to: extended_benchmark_20251205_120813.csv

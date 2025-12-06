@@ -1,7 +1,7 @@
 
 bench:
   workload: tpcc
-  scale: 3
+  scale: 1
   weight:
     new_order: 100
     payment: 0
@@ -9,15 +9,15 @@ bench:
     order_status: 0
     stock_level: 0
   population:
-    warehouse: 3
-    district: 10
-    customer: 30000
-    history: 30000
-    order: 30000
-    new_order: 9000
-    item: 100000
-    stock: 100000
-    order_line: 300000
+    warehouse: 2
+    district: 2
+    customer: 3000
+    history: 3000
+    order: 3000
+    new_order: 900
+    item: 10000
+    stock: 40000
+    order_line: 30000
 
 schema:
   - name: warehouse
@@ -56,53 +56,52 @@ schema:
       - {name: d_next_o_id, type: integer}
   - name: customer
     column:
-      - {name: c_id,        type: integer, primary: true}
-      - {name: c_d_id,      type: integer, primary: true, foreign: district.d_id}
-      - {name: c_w_id,      type: integer, primary: true, foreign: district.d_w_id}
-      - {name: c_first,     type: string}
-      - {name: c_middle,    type: string}
-      - {name: c_last,      type: string}
-      - {name: c_street_1,  type: string}
-      - {name: c_street_2,  type: string}
-      - {name: c_city,      type: string}
-      - {name: c_state,     type: string}
-      - {name: c_zip,       type: string}
-      - {name: c_phone,     type: string}
-      - {name: c_since,     type: string}
-      - {name: c_credit,    type: string}
-      - {name: c_credit_lim,    type: double}
-      - {name: c_discount,      type: double}
-      - {name: c_balance,       type: double}
-      - {name: c_ytd_payment,   type: double}
-      - {name: c_payment_cnt,   type: integer}
-      - {name: c_delivery_cnt,  type: integer}
-      - {name: c_data,          type: string}
+      - {name: c_id,         type: integer, primary: true}
+      - {name: c_d_id,       type: integer, primary: true, foreign: district.d_id}
+      - {name: c_w_id,       type: integer, primary: true, foreign: district.d_w_id}
+      - {name: c_first,      type: string}
+      - {name: c_middle,     type: string}
+      - {name: c_last,       type: string}
+      - {name: c_street_1,   type: string}
+      - {name: c_street_2,   type: string}
+      - {name: c_city,       type: string}
+      - {name: c_state,      type: string}
+      - {name: c_zip,        type: string}
+      - {name: c_phone,      type: string}
+      - {name: c_since,      type: string}
+      - {name: c_credit,     type: string}
+      - {name: c_credit_lim, type: double}
+      - {name: c_discount,   type: double}
+      - {name: c_balance,    type: double}
+      - {name: c_ytd_payment,type: double}
+      - {name: c_payment_cnt,type: integer}
+      - {name: c_delivery_cnt,type: integer}
+      - {name: c_data,       type: string}
   - name: history
     column:
-      - {name: h_key,     type: integer, primary: true}
-      - {name: h_c_id,    type: integer, foreign: customer.c_id}
-      - {name: h_c_d_id,  type: integer, foreign: customer.c_d_id}
-      - {name: h_c_w_id,  type: integer, foreign: customer.c_w_id}
-      - {name: h_d_id,    type: integer, foreign: district.d_id}
-      - {name: h_w_id,    type: integer, foreign: district.d_w_id}
-      - {name: h_date,    type: string}
-      - {name: h_amount,  type: double}
-      - {name: h_data,    type: string}
+      - {name: h_c_id,   type: integer, foreign: customer.c_id}
+      - {name: h_c_d_id, type: integer, foreign: customer.c_d_id}
+      - {name: h_c_w_id, type: integer, foreign: customer.c_w_id}
+      - {name: h_d_id,   type: integer, foreign: district.d_id}
+      - {name: h_w_id,   type: integer, foreign: district.d_w_id}
+      - {name: h_date,   type: string}
+      - {name: h_amount, type: double}
+      - {name: h_data,   type: string}
   - name: order
     column:
-      - {name: o_d_id,        type: integer, primary: true, foreign: district.d_id}
-      - {name: o_w_id,        type: integer, primary: true, foreign: district.d_w_id}
-      - {name: o_id,          type: integer, primary: true}
-      - {name: o_c_id,        type: integer, foreign: customer.c_id}
-      - {name: o_entry_d,     type: string}
-      - {name: o_carrier_id,  type: integer}
-      - {name: o_ol_cnt,      type: integer}
-      - {name: o_all_local,   type: integer}
+      - {name: o_d_id,       type: integer, primary: true, foreign: district.d_id}
+      - {name: o_w_id,       type: integer, primary: true, foreign: district.d_w_id}
+      - {name: o_id,         type: integer, primary: true}
+      - {name: o_c_id,       type: integer, foreign: customer.c_id}
+      - {name: o_entry_d,    type: string}
+      - {name: o_carrier_id, type: integer}
+      - {name: o_ol_cnt,     type: integer}
+      - {name: o_all_local,  type: integer}
   - name: new_order
     column:
+      - {name: no_o_id, type: integer, primary: true, foreign: order.o_id}
       - {name: no_d_id, type: integer, primary: true, foreign: order.o_d_id}
       - {name: no_w_id, type: integer, primary: true, foreign: order.o_w_id}
-      - {name: no_o_id, type: integer, primary: true, foreign: order.o_id}
   - name: item
     column:
       - {name: i_id,    type: integer, primary: true}
@@ -112,35 +111,35 @@ schema:
       - {name: i_data,  type: string}
   - name: stock
     column:
-      - {name: s_i_id,    type: integer, primary: true, foreign: item.i_id}
-      - {name: s_w_id,    type: integer, primary: true, foreign: warehouse.w_id}
-      - {name: s_quantity,type: integer}
-      - {name: s_dist_01, type: string}
-      - {name: s_dist_02, type: string}
-      - {name: s_dist_03, type: string}
-      - {name: s_dist_04, type: string}
-      - {name: s_dist_05, type: string}
-      - {name: s_dist_06, type: string}
-      - {name: s_dist_07, type: string}
-      - {name: s_dist_08, type: string}
-      - {name: s_dist_09, type: string}
-      - {name: s_dist_10, type: string}
-      - {name: s_ytd,         type: integer}
-      - {name: s_order_cnt,   type: integer}
-      - {name: s_remote_cnt,  type: integer}
-      - {name: s_data,        type: string}
+      - {name: s_i_id,       type: integer, primary: true, foreign: item.i_id}
+      - {name: s_w_id,       type: integer, primary: true, foreign: warehouse.w_id}
+      - {name: s_quantity,   type: integer}
+      - {name: s_dist_01,    type: string}
+      - {name: s_dist_02,    type: string}
+      - {name: s_dist_03,    type: string}
+      - {name: s_dist_04,    type: string}
+      - {name: s_dist_05,    type: string}
+      - {name: s_dist_06,    type: string}
+      - {name: s_dist_07,    type: string}
+      - {name: s_dist_08,    type: string}
+      - {name: s_dist_09,    type: string}
+      - {name: s_dist_10,    type: string}
+      - {name: s_ytd,        type: integer}
+      - {name: s_order_cnt,  type: integer}
+      - {name: s_remote_cnt, type: integer}
+      - {name: s_data,       type: string}
   - name: order_line
     column:
-      - {name: ol_d_id,   type: integer, primary: true, foreign: order.o_d_id}
-      - {name: ol_w_id,   type: integer, primary: true, foreign: order.o_w_id}
-      - {name: ol_o_id,   type: integer, primary: true, foreign: order.o_id}
-      - {name: ol_number, type: integer, primary: true}
-      - {name: ol_i_id,   type: integer, foreign: stock.s_i_id}
-      - {name: ol_supply_w_id,  type: integer, foreign: stock.s_w_id}
-      - {name: ol_delivery_d,   type: string}
-      - {name: ol_quantity,     type: integer}
-      - {name: ol_amount,       type: double}
-      - {name: ol_dist_info,    type: string}
+      - {name: ol_o_id,        type: integer, primary: true, foreign: order.o_id}
+      - {name: ol_d_id,        type: integer, primary: true, foreign: order.o_d_id}
+      - {name: ol_w_id,        type: integer, primary: true, foreign: order.o_w_id}
+      - {name: ol_number,      type: integer, primary: true}
+      - {name: ol_i_id,        type: integer, foreign: item.i_id}
+      - {name: ol_supply_w_id, type: integer, foreign: warehouse.w_id}
+      - {name: ol_delivery_d,  type: string}
+      - {name: ol_quantity,    type: integer}
+      - {name: ol_amount,      type: double}
+      - {name: ol_dist_info,   type: string}
 
 sharding:
   warehouse:  MOD
@@ -167,20 +166,18 @@ client:
 
 site:
   server:
-    - ["s101:8100"]
-    - ["s201:8101"]
-    - ["s301:8102"]
+    - ["s1:18101"]
+    - ["s2:18102"]
   client:
-    - ["c101"]
+    - ["c1:18100"]
 
 process:
-  s101: s101
-  s201: s201
-  s301: s301
-  c101: c101
+  s1: s1_proc
+  s2: s2_proc
+  c1: c1_proc
 
 host:
-  s101: 127.0.0.1
-  s201: 127.0.0.1
-  s301: 127.0.0.1
-  c101: 127.0.0.1
+  localhost: 127.0.0.1
+  s1_proc: 127.0.0.1
+  s2_proc: 127.0.0.1
+  c1_proc: 127.0.0.1

@@ -1,0 +1,22 @@
+============================================================
+DETERMINISTIC MODE EVALUATION
+============================================================
+Timestamp: 20251205_131846
+Duration per test: 15s
+
+============================================================
+TEST 1: Reproducibility (Same Input → Same Output)
+============================================================
+  Run 1/3... 34 commits
+  Run 2/3... 570 commits
+  Run 3/3... 424 commits
+
+  ✓ All runs completed successfully
+  ✓ Commits per run: [34, 570, 424]
+  ✓ Variation: 156.4% (timing-dependent)
+
+============================================================
+TEST 2: Partition Scaling
+============================================================
+  2 Partitions: 186 commits, 12.4 TPS
+  3 Partitions: 

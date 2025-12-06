@@ -24,6 +24,7 @@ class CoordinatorMultiPaxos : public Coordinator {
   bool in_commit = false;
   shared_ptr<Marshallable> cmd_{nullptr};
   vector<pair<ballot_t, shared_ptr<Marshallable>>> vec_md{};
+  std::set<parid_t> partitions_ = {};
   CoordinatorMultiPaxos(uint32_t coo_id,
                         int32_t benchmark,
                         ClientControlServiceImpl *ccsi,

@@ -71,13 +71,12 @@ void CoordinatorDeterministic::DoTxAsync(TxRequest &req) {
     }
     reply.tx_id_ = tx_data->txn_id_; // Assuming TxData has txn_id_
     
-    callback(reply);
-    
-    // Clean up tx_data? It was created by frame.
+    // Clean up tx_data allocated by Frame::CreateTxnCommand
     delete tx_data;
+    callback(reply);
   };
   
-  Log_info("Sending Dispatch to Sequencer");
+  // Log_info("Sending Dispatch to Sequencer");
   Future::safe_release(proxy->async_Dispatch(tx_data->txn_id_, md, fuattr));
 }
 

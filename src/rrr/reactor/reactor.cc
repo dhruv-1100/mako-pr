@@ -293,7 +293,10 @@ void PollThreadWorker::poll_loop() const {
     TriggerJob();
     // Wait() now directly casts userdata to Pollable* and calls handlers
     // Safe because deferred removal guarantees object stays in fd_to_pollable_ map
+    static int loop_cnt = 0;
+    if (loop_cnt++ % 1000 == 0) Log_info("PollThreadWorker::poll_loop wait %d", loop_cnt);
     poll_.Wait();
+    // Log_debug("PollThreadWorker::poll_loop wait return");
     TriggerJob();
 
     // Process deferred removals AFTER all events handled

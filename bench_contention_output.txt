@@ -1,0 +1,23 @@
+============================================================
+Deterministic Mode Contention Benchmark
+============================================================
+
+>>> Running high_contention <<<
+  Iteration 1/2...
+    Result: OK, Commits: 0, TPS: 0
+  Iteration 2/2...
+    Result: OK, Commits: 0, TPS: 0
+
+>>> Running low_contention <<<
+  Iteration 1/2...
+    Result: FAIL, Commits: 0, TPS: 0
+  Iteration 2/2...
+    Result: FAIL, Commits: 0, TPS: 0
+
+============================================================
+SUMMARY
+============================================================
+high_contention      | Avg TPS:    0.0 | Avg Commits:    0.0
+low_contention       | Avg TPS:    0.0 | Avg Commits:    0.0
+
+Results saved to: deterministic_benchmark_20251205_114752.csv

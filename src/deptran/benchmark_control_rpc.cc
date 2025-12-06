@@ -294,8 +294,10 @@ void ClientControlServiceImpl::client_ready(rrr::i32 *res, DeferredReply* defer)
 }
 
 void ClientControlServiceImpl::client_start(DeferredReply* defer) {
+  Log_info("ClientControlServiceImpl::client_start enter");
   status_mutex_.lock();
   status_ = CCS_RUN;
+  Log_info("ClientControlServiceImpl::client_start set CCS_RUN");
   status_cond_.bcast();
   clock_gettime(&start_time_);
   last_time_ = start_time_;
@@ -305,19 +307,25 @@ void ClientControlServiceImpl::client_start(DeferredReply* defer) {
 }
 
 void ClientControlServiceImpl::wait_for_start(unsigned int id) {
+  Log_info("ClientControlServiceImpl::wait_for_start enter %d", id);
   status_mutex_.lock();
   coo_threads_[id] = (pthread_t *) malloc(sizeof(pthread_t));
   *(coo_threads_[id]) = pthread_self();
   if (++num_ready_ == num_threads_) {
+    Log_info("ClientControlServiceImpl::wait_for_start all ready");
     status_ = CCS_READY;
     for (auto it : ready_block_defers_) {
       it->reply();
     }
     ready_block_defers_.clear();
   }
-  while (CCS_RUN != status_ && CCS_STOP != status_)
+  while (CCS_RUN != status_ && CCS_STOP != status_) {
+    Log_info("ClientControlServiceImpl::wait_for_start waiting, status: %d", status_);
     status_cond_.wait(status_mutex_);
+    Log_info("ClientControlServiceImpl::wait_for_start woke up, status: %d", status_);
+  }
   status_mutex_.unlock();
+  Log_info("ClientControlServiceImpl::wait_for_start exit");
 }
 
 void ClientControlServiceImpl::wait_for_shutdown() {

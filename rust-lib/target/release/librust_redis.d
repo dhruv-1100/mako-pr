@@ -1,0 +1,1 @@
+/home/dp012/Desktop/gitmac/mako-pr/rust-lib/target/release/librust_redis.a: /home/dp012/Desktop/gitmac/mako-pr/rust-lib/build.rs /home/dp012/Desktop/gitmac/mako-pr/rust-lib/src/lib.rs /home/dp012/Desktop/gitmac/mako-pr/rust-lib/src/resp3_handler.rs

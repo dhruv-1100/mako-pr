@@ -14,8 +14,9 @@ public:
   void Execute(Tx &txn_box, innid_t inn_id) override;
   int Next(int slot_id, shared_ptr<Marshallable> cmd) override;
   bool Dispatch(cmdid_t cmd_id, shared_ptr<Marshallable> cmd, TxnOutput& ret_output) override;
+  void OnCommit(const slotid_t slot_id, const ballot_t ballot, shared_ptr<Marshallable> &cmd) override;
 
-private:
+protected:
   // Queue to hold transactions that are ready to be executed but waiting for
   // their turn
   map<int, shared_ptr<Marshallable>> pending_txns_;

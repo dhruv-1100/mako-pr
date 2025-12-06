@@ -42,6 +42,7 @@ void ClassicServiceImpl::Dispatch(const i64& cmd_id,
                                   int32_t* res,
                                   TxnOutput* output,
                                   rrr::DeferredReply* defer) {
+  Log_info("ClassicServiceImpl::Dispatch cmd_id: %lu", cmd_id);
 //  std::lock_guard<std::mutex> guard(mtx_);
 
 #ifdef PIECE_COUNT
@@ -61,11 +62,25 @@ void ClassicServiceImpl::Dispatch(const i64& cmd_id,
   // find stored procedure, and run it
   shared_ptr<Marshallable> sp = md.sp_data_;
   auto func = [cmd_id, sp, output, res, this, defer]() {
+    Log_info("ClassicServiceImpl::Dispatch coroutine start cmd_id: %lu", cmd_id);
     *res = SUCCESS;
-    if (!dtxn_sched()->Dispatch(cmd_id, sp, *output)) {
-      *res = REJECT;
+    if (dtxn_sched() == nullptr) {
+        Log_fatal("ClassicServiceImpl::Dispatch dtxn_sched is null!");
     }
-    defer->reply();
+    Log_info("ClassicServiceImpl::Dispatch calling dtxn_sched->Dispatch");
+    if (dtxn_sched()->Dispatch(cmd_id, sp, *output)) {
+        Log_info("Service::Dispatch: dtxn_sched->Dispatch returned true. Output size: %d", (int)output->size());
+        defer->reply();
+        Log_info("Service::Dispatch: defer->reply() called");
+    } else {
+        *res = REJECT; // Keep original behavior for REJECT
+        Log_info("Service::Dispatch: dtxn_sched->Dispatch returned false (async)");
+        // Original code always called defer->reply() here.
+        // If the intent is to reply only on sync completion, then this defer->reply() should be removed.
+        // Assuming the original behavior of always replying is intended, but with logs.
+        defer->reply();
+    }
+    Log_info("ClassicServiceImpl::Dispatch coroutine end cmd_id: %lu", cmd_id);
   };
   Coroutine::CreateRun(func);
 }

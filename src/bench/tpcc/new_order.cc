@@ -225,7 +225,7 @@ void TpccWorkload::RegNewOrder() {
     // 1000 is a magical number?
     RegP(TPCC_NEW_ORDER, TPCC_NEW_ORDER_RI(i),
          {TPCC_VAR_I_ID(i)}, // i
-         {}, // o
+         {TPCC_VAR_I_PRICE(i)}, // o: Removed I_NAME, I_DATA
          {}, // no conflict
          {TPCC_TB_ITEM, {TPCC_VAR_I_ID(i)}}, // s
          DF_NO,
@@ -239,18 +239,12 @@ void TpccWorkload::RegNewOrder() {
                            cmd.input[TPCC_VAR_I_ID(i)].get_blob(),
                            ROW_ITEM);
            // Ri item
-           tx.ReadColumn(row_item,
-                            TPCC_COL_ITEM_I_NAME,
-                            &output[TPCC_VAR_I_NAME(i)],
-                            TXN_BYPASS);
+           // Removed I_NAME read
            tx.ReadColumn(row_item,
                             TPCC_COL_ITEM_I_PRICE,
                             &output[TPCC_VAR_I_PRICE(i)],
                             TXN_BYPASS);
-           tx.ReadColumn(row_item,
-                            TPCC_COL_ITEM_I_DATA,
-                            &output[TPCC_VAR_I_DATA(i)],
-                            TXN_BYPASS);
+           // Removed I_DATA read
 
            *res = SUCCESS;
            return;
@@ -260,7 +254,7 @@ void TpccWorkload::RegNewOrder() {
     // 1000 is a magical number?
     RegP(TPCC_NEW_ORDER, TPCC_NEW_ORDER_RS(i),
          {TPCC_VAR_D_ID, TPCC_VAR_I_ID(i), TPCC_VAR_S_W_ID(i)}, // i
-         {}, // o
+         {TPCC_VAR_OL_DIST_INFO(i)}, // o: Removed S_DATA
          {}, // no conflict
          {TPCC_TB_STOCK, {TPCC_VAR_S_W_ID(i)}}, //s
          DF_NO,
@@ -285,9 +279,7 @@ void TpccWorkload::RegNewOrder() {
            tx.ReadColumn(r, TPCC_COL_STOCK_S_DIST_XX,
                             &output[TPCC_VAR_OL_DIST_INFO(i)],
                             TXN_BYPASS); // 0 ==> s_dist_xx
-           tx.ReadColumn(r, TPCC_COL_STOCK_S_DATA,
-                            &output[TPCC_VAR_S_DATA(i)],
-                            TXN_BYPASS); // 1 ==> s_data
+           // Removed S_DATA read
            *res = SUCCESS;
            return;
          }

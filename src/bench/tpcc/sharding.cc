@@ -57,6 +57,9 @@ int TpccSharding::PopulateTable(tb_info_t *tb_info_ptr, parid_t par_id) {
         }
       }
       if (col_index == tb_info_ptr->columns.size()) {
+        if (tb_info_ptr->tb_name == TPCC_TB_STOCK) {
+             // Verbose logs removed
+        }
         auto row = frame_->CreateRow(schema, row_data);
         table_ptr->insert(row);
       }
@@ -100,6 +103,12 @@ int TpccSharding::PopulateTable(tb_info_t *tb_info_ptr, parid_t par_id) {
           else {
             column_t *foreign_column = tb_info_ptr->columns[col_index].foreign;
             tmp_int = foreign_column->values->size();
+            if (tb_info_ptr->tb_name == TPCC_TB_STOCK && foreign_column->name == "w_id") {
+                 fprintf(stderr, "PopulateTable: Stock foreign w_id size: %d on par_id=%d\n", tmp_int, par_id);
+                 for(auto& v : *foreign_column->values) {
+                     fprintf(stderr, "PopulateTable: Stock foreign w_id value: %d on par_id=%d\n", v.get_i32(), par_id);
+                 }
+            }
             if (tb_info_ptr->columns[col_index].values != NULL) {
               tb_info_ptr->columns[col_index].values->assign(foreign_column->values->begin(),
                                                              foreign_column->values->end());
@@ -139,6 +148,13 @@ int TpccSharding::PopulateTable(tb_info_t *tb_info_ptr, parid_t par_id) {
 
       bool record_key = true;
       init_index(prim_foreign_index);
+      if (tb_info_ptr->tb_name == TPCC_TB_STOCK) {
+          fprintf(stderr, "PopulateTable: Stock num_records: %llu\n", tb_info_ptr->num_records);
+          fprintf(stderr, "PopulateTable: Stock prim_foreign_index size: %lu\n", prim_foreign_index.size());
+          for(auto& pair : prim_foreign_index) {
+              fprintf(stderr, "PopulateTable: Stock col %u size %u\n", pair.first, pair.second.second);
+          }
+      }
       int counter = 0;
       while (true) {
         row_data.clear();
@@ -298,8 +314,11 @@ int TpccSharding::PopulateTable(tb_info_t *tb_info_ptr, parid_t par_id) {
           if (0 != index_increase(prim_foreign_index))
             verify(0);
         }
-        else if (0 != index_increase(prim_foreign_index))
-          break;
+        else {
+            int res = index_increase(prim_foreign_index);
+            if (0 != res)
+              break;
+        }
       }
     }
   }

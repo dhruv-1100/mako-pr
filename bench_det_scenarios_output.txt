@@ -1,0 +1,77 @@
+===========================================================================
+Deterministic Mode Comprehensive Benchmark
+===========================================================================
+Duration: 20s | Iterations: 2
+===========================================================================
+
+>>> 1P-NoRep_new_order <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 1P-NoRep_mixed <<<
+  Run 1/2... OK |    2 commits | 0.1 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.1 TPS
+
+>>> 1P-NoRep_payment <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 1P-3Rep_new_order <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 1P-3Rep_mixed <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 1P-3Rep_payment <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 2P-NoRep_new_order <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |   46 commits | 2.3 TPS
+  Avg: 1.1 TPS
+
+>>> 2P-NoRep_mixed <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 2P-NoRep_payment <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 2P-3Rep_new_order <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |  219 commits | 10.9 TPS
+  Avg: 5.5 TPS
+
+>>> 2P-3Rep_mixed <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+>>> 2P-3Rep_payment <<<
+  Run 1/2... OK |    0 commits | 0.0 TPS
+  Run 2/2... OK |    0 commits | 0.0 TPS
+  Avg: 0.0 TPS
+
+===========================================================================
+SUMMARY (Average TPS)
+===========================================================================
+Scenario        |    new_order |        mixed |      payment
+---------------------------------------------------------------------------
+1P-NoRep        |          0.0 |          0.1 |          0.0
+1P-3Rep         |          0.0 |          0.0 |          0.0
+2P-NoRep        |          1.1 |          0.0 |          0.0
+2P-3Rep         |          5.5 |          0.0 |          0.0
+===========================================================================
+Results saved to: deterministic_scenarios_20251205_123446.csv

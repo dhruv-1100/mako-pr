@@ -67,7 +67,7 @@ class PaxosServer : public TxLogServer {
                 ballot_t *max_ballot,
                 const function<void()> &cb);
 
-  void OnCommit(const slotid_t slot_id,
+  virtual void OnCommit(const slotid_t slot_id,
                 const ballot_t ballot,
                 shared_ptr<Marshallable> &cmd);
 

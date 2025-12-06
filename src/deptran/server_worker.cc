@@ -128,7 +128,7 @@ void ServerWorker::SetupService() {
 
   // init rrr::PollThreadWorker
   svr_poll_thread_worker_ = PollThreadWorker::create();
-//  svr_thread_pool_ = new rrr::ThreadPool(1);
+  svr_thread_pool_ = new base::ThreadPool(1);
 
   // init service implementation
 
@@ -159,6 +159,7 @@ void ServerWorker::SetupService() {
 
   // reg services
   for (auto service : services_) {
+    Log_info("ServerWorker::SetupService registering service: %p", service);
     rpc_server_->reg(service);
   }
 

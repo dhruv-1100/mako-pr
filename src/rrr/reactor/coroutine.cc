@@ -19,6 +19,7 @@ Coroutine::~Coroutine() {
 }
 
 void Coroutine::BoostRunWrapper(boost_coro_yield_t& yield) {
+  Log_info("Coroutine::BoostRunWrapper start: %p", this);
   boost_coro_yield_ = yield;
   verify(func_);
   auto reactor = Reactor::GetReactor();
@@ -37,6 +38,7 @@ void Coroutine::Run() {
   verify(!up_boost_coro_task_);
   verify(status_ == INIT);
   status_ = STARTED;
+  Log_info("Coroutine::Run start: %p", this);
   auto reactor = Reactor::GetReactor();
 //  reactor->coros_;
   auto sz = reactor->coros_.size();

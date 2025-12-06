@@ -1,0 +1,5 @@
+config,iteration,success,commits,tps,duration
+high_contention,1,True,0,0,15
+high_contention,2,True,0,0,15
+low_contention,1,False,0,0,15
+low_contention,2,False,0,0,15

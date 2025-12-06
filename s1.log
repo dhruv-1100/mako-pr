@@ -1,0 +1,457 @@
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:124] 2025-12-04 12:05:46.237 | PWD : 
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:136] 2025-12-04 12:05:46.237 | starting process 66586
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:290] 2025-12-04 12:05:46.237 | LoadYML: test_det_3replicas.yml
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:689] 2025-12-04 12:05:46.239 | group size: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/config.cc:713] 2025-12-04 12:05:46.239 | client forwarding: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:66] 2025-12-04 12:05:46.239 | server enabled, number of sites: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:72] 2025-12-04 12:05:46.240 | launching site: 0, bind address 0.0.0.0:18101
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:79] 2025-12-04 12:05:46.249 | start data population for site 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:106] 2025-12-04 12:05:48.273 | data populated for site: 0, partition: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:82] 2025-12-04 12:05:48.273 | table popped for site 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:121] 2025-12-04 12:05:48.273 | enter SetupService for s1 @ 0.0.0.0:18101
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:162] 2025-12-04 12:05:48.274 | ServerWorker::SetupService registering service: 0x7a7a4888a150
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:162] 2025-12-04 12:05:48.274 | ServerWorker::SetupService registering service: 0x7a7a60004930
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:48.274 | PollThreadWorker::poll_loop wait 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:173] 2025-12-04 12:05:48.274 | Server s1 ready at 0.0.0.0:18101
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:85] 2025-12-04 12:05:48.274 | start communication for site 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:14] 2025-12-04 12:05:48.274 | setup paxos communicator
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:48.274 | connect to site: 127.0.0.1:18101 (attempt 0)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:48.274 | connect to site: 127.0.0.1:18102 (attempt 0)
+E [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/client.cpp:179] 2025-12-04 12:05:48.274 | rrr::Client: connect(127.0.0.1:18102): Connection refused
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:49.274 | connect to site: 127.0.0.1:18102 (attempt 1)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:49.274 | connect to site: 127.0.0.1:18103 (attempt 0)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:14] 2025-12-04 12:05:49.274 | setup paxos communicator
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:49.274 | connect to site: 127.0.0.1:18101 (attempt 0)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:49.275 | connect to site: 127.0.0.1:18102 (attempt 0)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/communicator.cc:174] 2025-12-04 12:05:49.275 | connect to site: 127.0.0.1:18103 (attempt 0)
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:87] 2025-12-04 12:05:49.275 | site 0 launched!
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:49.428 | PollThreadWorker::poll_loop wait 1001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:98] 2025-12-04 12:05:50.241 | waiting for server setup threads.
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:102] 2025-12-04 12:05:50.241 | done waiting for server setup threads.
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/server_worker.cc:32] 2025-12-04 12:05:50.241 | heartbeat setup for s1 on 0.0.0.0:28101
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/s_main.cc:109] 2025-12-04 12:05:50.241 | server workers' communicators setup
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:50.589 | PollThreadWorker::poll_loop wait 2001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:51.765 | PollThreadWorker::poll_loop wait 3001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:52.969 | PollThreadWorker::poll_loop wait 4001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:54.149 | PollThreadWorker::poll_loop wait 5001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:55.328 | PollThreadWorker::poll_loop wait 6001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:56.532 | PollThreadWorker::poll_loop wait 7001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:57.702 | PollThreadWorker::poll_loop wait 8001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:05:58.857 | PollThreadWorker::poll_loop wait 9001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:00.039 | PollThreadWorker::poll_loop wait 10001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:01.177 | PollThreadWorker::poll_loop wait 11001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:02.304 | PollThreadWorker::poll_loop wait 12001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:03.435 | PollThreadWorker::poll_loop wait 13001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:04.570 | PollThreadWorker::poll_loop wait 14001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:05.692 | PollThreadWorker::poll_loop wait 15001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:06.819 | PollThreadWorker::poll_loop wait 16001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:07.977 | PollThreadWorker::poll_loop wait 17001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:09.150 | PollThreadWorker::poll_loop wait 18001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:10.324 | PollThreadWorker::poll_loop wait 19001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:11.459 | PollThreadWorker::poll_loop wait 20001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:12.606 | PollThreadWorker::poll_loop wait 21001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:13.761 | PollThreadWorker::poll_loop wait 22001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:14.935 | PollThreadWorker::poll_loop wait 23001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:16.078 | PollThreadWorker::poll_loop wait 24001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:17.284 | PollThreadWorker::poll_loop wait 25001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:18.456 | PollThreadWorker::poll_loop wait 26001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:19.613 | PollThreadWorker::poll_loop wait 27001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:20.750 | PollThreadWorker::poll_loop wait 28001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:21.889 | PollThreadWorker::poll_loop wait 29001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:23.044 | PollThreadWorker::poll_loop wait 30001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:24.207 | PollThreadWorker::poll_loop wait 31001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:25.368 | PollThreadWorker::poll_loop wait 32001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:26.519 | PollThreadWorker::poll_loop wait 33001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:27.705 | PollThreadWorker::poll_loop wait 34001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:28.884 | PollThreadWorker::poll_loop wait 35001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:30.044 | PollThreadWorker::poll_loop wait 36001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:31.173 | PollThreadWorker::poll_loop wait 37001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:32.349 | PollThreadWorker::poll_loop wait 38001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:33.501 | PollThreadWorker::poll_loop wait 39001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:34.695 | PollThreadWorker::poll_loop wait 40001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:35.866 | PollThreadWorker::poll_loop wait 41001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:37.024 | PollThreadWorker::poll_loop wait 42001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:38.192 | PollThreadWorker::poll_loop wait 43001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:39.320 | PollThreadWorker::poll_loop wait 44001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:40.459 | PollThreadWorker::poll_loop wait 45001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:41.624 | PollThreadWorker::poll_loop wait 46001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:42.792 | PollThreadWorker::poll_loop wait 47001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:43.949 | PollThreadWorker::poll_loop wait 48001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:45.137 | PollThreadWorker::poll_loop wait 49001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:46.313 | PollThreadWorker::poll_loop wait 50001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:47.454 | PollThreadWorker::poll_loop wait 51001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:48.594 | PollThreadWorker::poll_loop wait 52001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:49.767 | PollThreadWorker::poll_loop wait 53001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:50.937 | PollThreadWorker::poll_loop wait 54001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:52.109 | PollThreadWorker::poll_loop wait 55001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:53.274 | PollThreadWorker::poll_loop wait 56001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:54.433 | PollThreadWorker::poll_loop wait 57001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:55.577 | PollThreadWorker::poll_loop wait 58001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:56.702 | PollThreadWorker::poll_loop wait 59001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:57.831 | PollThreadWorker::poll_loop wait 60001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:06:58.957 | PollThreadWorker::poll_loop wait 61001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:00.076 | PollThreadWorker::poll_loop wait 62001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:01.222 | PollThreadWorker::poll_loop wait 63001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:02.412 | PollThreadWorker::poll_loop wait 64001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:03.581 | PollThreadWorker::poll_loop wait 65001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:04.747 | PollThreadWorker::poll_loop wait 66001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:05.905 | PollThreadWorker::poll_loop wait 67001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:07.066 | PollThreadWorker::poll_loop wait 68001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:08.232 | PollThreadWorker::poll_loop wait 69001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:09.395 | PollThreadWorker::poll_loop wait 70001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:10.571 | PollThreadWorker::poll_loop wait 71001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:11.748 | PollThreadWorker::poll_loop wait 72001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:12.918 | PollThreadWorker::poll_loop wait 73001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:14.078 | PollThreadWorker::poll_loop wait 74001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:15.245 | PollThreadWorker::poll_loop wait 75001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:16.407 | PollThreadWorker::poll_loop wait 76001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:17.574 | PollThreadWorker::poll_loop wait 77001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:18.694 | PollThreadWorker::poll_loop wait 78001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:19.812 | PollThreadWorker::poll_loop wait 79001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:20.937 | PollThreadWorker::poll_loop wait 80001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:22.069 | PollThreadWorker::poll_loop wait 81001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:23.205 | PollThreadWorker::poll_loop wait 82001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:24.326 | PollThreadWorker::poll_loop wait 83001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:25.453 | PollThreadWorker::poll_loop wait 84001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:26.584 | PollThreadWorker::poll_loop wait 85001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:27.727 | PollThreadWorker::poll_loop wait 86001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:28.874 | PollThreadWorker::poll_loop wait 87001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:30.035 | PollThreadWorker::poll_loop wait 88001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:31.192 | PollThreadWorker::poll_loop wait 89001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:32.360 | PollThreadWorker::poll_loop wait 90001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:33.529 | PollThreadWorker::poll_loop wait 91001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:34.692 | PollThreadWorker::poll_loop wait 92001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:35.811 | PollThreadWorker::poll_loop wait 93001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:36.934 | PollThreadWorker::poll_loop wait 94001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:38.088 | PollThreadWorker::poll_loop wait 95001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:39.270 | PollThreadWorker::poll_loop wait 96001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:40.422 | PollThreadWorker::poll_loop wait 97001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:41.583 | PollThreadWorker::poll_loop wait 98001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:42.736 | PollThreadWorker::poll_loop wait 99001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:43.886 | PollThreadWorker::poll_loop wait 100001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:45.018 | PollThreadWorker::poll_loop wait 101001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:46.148 | PollThreadWorker::poll_loop wait 102001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:47.284 | PollThreadWorker::poll_loop wait 103001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:48.415 | PollThreadWorker::poll_loop wait 104001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:49.553 | PollThreadWorker::poll_loop wait 105001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:50.700 | PollThreadWorker::poll_loop wait 106001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:51.847 | PollThreadWorker::poll_loop wait 107001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:52.000 | PollThreadWorker::poll_loop wait 108001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:54.138 | PollThreadWorker::poll_loop wait 109001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:55.256 | PollThreadWorker::poll_loop wait 110001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:56.372 | PollThreadWorker::poll_loop wait 111001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:57.490 | PollThreadWorker::poll_loop wait 112001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:58.613 | PollThreadWorker::poll_loop wait 113001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:07:59.743 | PollThreadWorker::poll_loop wait 114001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:00.880 | PollThreadWorker::poll_loop wait 115001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:02.084 | PollThreadWorker::poll_loop wait 116001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:03.239 | PollThreadWorker::poll_loop wait 117001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:04.380 | PollThreadWorker::poll_loop wait 118001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:05.552 | PollThreadWorker::poll_loop wait 119001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:06.737 | PollThreadWorker::poll_loop wait 120001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:07.904 | PollThreadWorker::poll_loop wait 121001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:09.046 | PollThreadWorker::poll_loop wait 122001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:10.200 | PollThreadWorker::poll_loop wait 123001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:11.366 | PollThreadWorker::poll_loop wait 124001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:12.536 | PollThreadWorker::poll_loop wait 125001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:13.743 | PollThreadWorker::poll_loop wait 126001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:14.915 | PollThreadWorker::poll_loop wait 127001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:16.055 | PollThreadWorker::poll_loop wait 128001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:17.194 | PollThreadWorker::poll_loop wait 129001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:18.333 | PollThreadWorker::poll_loop wait 130001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:19.499 | PollThreadWorker::poll_loop wait 131001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:20.618 | PollThreadWorker::poll_loop wait 132001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:21.767 | PollThreadWorker::poll_loop wait 133001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:22.946 | PollThreadWorker::poll_loop wait 134001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:24.101 | PollThreadWorker::poll_loop wait 135001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:25.277 | PollThreadWorker::poll_loop wait 136001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:26.464 | PollThreadWorker::poll_loop wait 137001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:27.655 | PollThreadWorker::poll_loop wait 138001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:28.815 | PollThreadWorker::poll_loop wait 139001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:30.007 | PollThreadWorker::poll_loop wait 140001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:31.173 | PollThreadWorker::poll_loop wait 141001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:32.333 | PollThreadWorker::poll_loop wait 142001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:33.476 | PollThreadWorker::poll_loop wait 143001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:34.615 | PollThreadWorker::poll_loop wait 144001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:35.798 | PollThreadWorker::poll_loop wait 145001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:36.982 | PollThreadWorker::poll_loop wait 146001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:38.143 | PollThreadWorker::poll_loop wait 147001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:39.330 | PollThreadWorker::poll_loop wait 148001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:40.484 | PollThreadWorker::poll_loop wait 149001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:41.667 | PollThreadWorker::poll_loop wait 150001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:42.833 | PollThreadWorker::poll_loop wait 151001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:43.962 | PollThreadWorker::poll_loop wait 152001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:45.107 | PollThreadWorker::poll_loop wait 153001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:46.283 | PollThreadWorker::poll_loop wait 154001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:47.447 | PollThreadWorker::poll_loop wait 155001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:48.598 | PollThreadWorker::poll_loop wait 156001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:49.733 | PollThreadWorker::poll_loop wait 157001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:50.888 | PollThreadWorker::poll_loop wait 158001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:52.099 | PollThreadWorker::poll_loop wait 159001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:53.223 | PollThreadWorker::poll_loop wait 160001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:54.363 | PollThreadWorker::poll_loop wait 161001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:55.548 | PollThreadWorker::poll_loop wait 162001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:56.705 | PollThreadWorker::poll_loop wait 163001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:57.847 | PollThreadWorker::poll_loop wait 164001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:08:59.009 | PollThreadWorker::poll_loop wait 165001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:00.178 | PollThreadWorker::poll_loop wait 166001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:01.304 | PollThreadWorker::poll_loop wait 167001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:02.429 | PollThreadWorker::poll_loop wait 168001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:03.584 | PollThreadWorker::poll_loop wait 169001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:04.778 | PollThreadWorker::poll_loop wait 170001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:05.959 | PollThreadWorker::poll_loop wait 171001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:07.141 | PollThreadWorker::poll_loop wait 172001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:08.283 | PollThreadWorker::poll_loop wait 173001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:09.427 | PollThreadWorker::poll_loop wait 174001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:10.566 | PollThreadWorker::poll_loop wait 175001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:11.754 | PollThreadWorker::poll_loop wait 176001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:12.945 | PollThreadWorker::poll_loop wait 177001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:14.160 | PollThreadWorker::poll_loop wait 178001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:15.324 | PollThreadWorker::poll_loop wait 179001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:16.485 | PollThreadWorker::poll_loop wait 180001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:17.671 | PollThreadWorker::poll_loop wait 181001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:18.819 | PollThreadWorker::poll_loop wait 182001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:19.972 | PollThreadWorker::poll_loop wait 183001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:21.096 | PollThreadWorker::poll_loop wait 184001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:22.232 | PollThreadWorker::poll_loop wait 185001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:23.396 | PollThreadWorker::poll_loop wait 186001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:24.547 | PollThreadWorker::poll_loop wait 187001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:25.719 | PollThreadWorker::poll_loop wait 188001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:26.869 | PollThreadWorker::poll_loop wait 189001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:28.022 | PollThreadWorker::poll_loop wait 190001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:29.164 | PollThreadWorker::poll_loop wait 191001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:30.291 | PollThreadWorker::poll_loop wait 192001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:31.438 | PollThreadWorker::poll_loop wait 193001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:32.636 | PollThreadWorker::poll_loop wait 194001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:33.809 | PollThreadWorker::poll_loop wait 195001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:34.973 | PollThreadWorker::poll_loop wait 196001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:36.157 | PollThreadWorker::poll_loop wait 197001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:37.313 | PollThreadWorker::poll_loop wait 198001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:38.468 | PollThreadWorker::poll_loop wait 199001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:39.628 | PollThreadWorker::poll_loop wait 200001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:40.780 | PollThreadWorker::poll_loop wait 201001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:41.945 | PollThreadWorker::poll_loop wait 202001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:43.089 | PollThreadWorker::poll_loop wait 203001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:44.246 | PollThreadWorker::poll_loop wait 204001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:45.382 | PollThreadWorker::poll_loop wait 205001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:46.602 | PollThreadWorker::poll_loop wait 206001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:47.809 | PollThreadWorker::poll_loop wait 207001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:49.003 | PollThreadWorker::poll_loop wait 208001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:50.155 | PollThreadWorker::poll_loop wait 209001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:51.305 | PollThreadWorker::poll_loop wait 210001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:52.480 | PollThreadWorker::poll_loop wait 211001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:53.643 | PollThreadWorker::poll_loop wait 212001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:54.831 | PollThreadWorker::poll_loop wait 213001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:56.038 | PollThreadWorker::poll_loop wait 214001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:57.187 | PollThreadWorker::poll_loop wait 215001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:58.343 | PollThreadWorker::poll_loop wait 216001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:09:59.488 | PollThreadWorker::poll_loop wait 217001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:00.644 | PollThreadWorker::poll_loop wait 218001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:01.786 | PollThreadWorker::poll_loop wait 219001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:02.944 | PollThreadWorker::poll_loop wait 220001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:04.091 | PollThreadWorker::poll_loop wait 221001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:05.236 | PollThreadWorker::poll_loop wait 222001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:06.403 | PollThreadWorker::poll_loop wait 223001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:07.580 | PollThreadWorker::poll_loop wait 224001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:08.724 | PollThreadWorker::poll_loop wait 225001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:09.909 | PollThreadWorker::poll_loop wait 226001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:11.053 | PollThreadWorker::poll_loop wait 227001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:12.214 | PollThreadWorker::poll_loop wait 228001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:13.396 | PollThreadWorker::poll_loop wait 229001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:14.578 | PollThreadWorker::poll_loop wait 230001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:15.759 | PollThreadWorker::poll_loop wait 231001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:16.882 | PollThreadWorker::poll_loop wait 232001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:18.045 | PollThreadWorker::poll_loop wait 233001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:19.207 | PollThreadWorker::poll_loop wait 234001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:20.365 | PollThreadWorker::poll_loop wait 235001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:21.554 | PollThreadWorker::poll_loop wait 236001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:22.720 | PollThreadWorker::poll_loop wait 237001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:23.894 | PollThreadWorker::poll_loop wait 238001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:25.086 | PollThreadWorker::poll_loop wait 239001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:26.242 | PollThreadWorker::poll_loop wait 240001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:27.483 | PollThreadWorker::poll_loop wait 241001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:28.637 | PollThreadWorker::poll_loop wait 242001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:29.792 | PollThreadWorker::poll_loop wait 243001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:30.960 | PollThreadWorker::poll_loop wait 244001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:32.138 | PollThreadWorker::poll_loop wait 245001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:33.322 | PollThreadWorker::poll_loop wait 246001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:34.538 | PollThreadWorker::poll_loop wait 247001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:35.725 | PollThreadWorker::poll_loop wait 248001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:36.890 | PollThreadWorker::poll_loop wait 249001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:38.081 | PollThreadWorker::poll_loop wait 250001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:39.263 | PollThreadWorker::poll_loop wait 251001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:40.416 | PollThreadWorker::poll_loop wait 252001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:41.607 | PollThreadWorker::poll_loop wait 253001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:42.795 | PollThreadWorker::poll_loop wait 254001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:43.970 | PollThreadWorker::poll_loop wait 255001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:45.140 | PollThreadWorker::poll_loop wait 256001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:46.308 | PollThreadWorker::poll_loop wait 257001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:47.459 | PollThreadWorker::poll_loop wait 258001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:48.608 | PollThreadWorker::poll_loop wait 259001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:49.761 | PollThreadWorker::poll_loop wait 260001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:50.913 | PollThreadWorker::poll_loop wait 261001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:52.062 | PollThreadWorker::poll_loop wait 262001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:53.236 | PollThreadWorker::poll_loop wait 263001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:54.399 | PollThreadWorker::poll_loop wait 264001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:55.606 | PollThreadWorker::poll_loop wait 265001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:56.777 | PollThreadWorker::poll_loop wait 266001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:57.986 | PollThreadWorker::poll_loop wait 267001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:10:59.154 | PollThreadWorker::poll_loop wait 268001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:00.297 | PollThreadWorker::poll_loop wait 269001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:01.443 | PollThreadWorker::poll_loop wait 270001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:02.632 | PollThreadWorker::poll_loop wait 271001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:03.809 | PollThreadWorker::poll_loop wait 272001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:04.971 | PollThreadWorker::poll_loop wait 273001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:06.118 | PollThreadWorker::poll_loop wait 274001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:07.304 | PollThreadWorker::poll_loop wait 275001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:08.470 | PollThreadWorker::poll_loop wait 276001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-04 12:11:09.642 | PollThreadWorker::poll_loop wait 277001
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 12:11:10.341 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 12:11:10.341 | ServerConnection::handle_read rpc_id: 0x55a22dbd
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 12:11:10.341 | ServerConnection::handle_read creating coroutine for rpc_id: 0x55a22dbd
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.341 | Coroutine created: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.341 | Reactor::CreateRunCoroutine running coro: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.341 | Coroutine::Run start: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.341 | Coroutine::BoostRunWrapper start: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 12:11:10.341 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-04 12:11:10.341 | VecPieceData::FromMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:45] 2025-12-04 12:11:10.341 | ClassicServiceImpl::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.341 | Coroutine created: 0x7a7a34028bd0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.341 | Reactor::CreateRunCoroutine running coro: 0x7a7a34028bd0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.341 | Coroutine::Run start: 0x7a7a34028bd0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.341 | Coroutine::BoostRunWrapper start: 0x7a7a34028bd0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:65] 2025-12-04 12:11:10.341 | ClassicServiceImpl::Dispatch coroutine start cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:70] 2025-12-04 12:11:10.341 | ClassicServiceImpl::Dispatch calling dtxn_sched->Dispatch
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:33] 2025-12-04 12:11:10.341 | SchedulerDeterministic::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:39] 2025-12-04 12:11:10.341 | SchedulerDeterministic::Dispatch slot_id=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:42] 2025-12-04 12:11:10.341 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:48] 2025-12-04 12:11:10.341 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0, n_replicas=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:59] 2025-12-04 12:11:10.341 | SchedulerDeterministic::Dispatch created paxos_coord_
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:66] 2025-12-04 12:11:10.341 | Paxos Submit for slot 1, cmd_id 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:44] 2025-12-04 12:11:10.341 | CoordinatorMultiPaxos::Submit calling GotoNextPhase
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:214] 2025-12-04 12:11:10.341 | CoordinatorMultiPaxos::GotoNextPhase current_phase: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.341 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.341 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.341 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:129] 2025-12-04 12:11:10.341 | CoordinatorMultiPaxos::Accept waiting for quorum
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.341 | Coroutine destroyed: 0x7a7a34002450, task: 0x7a7a340024e0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 12:11:10.341 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 12:11:10.341 | ServerConnection::handle_read rpc_id: 0x3ec14825
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 12:11:10.341 | ServerConnection::handle_read creating coroutine for rpc_id: 0x3ec14825
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.341 | Coroutine created: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.341 | Reactor::CreateRunCoroutine running coro: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.341 | Coroutine::Run start: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.341 | Coroutine::BoostRunWrapper start: 0x7a7a34002450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 12:11:10.341 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-04 12:11:10.341 | VecPieceData::FromMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.341 | Coroutine created: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.341 | Reactor::CreateRunCoroutine running coro: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.341 | Coroutine::Run start: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.341 | Coroutine::BoostRunWrapper start: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/service.cc:35] 2025-12-04 12:11:10.341 | MultiPaxosServiceImpl::Accept called for slot 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/server.cc:38] 2025-12-04 12:11:10.341 | multi-paxos scheduler accept for slot_id: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.341 | Coroutine destroyed: 0x7a7a34008630, task: 0x7a7a34008570
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.341 | Coroutine destroyed: 0x7a7a34002450, task: 0x7a7a340024e0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.341 | Coroutine created: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.341 | Reactor::CreateRunCoroutine running coro: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.341 | Coroutine::Run start: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.341 | Coroutine::BoostRunWrapper start: 0x7a7a34008630
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:77] 2025-12-04 12:11:10.341 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.341 | Coroutine destroyed: 0x7a7a34008630, task: 0x7a7a340029d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.342 | Coroutine created: 0x7a7a34008490
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.342 | Reactor::CreateRunCoroutine running coro: 0x7a7a34008490
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.342 | Coroutine::Run start: 0x7a7a34008490
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.342 | Coroutine::BoostRunWrapper start: 0x7a7a34008490
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:77] 2025-12-04 12:11:10.342 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:131] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Accept quorum wait done: yes=1, no=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:134] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Accept committed_ set to true
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:229] 2025-12-04 12:11:10.342 | GotoNextPhase ACCEPT case: committed_=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:233] 2025-12-04 12:11:10.342 | GotoNextPhase ACCEPT case: about to call Commit
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:179] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit ENTRY par_id=0 slot=1 phase=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:186] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit about to verify phase=3, COMMIT=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:189] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit for partition: 0, slot 1, about to BroadcastDecide
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:197] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit commo()=0x7a7a4888b520, calling BroadcastDecide
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:166] 2025-12-04 12:11:10.342 | BroadcastDecide ENTRY: par_id=0 slot=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:168] 2025-12-04 12:11:10.342 | BroadcastDecide: about to GetPartitionSize
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:170] 2025-12-04 12:11:10.342 | BroadcastDecide: n=3, about to get proxies from par_id=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:174] 2025-12-04 12:11:10.342 | BroadcastDecide: proxies.size()=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:179] 2025-12-04 12:11:10.342 | BroadcastDecide: par_id=0 slot=1 n=3 proxies=3 cur_batch_idx=0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:183] 2025-12-04 12:11:10.342 | BroadcastDecide: loop i=0, accessing proxies[0], proxies.size()=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:194] 2025-12-04 12:11:10.342 | BroadcastDecide: sending Decide to site 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.342 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:183] 2025-12-04 12:11:10.342 | BroadcastDecide: loop i=1, accessing proxies[1], proxies.size()=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:194] 2025-12-04 12:11:10.342 | BroadcastDecide: sending Decide to site 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.342 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:183] 2025-12-04 12:11:10.342 | BroadcastDecide: loop i=2, accessing proxies[2], proxies.size()=3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:194] 2025-12-04 12:11:10.342 | BroadcastDecide: sending Decide to site 2
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-04 12:11:10.342 | VecPieceData::ToMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:202] 2025-12-04 12:11:10.342 | BroadcastDecide: loop complete, sent 3 Decide RPCs
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:200] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit BroadcastDecide returned
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:203] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit calling commit_callback_
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:79] 2025-12-04 12:11:10.342 | Paxos consensus complete, waiting for execution...
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:205] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::Commit commit_callback_ returned
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:214] 2025-12-04 12:11:10.342 | CoordinatorMultiPaxos::GotoNextPhase current_phase: 3
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/coordinator.cc:236] 2025-12-04 12:11:10.342 | GotoNextPhase ACCEPT case: Commit returned
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.342 | Coroutine destroyed: 0x7a7a34008490, task: 0x7a7a34008590
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.342 | Coroutine created: 0x7a7a34002ce0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.342 | Reactor::CreateRunCoroutine running coro: 0x7a7a34002ce0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.342 | Coroutine::Run start: 0x7a7a34002ce0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.342 | Coroutine::BoostRunWrapper start: 0x7a7a34002ce0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/commo.cc:77] 2025-12-04 12:11:10.342 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.342 | Coroutine destroyed: 0x7a7a34002ce0, task: 0x7a7a340086c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-04 12:11:10.342 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-04 12:11:10.342 | ServerConnection::handle_read rpc_id: 0x41b23a21
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-04 12:11:10.342 | ServerConnection::handle_read creating coroutine for rpc_id: 0x41b23a21
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.342 | Coroutine created: 0x7a7a3404d670
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.342 | Reactor::CreateRunCoroutine running coro: 0x7a7a3404d670
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.342 | Coroutine::Run start: 0x7a7a3404d670
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.342 | Coroutine::BoostRunWrapper start: 0x7a7a3404d670
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-04 12:11:10.342 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-04 12:11:10.342 | VecPieceData::FromMarshal size: 29
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.342 | Coroutine created: 0x7a7a3404b4c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.342 | Reactor::CreateRunCoroutine running coro: 0x7a7a3404b4c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.342 | Coroutine::Run start: 0x7a7a3404b4c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.342 | Coroutine::BoostRunWrapper start: 0x7a7a3404b4c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/service.cc:51] 2025-12-04 12:11:10.342 | MultiPaxosServiceImpl::Decide called for slot 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/server.cc:57] 2025-12-04 12:11:10.342 | multi-paxos scheduler decide for slot: 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/server.cc:60] 2025-12-04 12:11:10.342 | PaxosServer::OnCommit slot 1, executed 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:171] 2025-12-04 12:11:10.342 | SchedulerDeterministic::ExecuteNext next_slot: 1, pending_txns_.count=1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:175] 2025-12-04 12:11:10.342 | ExecuteNext: entering while loop for slot 1
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:178] 2025-12-04 12:11:10.342 | ExecuteNext: vpd=0x7a7a34008450
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:259] 2025-12-04 12:11:10.342 | ExecuteNext: no other partitions, signaling immediately
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/paxos/server.cc:71] 2025-12-04 12:11:10.343 | apply multi-paxos par:0 loc:0 executed slot 1 now
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/deterministic/scheduler.cc:92] 2025-12-04 12:11:10.343 | SchedulerDeterministic::Dispatch returning true for cmd_id 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/deptran/service.cc:74] 2025-12-04 12:11:10.343 | ClassicServiceImpl::Dispatch coroutine end cmd_id: 0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.343 | Coroutine destroyed: 0x7a7a34028bd0, task: 0x7a7a34028c60
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.343 | Coroutine destroyed: 0x7a7a3404b4c0, task: 0x7a7a340029d0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.343 | Coroutine destroyed: 0x7a7a3404d670, task: 0x7a7a3404b440
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.343 | Coroutine created: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.343 | Reactor::CreateRunCoroutine running coro: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.343 | Coroutine::Run start: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.343 | Coroutine::BoostRunWrapper start: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.343 | Coroutine destroyed: 0x7a7a340a84c0, task: 0x7a7a34028c60
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.343 | Coroutine created: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.343 | Reactor::CreateRunCoroutine running coro: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.343 | Coroutine::Run start: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.343 | Coroutine::BoostRunWrapper start: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-04 12:11:10.343 | Coroutine destroyed: 0x7a7a340a84c0, task: 0x7a7a34028c60
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-04 12:11:10.344 | Coroutine created: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-04 12:11:10.344 | Reactor::CreateRunCoroutine running coro: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-04 12:11:10.344 | Coroutine::Run start: 0x7a7a340a84c0
+I [/home/dp012/Desktop/gitmac/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-04 12:11:10.344 | Coroutine::BoostRunWr  *** begin stack trace ***
+0    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN3rrr17print_stack_traceEP8_IO_FILE+0x6c) [0x7a7a68a25a0c]
+1    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN5janus21CoordinatorMultiPaxos6SubmitERSt10shared_ptrIN3rrr12MarshallableEERKSt8functionIFvvEESA_+0x286) [0x7a7a689b2ef6]
+2    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN5janus22SchedulerDeterministic8DispatchEmSt10shared_ptrIN3rrr12MarshallableEERSt3mapIjS5_IiN3mdb5ValueESt4lessIiESaISt4pairIKiS7_EEES8_IjESaISA_IKjSE_EEE+0x423) [0x7a7a6897c3f3]
+3    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(+0x1feb21) [0x7a7a689feb21]
+4    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN3rrr9Coroutine15BoostRunWrapperERN5boost11coroutines26detail14push_coroutineIvEE+0x6e) [0x7a7a68a3ad4e]
+5    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZZN5boost11coroutines26detail14pull_coroutineIvE13control_blockC4INS_7context21basic_fixedsize_stackINS6_12stack_traitsEEESt5_BindIFMN3rrr9CoroutineEFvRNS1_14push_coroutineIvEEEPSC_St12_PlaceholderILi1EEEEEENS6_12preallocatedEOT_OT0_ENUlONS6_5fiberEE_clEST_+0x83) [0x7a7a68a3b8e3]
+6    /home/dp012/Desktop/gitmac/mako-pr/build/libtxlog.so(_ZN5boost7context6detail11fiber_entryINS1_12fiber_recordINS0_5fiberENS0_21basic_fixedsize_stackINS0_12stack_traitsEEEZNS_11coroutines26detail14pull_coroutineIvE13control_blockC4IS7_St5_BindIFMN3rrr9CoroutineEFvRNS9_14push_coroutineIvEEEPSG_St12_PlaceholderILi1EEEEEENS0_12preallocatedEOT_OT0_EUlOS4_E_EEEEvNS1_10transfer_tE+0x43) [0x7a7a68a3bbb3]
+  ***  end stack trace  ***

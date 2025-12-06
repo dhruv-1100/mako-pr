@@ -50,6 +50,11 @@
 #include "deptran/2pl/scheduler.h"
 #include "occ/scheduler.h"
 
+#include "occ/scheduler.h"
+
+#include "deterministic/scheduler.h"
+#include "deterministic/coordinator.h"
+
 #include "extern_c/frame.h"
 
 
@@ -213,6 +218,15 @@ Coordinator* Frame::CreateCoordinator(cooid_t coo_id,
                           id);
       ((Coordinator*)coo)->txn_reg_ = txn_reg;
       break;
+      ((Coordinator*)coo)->txn_reg_ = txn_reg;
+      break;
+    case MODE_DETERMINISTIC:
+      coo = new CoordinatorDeterministic(coo_id,
+                                         benchmark,
+                                         ccsi,
+                                         id);
+      ((Coordinator*)coo)->txn_reg_ = txn_reg;
+      break;
   }
   coo->frame_ = this;
   return coo;
@@ -365,6 +379,9 @@ TxLogServer* Frame::CreateScheduler() {
     default:
       verify(0);
 //      sch = new CustomSched();
+    case MODE_DETERMINISTIC:
+      sch = new SchedulerDeterministic();
+      break;
   }
   verify(sch);
   sch->frame_ = this;
@@ -434,7 +451,8 @@ map<string, int> &Frame::FrameNameToMode() {
       {"mdcc",          MODE_MDCC},
       {"multi_paxos",   MODE_MULTI_PAXOS},
       {"epaxos",        MODE_NOT_READY},
-      {"rep_commit",    MODE_NOT_READY}
+      {"rep_commit",    MODE_NOT_READY},
+      {"deterministic", MODE_DETERMINISTIC}
   };
   return frame_name_mode_s;
 }

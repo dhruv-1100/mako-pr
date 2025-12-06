@@ -1,0 +1,28 @@
+======================================================================
+Apples-to-Apples Benchmark: Same Config, Different CC Modes
+======================================================================
+Config: 2 partitions, 2 warehouses, 100% NEW_ORDER
+Duration: 30s per run, Iterations: 3
+======================================================================
+
+>>> OCC + 2PC (multi_paxos) <<<
+  Run 1/3... OK |     0 commits |    0 TPS
+  Run 2/3... OK |     0 commits |    0 TPS
+  Run 3/3... OK |     0 commits |    0 TPS
+  Average: 0 commits, 0.0 TPS
+
+>>> Deterministic (multi_paxos) <<<
+  Run 1/3... OK |     0 commits |    0 TPS
+  Run 2/3... OK |     0 commits |    0 TPS
+  Run 3/3... OK |     0 commits |    0 TPS
+  Average: 0 commits, 0.0 TPS
+
+======================================================================
+FINAL COMPARISON
+======================================================================
+Mode                                |  Avg Commits |    Avg TPS
+----------------------------------------------------------------------
+OCC + 2PC (multi_paxos)             |            0 |        0.0
+Deterministic (multi_paxos)         |            0 |        0.0
+======================================================================
+Results saved to: benchmark_2p_comparison_20251205_121703.csv

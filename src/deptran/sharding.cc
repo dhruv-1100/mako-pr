@@ -85,6 +85,38 @@ parid_t Sharding::PartitionFromKey(const MultiValue &key,
   const int num_partitions = Config::GetConfig()->replica_groups_.size();
   uint32_t ret;
 
+  if (Config::GetConfig()->benchmark() == TPCC) {
+      // Special handling for TPCC to partition by w_id
+      int w_id_idx = -1;
+      for (int i = 0; i < tb_info->columns.size(); i++) {
+          if (tb_info->columns[i].is_primary) {
+             if (tb_info->columns[i].name == "w_id" ||
+                 tb_info->columns[i].name == "d_w_id" ||
+                 tb_info->columns[i].name == "c_w_id" ||
+                 tb_info->columns[i].name == "s_w_id" ||
+                 tb_info->columns[i].name == "o_w_id" ||
+                 tb_info->columns[i].name == "ol_w_id" ||
+                 tb_info->columns[i].name == "h_w_id") {
+                 // Found w_id column.
+                 // But key only contains primary key values.
+                 // We need to map column index to key index.
+                 // Assuming key values are in the same order as primary key columns in schema.
+                 int key_idx = 0;
+                 for (int j = 0; j < i; j++) {
+                     if (tb_info->columns[j].is_primary) key_idx++;
+                 }
+                 w_id_idx = key_idx;
+                 break;
+             }
+          }
+      }
+      if (w_id_idx != -1 && w_id_idx < key.size()) {
+          uint32_t p = modulus(MultiValue(key[w_id_idx]), num_partitions);
+          fprintf(stderr, "PartitionFromKey: w_id=%d, num_partitions=%d, p=%d\n", key[w_id_idx].get_i32(), num_partitions, p);
+          return p;
+      }
+  }
+
   switch (tb_info->sharding_method) {
     case MODULUS:
       ret = modulus(key_buf, num_partitions);

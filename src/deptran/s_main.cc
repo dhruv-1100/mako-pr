@@ -166,6 +166,9 @@ int main(int argc, char *argv[]) {
     sleep(Config::GetConfig()->duration_);
     wait_for_clients();
     Log_info("all clients have shut down.");
+    if (ccsi_g) {
+      ccsi_g->wait_for_shutdown();
+    }
   }
 
   for (auto& worker : svr_workers_g) {

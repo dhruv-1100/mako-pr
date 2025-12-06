@@ -4,6 +4,7 @@
 namespace rrr {
 
 rrr::Marshal &operator<<(rrr::Marshal &m, const mdb::Value &value) {
+  Log_info("Marshal Value kind: %d", value.get_kind());
   m << value.ver_;
   switch (value.get_kind()) {
     case Value::I32:
@@ -29,6 +30,7 @@ rrr::Marshal &operator>>(rrr::Marshal &m, mdb::Value &value) {
   m >> value.ver_;
   i32 k;
   m >> k;
+  Log_info("Unmarshal Value kind: %d", k);
   switch (k) {
     case 0:
       int32_t i32;
@@ -45,11 +47,15 @@ rrr::Marshal &operator>>(rrr::Marshal &m, mdb::Value &value) {
       m >> d;
       value.set_double(d);
       break;
-    case 3:
+    case 3: {
       std::string str;
       m >> str;
       value.set_str(str);
       break;
+    }
+    default:
+       Log_fatal("Unknown Value kind: %d", k);
+       verify(0);
   }
   return m;
 }

@@ -1,0 +1,12 @@
+sites:
+  - name: s1
+    ip: 127.0.0.1
+    port: 8000
+  - name: c1
+    ip: 127.0.0.1
+    port: 9000
+
+shard_map:
+  - [s1]
+
+warehouses: 1

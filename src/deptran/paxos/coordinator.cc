@@ -34,19 +34,26 @@ void CoordinatorMultiPaxos::Submit(shared_ptr<Marshallable>& cmd,
   }
 
   std::lock_guard<std::recursive_mutex> lock(mtx_);
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: entered\n");
   verify(!in_submission_);
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: !in_submission_ verified\n");
   verify(cmd_ == nullptr);
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: cmd_ == nullptr verified\n");
 //  verify(cmd.self_cmd_ != nullptr);
   in_submission_ = true;
   cmd_ = cmd;
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: cmd_ assigned\n");
   verify(cmd_->kind_ != MarshallDeputy::UNKNOWN);
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: kind_ verified\n");
   commit_callback_ = func;
   GotoNextPhase();
+  fprintf(stderr, "CoordinatorMultiPaxos::Submit: GotoNextPhase returned\n");
 }
 
 void BulkCoordinatorMultiPaxos::BulkSubmit(shared_ptr<Marshallable>& cmd,
                                        const function<void()>& func,
                                        const function<void()>& exe_callback) {
+    Log_info("CoordinatorMultiPaxos::Submit entered. cmd_=%p", cmd.get());
     verify(!in_submission_);
     in_submission_ = true;
     cmd_ = cmd;
@@ -124,17 +131,28 @@ void CoordinatorMultiPaxos::Accept() {
   Log_debug("multi-paxos coordinator broadcasts accept, "
                 "par_id_: %lx, slot_id: %llx",
             par_id_, slot_id_);
-  auto sp_quorum = commo()->BroadcastAccept(par_id_, slot_id_, curr_ballot_, cmd_);
-  sp_quorum->Wait();
-  if (sp_quorum->Yes()) {
-    committed_ = true;
-  } else if (sp_quorum->No()) {
-    // TODO process the case: failed to get a majority.
-    verify(0);
+  
+  std::vector<shared_ptr<PaxosAcceptQuorumEvent>> events;
+  if (partitions_.empty()) {
+    events.push_back(commo()->BroadcastAccept(par_id_, slot_id_, curr_ballot_, cmd_));
   } else {
-    // TODO process timeout.
-    verify(0);
+    for (auto par_id : partitions_) {
+      Log_info("Broadcasting Accept to partition %d", par_id);
+      events.push_back(commo()->BroadcastAccept(par_id, slot_id_, curr_ballot_, cmd_));
+    }
   }
+
+  for (auto& sp_quorum : events) {
+    sp_quorum->Wait();
+    if (sp_quorum->Yes()) {
+      // continue
+    } else {
+      Log_fatal("CoordinatorMultiPaxos::Accept quorum rejected or timeout");
+      verify(0);
+    }
+  }
+  committed_ = true;
+  Log_info("CoordinatorMultiPaxos::Accept committed_ set to true");
 //  commo()->BroadcastAccept(par_id_,
 //                           slot_id_,
 //                           curr_ballot_,
@@ -170,12 +188,34 @@ void CoordinatorMultiPaxos::Accept() {
 }
 
 void CoordinatorMultiPaxos::Commit() {
+  Log_info("CoordinatorMultiPaxos::Commit ENTRY par_id=%d slot=%d phase=%d", (int)par_id_, (int)slot_id_, (int)phase_);
+  fflush(stdout);
+  fflush(stderr);
   //std::lock_guard<std::recursive_mutex> lock(mtx_);
-  commit_callback_();
-  Log_debug("multi-paxos broadcast commit for partition: %d, slot %d",
-            (int) par_id_, (int) slot_id_);
-  commo()->BroadcastDecide(par_id_, slot_id_, curr_ballot_, cmd_);
+  
+  // Send BroadcastDecide FIRST before calling commit_callback_
+  // This ensures the Decide messages are sent before the waiting coroutine wakes up
+  Log_info("CoordinatorMultiPaxos::Commit about to verify phase=%d, COMMIT=%d", (int)phase_, (int)Phase::COMMIT);
+  fflush(stdout);
   verify(phase_ == Phase::COMMIT);
+  Log_info("CoordinatorMultiPaxos::Commit for partition: %d, slot %d, about to BroadcastDecide",
+            (int) par_id_, (int) slot_id_);
+  fflush(stdout);
+  auto commo_ptr = commo();
+  if (!commo_ptr) {
+    Log_fatal("CoordinatorMultiPaxos::Commit commo() is null!");
+    verify(0);
+  }
+  Log_info("CoordinatorMultiPaxos::Commit commo()=%p, calling BroadcastDecide", (void*)commo_ptr);
+  fflush(stdout);
+  commo_ptr->BroadcastDecide(par_id_, slot_id_, curr_ballot_, cmd_);
+  Log_info("CoordinatorMultiPaxos::Commit BroadcastDecide returned");
+  
+  // Now call the commit callback to wake up the waiting coroutine
+  Log_info("CoordinatorMultiPaxos::Commit calling commit_callback_");
+  commit_callback_();
+  Log_info("CoordinatorMultiPaxos::Commit commit_callback_ returned");
+  
   GotoNextPhase();
 }
 
@@ -183,6 +223,7 @@ void CoordinatorMultiPaxos::GotoNextPhase() {
   int n_phase = 4;
   int current_phase = phase_ % n_phase;
   phase_++;
+  Log_debug("CoordinatorMultiPaxos::GotoNextPhase current_phase: %d", current_phase);
   switch (current_phase) {
     case Phase::INIT_END:
       if (IsLeader()) {
@@ -197,9 +238,16 @@ void CoordinatorMultiPaxos::GotoNextPhase() {
       }
     case Phase::ACCEPT:
       verify(phase_ % n_phase == Phase::COMMIT);
+      Log_info("GotoNextPhase ACCEPT case: committed_=%d", committed_);
+      fflush(stdout);
+      fflush(stderr);
       if (committed_) {
+        Log_info("GotoNextPhase ACCEPT case: about to call Commit");
+        fflush(stdout);
         Commit();
+        Log_info("GotoNextPhase ACCEPT case: Commit returned");
       } else {
+        Log_fatal("GotoNextPhase ACCEPT case: committed_ is false!");
         verify(0);
       }
       break;
@@ -209,6 +257,11 @@ void CoordinatorMultiPaxos::GotoNextPhase() {
       break;
     case Phase::COMMIT:
       // do nothing.
+      {
+        std::lock_guard<std::recursive_mutex> lock(mtx_);
+        in_submission_ = false;
+        cmd_ = nullptr;
+      }
       break;
     default:
       verify(0);

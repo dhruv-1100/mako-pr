@@ -5,6 +5,8 @@
 #include "scheduler.h"
 #include "../service.h"
 
+#include "../paxos/commo.h"
+
 namespace janus {
 
 REG_FRAME(MODE_DETERMINISTIC, vector<string>({"deterministic"}),
@@ -42,6 +44,10 @@ vector<rrr::Service *> DeterministicFrame::CreateRpcServices(
     rusty::Arc<rrr::PollThreadWorker> poll_thread_worker,
     ServerControlServiceImpl *scsi) {
   return vector<rrr::Service *>({new ClassicServiceImpl(dtxn_sched, poll_thread_worker, scsi)});
+}
+
+Communicator *DeterministicFrame::CreateCommo(rusty::Arc<rrr::PollThreadWorker> poll_thread_worker) {
+  return new MultiPaxosCommo(poll_thread_worker);
 }
 
 } // namespace janus

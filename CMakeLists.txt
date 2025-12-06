@@ -633,6 +633,21 @@ set_target_properties(txlog PROPERTIES
     OUTPUT_NAME "txlog"
 )
 
+# Add deptran_server executable
+add_executable(deptran_server src/deptran/s_main.cc)
+target_link_libraries(deptran_server txlog)
+target_include_directories(deptran_server PRIVATE
+    src
+    src/rrr
+    src/memdb
+    src/deptran
+    src/bench
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/rusty-cpp/include
+    dependencies/yaml-cpp/include
+    ${Boost_INCLUDE_DIRS}
+    ${Python3_INCLUDE_DIRS}
+)
+
 # Build stamp files
 add_custom_command(
   OUTPUT ${O}/${W}/buildstamp ${O}/${W}/buildstamp.bench ${O}/${W}/buildstamp.masstree
@@ -952,6 +967,13 @@ if(BUILD_TESTS)
     target_compile_options(test_and_event PRIVATE ${TEST_COMPILE_OPTIONS})
     target_link_libraries(test_and_event ${TEST_LINK_LIBS} ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES} pthread)
     add_test(NAME test_and_event COMMAND test_and_event)
+
+    # Deterministic Scheduler Tests
+    add_executable(test_deterministic test/test_deterministic.cc)
+    target_include_directories(test_deterministic PRIVATE ${TEST_INCLUDE_DIRS} ${GTEST_INCLUDE_DIRS} src/deptran)
+    target_compile_options(test_deterministic PRIVATE ${TEST_COMPILE_OPTIONS})
+    target_link_libraries(test_deterministic ${TEST_LINK_LIBS} ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES} pthread txlog)
+    add_test(NAME test_deterministic COMMAND test_deterministic)
 
     # Integration tests from CI
     add_test(NAME simpleTransaction COMMAND simpleTransaction)

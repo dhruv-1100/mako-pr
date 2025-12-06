@@ -219,14 +219,23 @@ void Communicator::BroadcastDispatch(
         callback(ret, outputs);
       };
   auto pair_leader_proxy = LeaderProxyForPartition(par_id);
-  Log_debug("send dispatch to site %ld",
-            pair_leader_proxy.first);
+  Log_info("BroadcastDispatch: send dispatch to site %ld (par_id %d)",
+            pair_leader_proxy.first, par_id);
   auto proxy = pair_leader_proxy.second;
+  if (!proxy) {
+      Log_error("BroadcastDispatch: proxy is null for site %ld", pair_leader_proxy.first);
+      return;
+  }
   shared_ptr<VecPieceData> sp_vpd(new VecPieceData);
   sp_vpd->sp_vec_piece_data_ = sp_vec_piece;
   MarshallDeputy md(sp_vpd); // ????
   auto future = proxy->async_Dispatch(cmd_id, md, fuattr);
-  Future::safe_release(future);
+  if (!future) {
+      Log_error("BroadcastDispatch: async_Dispatch returned null future");
+  } else {
+      Log_info("BroadcastDispatch: async_Dispatch called successfully");
+      Future::safe_release(future);
+  }
   // FIXME fix this, this cause occ and perhaps 2pl to fail
   for (auto& pair : rpc_par_proxies_[par_id]) {
     if (pair.first != pair_leader_proxy.first) {

@@ -372,20 +372,36 @@ void Config::LoadSiteYML(YAML::Node config) {
     int locale_id = 0;
     for (auto group_it = group.begin(); group_it != group.end(); group_it++) {
       auto site_name = group_it->as<string>();
-      SiteInfo info(site_id++);
-      info.name = site_name;
-      info.proc_name = site_proc_map_[info.name];
-      if (info.proc_name.compare("localhost")==0) {
-        info.role = 0;
-      } else if (info.proc_name.compare("learner")==0) {
-        info.role = 2;
+      if (site_name.find(':') != string::npos) {
+         SiteInfo info(site_id++, site_name);
+         info.proc_name = site_proc_map_[info.name];
+         if (info.proc_name.compare("localhost")==0) {
+           info.role = 0;
+         } else if (info.proc_name.compare("learner")==0) {
+           info.role = 2;
+         } else {
+           info.role = 1;
+         }
+         info.type_ = CLIENT;
+         info.locale_id = locale_id;
+         // info.port is already set by constructor
+         par_clients_.push_back(info);
       } else {
-        info.role = 1;
+         SiteInfo info(site_id++);
+         info.name = site_name;
+         info.proc_name = site_proc_map_[info.name];
+         if (info.proc_name.compare("localhost")==0) {
+           info.role = 0;
+         } else if (info.proc_name.compare("learner")==0) {
+           info.role = 2;
+         } else {
+           info.role = 1;
+         }
+         info.type_ = CLIENT;
+         info.locale_id = locale_id;
+         info.port = GetClientPort(site_name);
+         par_clients_.push_back(info);
       }
-      info.type_ = CLIENT;
-      info.locale_id = locale_id;
-      info.port = GetClientPort(site_name);
-      par_clients_.push_back(info);
       locale_id++;
     }
   }

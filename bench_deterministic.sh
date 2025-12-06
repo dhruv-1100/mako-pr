@@ -5,6 +5,14 @@
 
 # Run the server with the deterministic configuration
 echo "Starting Deterministic Benchmark..."
-./build/deptran_server -f config/deterministic_micro.yml
+# Launch replicas
+./build/dbtest -q config/deterministic_converted.yml -N s2 &
+./build/dbtest -q config/deterministic_converted.yml -N s3 &
+sleep 2
+# Launch leader
+./build/dbtest -q config/deterministic_converted.yml -N s1
+
+# Cleanup
+pkill -f dbtest
 
 echo "Benchmark completed."

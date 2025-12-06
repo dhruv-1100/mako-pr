@@ -1,0 +1,27 @@
+=========================================
+Testing 2-shard setup without replication
+=========================================
+Starting shard 0...
+Starting shard 1...
+Running experiments for 30 seconds...
+Stopping shards...
+
+=========================================
+Checking test results...
+=========================================
+
+Checking test_2shard_no_replication.sh_rrr_shard0-2.log:
+-----------------
+  ✓ Found 'agg_persist_throughput' keyword
+    agg_persist_throughput: 939.3 ops/sec
+  ✓ NewOrder_remote_abort_ratio: 0.114943 (< 20%)
+
+Checking test_2shard_no_replication.sh_rrr_shard1-2.log:
+-----------------
+  ✓ Found 'agg_persist_throughput' keyword
+    agg_persist_throughput: 632.462 ops/sec
+  ✓ NewOrder_remote_abort_ratio: 2.41935 (< 20%)
+
+=========================================
+All checks passed!
+=========================================

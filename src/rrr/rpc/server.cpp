@@ -157,7 +157,7 @@ void ServerConnection::handle_read() {
     if(n_peek < sizeof(i32)){
       int bytes_read = block_read_in.chnk_read_from_fd(socket_, sizeof(i32)-n_peek);
 
-      //Log_info("bytes read from socket %d", bytes_read);
+      if (bytes_read > 0) Log_info("ServerConnection::handle_read bytes read from socket %d", bytes_read);
        if (block_read_in.content_size() < sizeof(i32)) {
           return;
        }
@@ -218,6 +218,7 @@ void ServerConnection::handle_read() {
 
         i32 rpc_id;
         req->m >> rpc_id;
+        Log_info("ServerConnection::handle_read rpc_id: 0x%08x", rpc_id);
 
 #ifdef RPC_STATISTICS
         stat_server_rpc_counting(rpc_id);
@@ -225,10 +226,11 @@ void ServerConnection::handle_read() {
 
         auto it = server_->handlers_.find(rpc_id);
         if (it != server_->handlers_.end()) {
-            // C++23 std::move_only_function allows direct capture of move-only types like rusty::Box
             // Lambda captures rusty::Box<Request> by move, maintaining single ownership semantics
             auto weak_this = weak_self_;
+            Log_info("ServerConnection::handle_read creating coroutine for rpc_id: 0x%08x", rpc_id);
             Coroutine::CreateRun([it, req = std::move(req), weak_this] () mutable {
+                Log_info("ServerConnection::handle_read coroutine start");
                 // Move rusty::Box to handler, transferring ownership
                 it->second(std::move(req), weak_this);
 

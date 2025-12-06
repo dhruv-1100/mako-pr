@@ -56,20 +56,38 @@ void ClientWorker::ForwardRequestDone(Coordinator* coo,
 
 void ClientWorker::RequestDone(Coordinator* coo, TxReply& txn_reply) {
   verify(coo != nullptr);
+  Log_info("ClientWorker::RequestDone received callback from tx_id %" PRIx64 ", res=%d", txn_reply.tx_id_, txn_reply.res_);
 
-  if (txn_reply.res_ == SUCCESS)
+  if (txn_reply.res_ == SUCCESS) {
     success++;
+    if (ccsi) {
+      struct timespec t;
+      clock_gettime(&t);
+      int32_t type = 10; // Default to TPCC_NEW_ORDER
+      if (coo->cmd_ && coo->cmd_->type_ != 0) {
+          type = coo->cmd_->type_;
+      }
+      ccsi->txn_success_one(id, type, t, 0.0, 0.0, txn_reply.n_try_);
+    } else {
+      Log_warn("ClientWorker::RequestDone: ccsi is NULL, cannot report success");
+    }
+  }
+  Log_info("ClientWorker::RequestDone: res=%d", txn_reply.res_);
   num_txn++;
   num_try.fetch_add(txn_reply.n_try_);
 
   bool have_more_time = timer_->elapsed() < duration;
-  Log_debug("received callback from tx_id %" PRIx64, txn_reply.tx_id_);
-  Log_debug("elapsed: %2.2f; duration: %d", timer_->elapsed(), duration);
+  Log_info("received callback from tx_id %" PRIx64, txn_reply.tx_id_);
+  Log_info("elapsed: %2.2f; duration: %d", timer_->elapsed(), duration);
   if (have_more_time && config_->client_type_ == Config::Open) {
     std::lock_guard<std::mutex> lock(coordinator_mutex);
     free_coordinators_.push_back(coo);
   } else if (have_more_time && config_->client_type_ == Config::Closed) {
-    Log_debug("there is still time to issue another request. continue.");
+    if (txn_reply.res_ == SUCCESS) {
+      Log_info("ClientWorker::RequestDone: Tx %" PRIx64 " succeeded. Calling DispatchRequest.", txn_reply.tx_id_);
+    } else {
+      Log_warn("ClientWorker::RequestDone: Tx %" PRIx64 " failed with res=%d. Calling DispatchRequest.", txn_reply.tx_id_, txn_reply.res_);
+    }
     DispatchRequest(coo);
   } else if (!have_more_time) {
     Log_debug("times up. stop.");
@@ -138,7 +156,7 @@ Coordinator* ClientWorker::CreateCoordinator(uint16_t offset_id) {
 }
 
 void ClientWorker::Work() {
-  Log_debug("%s: %d", __FUNCTION__, this->cli_id_);
+  Log_info("%s: %d", __FUNCTION__, this->cli_id_);
   txn_reg_ = std::make_shared<TxnRegistry>();
   verify(config_ != nullptr);
   Workload* workload = Workload::CreateWorkload(config_);
@@ -147,9 +165,11 @@ void ClientWorker::Work() {
 
   commo_->WaitConnectClientLeaders();
   if (ccsi) {
+    Log_info("waiting for start signal");
     ccsi->wait_for_start(id);
+    Log_info("received start signal");
   }
-  Log_debug("after wait for start");
+  Log_info("after wait for start");
 
   timer_ = new Timer();
   timer_->start();
@@ -161,7 +181,8 @@ void ClientWorker::Work() {
     auto sp_job = std::make_shared<OneTimeJob>([this] () {
       for (uint32_t n_tx = 0; n_tx < n_concurrent_; n_tx++) {
         auto coo = CreateCoordinator(n_tx);
-        Log_debug("create coordinator %d", coo->coo_id_);
+        Log_info("create coordinator %d", coo->coo_id_);
+        Log_info("ClientWorker::Work: Dispatching request for coordinator %d", coo->coo_id_);
         this->DispatchRequest(coo);
       }
     });
@@ -252,21 +273,40 @@ void ClientWorker::AcceptForwardedRequest(TxRequest& request,
 
 void ClientWorker::DispatchRequest(Coordinator* coo) {
   const char* f = __FUNCTION__;
-  std::function<void()> task = [=]() {
-    Log_debug("%s: %d", f, cli_id_);
-    TxRequest req;
-    {
-      std::lock_guard<std::mutex> lock(this->request_gen_mutex);
-      tx_generator_->GetTxRequest(&req, coo->coo_id_);
+  Log_info("ClientWorker::DispatchRequest start for cli_id %d", cli_id_);
+  Log_debug("%s: %d", f, cli_id_);
+  TxRequest req;
+  {
+    std::lock_guard<std::mutex> lock(this->request_gen_mutex);
+    tx_generator_->GetTxRequest(&req, coo->coo_id_);
+  }
+  
+  if (ccsi) {
+      int32_t type = req.tx_type_;
+      if (type == 0) type = 10;
+      ccsi->txn_start_one(id, type);
+  }
+  struct timespec start_time;
+  clock_gettime(&start_time);
+
+  req.callback_ = [this, coo, start_time](TxReply& reply) {
+    if (ccsi) {
+        struct timespec end_time;
+        clock_gettime(&end_time);
+        double latency = timespec2ms(end_time) - timespec2ms(start_time);
+        int32_t type = reply.txn_type_;
+        if (type == 0) type = 10;
+        if (reply.res_ == SUCCESS) {
+            ccsi->txn_success_one(id, type, start_time, latency, 0, reply.n_try_);
+        } else {
+            ccsi->txn_reject_one(id, type, start_time, latency, 0, reply.n_try_);
+        }
     }
-    req.callback_ = std::bind(&ClientWorker::RequestDone,
-                              this,
-                              coo,
-                              std::placeholders::_1);
-    coo->DoTxAsync(req);
+    RequestDone(coo, reply);
   };
-  task();
-//  dispatch_pool_->run_async(task); // this causes bug
+
+  coo->DoTxAsync(req);
+  Log_info("ClientWorker::DispatchRequest end for cli_id %d", cli_id_);
 }
 
 ClientWorker::ClientWorker(
@@ -287,6 +327,9 @@ ClientWorker::ClientWorker(
   poll_thread_worker_ = !poll_thread_worker ? PollThreadWorker::create() : poll_thread_worker;
   frame_ = Frame::GetFrame(config->tx_proto_);
   tx_generator_ = frame_->CreateTxGenerator();
+  txn_reg_ = std::make_shared<TxnRegistry>();
+  tx_generator_->txn_reg_ = txn_reg_;
+  tx_generator_->RegisterPrecedures();
   config->get_all_site_addr(servers_);
   num_txn.store(0);
   success.store(0);
