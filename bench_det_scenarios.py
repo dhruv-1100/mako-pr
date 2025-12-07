@@ -20,7 +20,7 @@ import time
 import csv
 from datetime import datetime
 
-os.chdir('/home/dp012/Desktop/gitmac/mako-pr')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 DURATION = 20  # seconds per test
 ITERATIONS = 2

@@ -16,8 +16,8 @@ SchedulerDeterministic::SchedulerDeterministic() : PaxosServer() {
 }
 
 void SchedulerDeterministic::OnCommit(const slotid_t slot_id,
-                                    const ballot_t ballot,
-                                    shared_ptr<Marshallable> &cmd) {
+                                      const ballot_t ballot,
+                                      shared_ptr<Marshallable> &cmd) {
   std::lock_guard<std::recursive_mutex> lock(mtx_pending_);
   Log_info("SchedulerDeterministic::OnCommit slot %d", slot_id);
   PaxosServer::OnCommit(slot_id, ballot, cmd);
@@ -34,11 +34,11 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
   auto vpd = dynamic_pointer_cast<VecPieceData>(cmd);
   int slot_id = 0;
   if (vpd && vpd->sp_vec_piece_data_ && vpd->sp_vec_piece_data_->size() > 0) {
-    auto& piece = vpd->sp_vec_piece_data_->at(0);
+    auto &piece = vpd->sp_vec_piece_data_->at(0);
     if (piece) {
-        slot_id = (int)piece->timestamp_;
+      slot_id = (int)piece->timestamp_;
     } else {
-        fprintf(stderr, "Dispatch: piece at 0 is null\n");
+      fprintf(stderr, "Dispatch: piece at 0 is null\n");
     }
   }
   fprintf(stderr, "SchedulerDeterministic::Dispatch slot_id=%d\n", slot_id);
@@ -54,39 +54,51 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
       fprintf(stderr, "Dispatch: vpd check\n");
       if (vpd && vpd->sp_vec_piece_data_) {
         int idx = 0;
-        fprintf(stderr, "Dispatch: vpd=%p, vec_size=%d\n", vpd.get(), (int)vpd->sp_vec_piece_data_->size());
-        for (auto& sp_piece : *vpd->sp_vec_piece_data_) {
-           if (sp_piece) {
-             fprintf(stderr, "Dispatch: piece %d, addr=%p\n", idx, sp_piece.get());
-             partitions.insert(sp_piece->PartitionId());
-             fprintf(stderr, "Dispatch: piece %d inserted\n", idx);
-           } else {
-             fprintf(stderr, "Dispatch: sp_piece at index %d is null\n", idx);
-           }
-           idx++;
+        fprintf(stderr, "Dispatch: vpd=%p, vec_size=%d\n", vpd.get(),
+                (int)vpd->sp_vec_piece_data_->size());
+        for (auto &sp_piece : *vpd->sp_vec_piece_data_) {
+          if (sp_piece) {
+            fprintf(stderr, "Dispatch: piece %d, addr=%p\n", idx,
+                    sp_piece.get());
+            partitions.insert(sp_piece->PartitionId());
+            fprintf(stderr, "Dispatch: piece %d inserted\n", idx);
+          } else {
+            fprintf(stderr, "Dispatch: sp_piece at index %d is null\n", idx);
+          }
+          idx++;
         }
       } else {
-        fprintf(stderr, "Dispatch: vpd is null or sp_vec_piece_data_ is null\n");
+        fprintf(stderr,
+                "Dispatch: vpd is null or sp_vec_piece_data_ is null\n");
       }
-      Log_info("SchedulerDeterministic::Dispatch: partition_id_=%d, loc_id_=%d, n_replicas=%d, n_partitions=%d",
+      Log_info("SchedulerDeterministic::Dispatch: partition_id_=%d, "
+               "loc_id_=%d, n_replicas=%d, n_partitions=%d",
                partition_id_, loc_id_, n_replicas, (int)partitions.size());
-      fprintf(stderr, "DEBUG: n_replicas=%d, partitions.size()=%d\n", n_replicas, (int)partitions.size());
-      
+      fprintf(stderr, "DEBUG: n_replicas=%d, partitions.size()=%d\n",
+              n_replicas, (int)partitions.size());
+
       if (n_replicas > 1 || partitions.size() > 1) {
         fprintf(stderr, "DEBUG: Taking MULTI-NODE path (Paxos)\n");
-        // Create a new coordinator for each request to avoid concurrency issues
-        auto paxos_coord = new CoordinatorMultiPaxos(
-            0, Config::GetConfig()->benchmark(), nullptr, 0);
-        paxos_coord->par_id_ = partition_id_;
-        paxos_coord->partitions_ = partitions;
-        paxos_coord->loc_id_ = loc_id_;
-        paxos_coord->frame_ = frame_;
-        paxos_coord->commo_ = commo_;
-        Log_info("SchedulerDeterministic::Dispatch created local paxos_coord");
+
+        // Serialize access to the shared paxos_coord_
+        std::lock_guard<std::mutex> lock(mtx_dispatch_);
+
+        // Reuse existing coordinator or create if null
+        if (!paxos_coord_) {
+          paxos_coord_ = new CoordinatorMultiPaxos(
+              0, Config::GetConfig()->benchmark(), nullptr, 0);
+          paxos_coord_->par_id_ = partition_id_;
+          paxos_coord_->partitions_ = partitions;
+          paxos_coord_->loc_id_ = loc_id_;
+          paxos_coord_->frame_ = frame_;
+          paxos_coord_->commo_ = commo_;
+          Log_info(
+              "SchedulerDeterministic::Dispatch created local paxos_coord_");
+        }
 
         // Assign the next slot for this transaction
         int assigned_slot = get_open_slot();
-        paxos_coord->set_slot(assigned_slot);
+        paxos_coord_->set_slot(assigned_slot);
 
         Log_info("Paxos Submit for slot %d, cmd_id %lu", assigned_slot, cmd_id);
 
@@ -98,11 +110,9 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
           pending_txns_[assigned_slot] = cmd;
         }
 
-        // Submit to Paxos. The callback is empty because ExecuteNext will 
+        // Submit to Paxos. The callback is empty because ExecuteNext will
         // signal completion after transaction execution, not just consensus.
-        paxos_coord->Submit(cmd, [this]() { 
-          this->ExecuteNext();
-        });
+        paxos_coord_->Submit(cmd, [this]() { this->ExecuteNext(); });
 
         // Wait for ExecuteNext to complete and signal via event->Set(1)
         event->Wait();
@@ -114,8 +124,10 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
         }
         event.reset();
         cmd.reset();
-        Log_info("SchedulerDeterministic::Dispatch returning true for cmd_id %lu", cmd_id);
-        delete paxos_coord;
+        Log_info(
+            "SchedulerDeterministic::Dispatch returning true for cmd_id %lu",
+            cmd_id);
+        // Do NOT delete paxos_coord_ here
         return true;
       } else {
         // Single-node: Use simple sequential slot assignment
@@ -197,15 +209,23 @@ int SchedulerDeterministic::Next(int slot_id, shared_ptr<Marshallable> cmd) {
 }
 
 void SchedulerDeterministic::ExecuteNext() {
+  // HOLDING LOCK: mtx_pending_ is held throughout this function.
+  // This ensures strict serial execution.
+  // WARNING: We hold the lock while waiting for network replies
+  // (agg_event->Wait()). This is safe ONLY if the reply callback does not
+  // attempt to acquire mtx_pending_.
   std::lock_guard<std::recursive_mutex> lock(mtx_pending_);
-  Log_info("SchedulerDeterministic::ExecuteNext next_slot: %d, pending_txns_.count=%d",
-           next_slot_to_execute_, (int)pending_txns_.count(next_slot_to_execute_));
+  Log_info("SchedulerDeterministic::ExecuteNext next_slot: %d, "
+           "pending_txns_.count=%d",
+           next_slot_to_execute_,
+           (int)pending_txns_.count(next_slot_to_execute_));
 
   while (pending_txns_.count(next_slot_to_execute_)) {
-    Log_info("ExecuteNext: entering while loop for slot %d", next_slot_to_execute_);
+    Log_info("ExecuteNext: entering while loop for slot %d",
+             next_slot_to_execute_);
     auto cmd = pending_txns_[next_slot_to_execute_];
     auto vpd = dynamic_pointer_cast<VecPieceData>(cmd);
-    Log_info("ExecuteNext: vpd=%p", (void*)vpd.get());
+    Log_info("ExecuteNext: vpd=%p", (void *)vpd.get());
 
     if (vpd) {
       cmdid_t cmd_id = vpd->sp_vec_piece_data_->at(0)->root_id_;
@@ -230,12 +250,14 @@ void SchedulerDeterministic::ExecuteNext() {
       tx->txn_reg_ = txn_reg_;
 
       bool execute_success = true;
-      Log_info("ExecuteNext: Starting piece execution loop. partition_id_=%d", partition_id_);
+      Log_info("ExecuteNext: Starting piece execution loop. partition_id_=%d",
+               partition_id_);
       int pieces_executed = 0;
       for (auto &piece : *vpd->sp_vec_piece_data_) {
         if (piece->PartitionId() == partition_id_) {
           // Execute piece
-          Log_info("ExecuteNext: Executing piece type=%d, inn_id=%d", piece->type_, piece->inn_id());
+          Log_info("ExecuteNext: Executing piece type=%d, inn_id=%d",
+                   piece->type_, piece->inn_id());
           auto roottype = piece->root_type_;
           auto subtype = piece->type_;
           TxnPieceDef &piece_def = txn_reg_->get(roottype, subtype);
@@ -251,7 +273,9 @@ void SchedulerDeterministic::ExecuteNext() {
           pieces_executed++;
         }
       }
-      Log_info("ExecuteNext: Finished piece execution loop. Executed %d pieces. Committing mdb_txn.", pieces_executed);
+      Log_info("ExecuteNext: Finished piece execution loop. Executed %d "
+               "pieces. Committing mdb_txn.",
+               pieces_executed);
 
       // Commit MDB Txn
       mdb_txn->commit();
@@ -295,29 +319,40 @@ void SchedulerDeterministic::ExecuteNext() {
           Log_info("ExecuteNext: no other partitions, signaling immediately");
           agg_event->Set(1);
         } else {
-          Log_info("ExecuteNext: Broadcasting Dispatch to %d partitions", (int)partitions.size());
+          Log_info("ExecuteNext: Broadcasting Dispatch to %d partitions",
+                   (int)partitions.size());
           for (auto &pair : partitions) {
-            Log_info("ExecuteNext: Sending Dispatch to partition %d", pair.first);
+            Log_info("ExecuteNext: Sending Dispatch to partition %d",
+                     pair.first);
             commo()->BroadcastDispatch(
                 pair.second, nullptr,
-                [&mtx_agg, agg_event, sp_pending_replies,
-                 &aggregated_output, pair](int res, TxnOutput &output) {
-                  Log_info("ExecuteNext: Received Dispatch reply from partition %d, res=%d, output_size=%d", pair.first, res, (int)output.size());
+                [&mtx_agg, agg_event, sp_pending_replies, &aggregated_output,
+                 pair](int res, TxnOutput &output) {
+                  Log_info("ExecuteNext: Received Dispatch reply from "
+                           "partition %d, res=%d, output_size=%d",
+                           pair.first, res, (int)output.size());
                   std::lock_guard<std::mutex> lk(mtx_agg);
                   for (auto &op : output) {
                     aggregated_output[op.first] = op.second;
                   }
                   if (sp_pending_replies->fetch_sub(1) == 1) {
-                    Log_info("ExecuteNext: All partitions replied, signaling agg_event");
+                    Log_info("ExecuteNext: All partitions replied, signaling "
+                             "agg_event");
                     agg_event->Set(1);
                   }
                 });
           }
         }
 
-        Log_info("ExecuteNext: Waiting for agg_event");
-        agg_event->Wait();
-        Log_info("ExecuteNext: agg_event signaled");
+        Log_info("ExecuteNext: Waiting for agg_event (holding mtx_pending_)");
+        // Wait for 2 seconds (2,000,000 microseconds)
+        agg_event->Wait(2000000);
+
+        if (agg_event->status_ == Event::TIMEOUT) {
+          Log_error("ExecuteNext: Timed out waiting for partitions!");
+        } else {
+          Log_info("ExecuteNext: agg_event signaled");
+        }
 
         // Signal completion to the waiting Dispatch (New Request)
         // Signal completion to the waiting Dispatch (New Request)
@@ -326,14 +361,17 @@ void SchedulerDeterministic::ExecuteNext() {
           pending_requests_[cmd_id].event->Set(1);
         }
       } else {
-          // Worker: Signal completion to the waiting Dispatch (Ordered Request)
-          if (pending_requests_.count(cmd_id)) {
-            Log_info("ExecuteNext: Worker signaling completion for cmd_id %lu", cmd_id);
-            pending_requests_[cmd_id].output = local_output;
-            pending_requests_[cmd_id].event->Set(1);
-          } else {
-             Log_info("ExecuteNext: Worker cmd_id %lu not found in pending_requests_", cmd_id);
-          }
+        // Worker: Signal completion to the waiting Dispatch (Ordered Request)
+        if (pending_requests_.count(cmd_id)) {
+          Log_info("ExecuteNext: Worker signaling completion for cmd_id %lu",
+                   cmd_id);
+          pending_requests_[cmd_id].output = local_output;
+          pending_requests_[cmd_id].event->Set(1);
+        } else {
+          Log_info(
+              "ExecuteNext: Worker cmd_id %lu not found in pending_requests_",
+              cmd_id);
+        }
       }
 
       pending_txns_.erase(next_slot_to_execute_);
@@ -342,4 +380,4 @@ void SchedulerDeterministic::ExecuteNext() {
   }
 
 } // namespace janus
-}
+} // namespace janus
