@@ -1,0 +1,442 @@
+PartitionFromKey: w_id=0, num_partitions=1, p=0
+PopulateTable: Stock foreign w_id size: 1 on par_id=0
+PopulateTable: Stock foreign w_id value: 0 on par_id=0
+PopulateTable: Stock num_records: 10000
+PopulateTable: Stock prim_foreign_index size: 2
+PopulateTable: Stock col 0 size 10000
+PopulateTable: Stock col 1 size 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:124] 2025-12-07 08:02:13.811 | PWD : 
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:136] 2025-12-07 08:02:13.811 | starting process 108364
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:77] 2025-12-07 08:02:13.811 | CreateConfig: argc=12
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[0]=./build/deptran_server
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[1]=-b
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[2]=-d
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[3]=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[4]=-f
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[5]=/tmp/test_1p_3rep.yml
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[6]=-P
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[7]=s1_proc
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[8]=-p
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[9]=19101
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[10]=-t
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:02:13.811 | argv[11]=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:221] 2025-12-07 08:02:13.811 | CreateConfig: Final duration=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:297] 2025-12-07 08:02:13.811 | LoadYML: /tmp/test_1p_3rep.yml
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:02:13.814 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:720] 2025-12-07 08:02:13.814 | client forwarding: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:66] 2025-12-07 08:02:13.814 | server enabled, number of sites: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:72] 2025-12-07 08:02:13.814 | launching site: 0, bind address 0.0.0.0:19101
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:79] 2025-12-07 08:02:13.820 | start data population for site 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:106] 2025-12-07 08:02:13.947 | data populated for site: 0, partition: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:82] 2025-12-07 08:02:13.947 | table popped for site 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:121] 2025-12-07 08:02:13.947 | enter SetupService for s1 @ 0.0.0.0:19101
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:162] 2025-12-07 08:02:13.947 | ServerWorker::SetupService registering service: 0x74bc12350880
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:162] 2025-12-07 08:02:13.947 | ServerWorker::SetupService registering service: 0x74bc100047d0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:13.947 | PollThreadWorker::poll_loop wait 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:173] 2025-12-07 08:02:13.947 | Server s1 ready at 0.0.0.0:19101
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:85] 2025-12-07 08:02:13.947 | start communication for site 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:14] 2025-12-07 08:02:13.947 | setup paxos communicator
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:13.948 | connect to site: 127.0.0.1:19101 (attempt 0)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:13.948 | connect to site: 127.0.0.1:19102 (attempt 0)
+E [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/client.cpp:179] 2025-12-07 08:02:13.948 | rrr::Client: connect(127.0.0.1:19102): Connection refused
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:14.948 | connect to site: 127.0.0.1:19102 (attempt 1)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:14.948 | connect to site: 127.0.0.1:19103 (attempt 0)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:14] 2025-12-07 08:02:14.948 | setup paxos communicator
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:14.948 | connect to site: 127.0.0.1:19101 (attempt 0)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:14.949 | connect to site: 127.0.0.1:19102 (attempt 0)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/communicator.cc:174] 2025-12-07 08:02:14.949 | connect to site: 127.0.0.1:19103 (attempt 0)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:87] 2025-12-07 08:02:14.949 | site 0 launched!
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:15.114 | PollThreadWorker::poll_loop wait 1001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:98] 2025-12-07 08:02:15.814 | waiting for server setup threads.
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:102] 2025-12-07 08:02:15.814 | done waiting for server setup threads.
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/server_worker.cc:32] 2025-12-07 08:02:15.814 | heartbeat setup for s1 on 0.0.0.0:29101
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:109] 2025-12-07 08:02:15.814 | server workers' communicators setup
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:16.275 | PollThreadWorker::poll_loop wait 2001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:17.471 | PollThreadWorker::poll_loop wait 3001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:18.662 | PollThreadWorker::poll_loop wait 4001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:19.800 | PollThreadWorker::poll_loop wait 5001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:20.995 | PollThreadWorker::poll_loop wait 6001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:22.140 | PollThreadWorker::poll_loop wait 7001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:297] 2025-12-07 08:02:23.280 | PollThreadWorker::poll_loop wait 8001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-07 08:02:23.910 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-07 08:02:23.910 | ServerConnection::handle_read rpc_id: 0x44a6ac3e
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cppSchedulerDeterministic::Dispatch cmd_id: 0
+SchedulerDeterministic::Dispatch slot_id=0
+Dispatch: vpd check
+Dispatch: vpd=0x74bbfc022920, vec_size=25
+Dispatch: piece 0, addr=0x74bbfc0229b0
+Dispatch: piece 0 inserted
+Dispatch: piece 1, addr=0x74bbfc022e10
+Dispatch: piece 1 inserted
+Dispatch: piece 2, addr=0x74bbfc023000
+Dispatch: piece 2 inserted
+Dispatch: piece 3, addr=0x74bbfc023210
+Dispatch: piece 3 inserted
+Dispatch: piece 4, addr=0x74bbfc0233a0
+Dispatch: piece 4 inserted
+Dispatch: piece 5, addr=0x74bbfc0235f0
+Dispatch: piece 5 inserted
+Dispatch: piece 6, addr=0x74bbfc023760
+Dispatch: piece 6 inserted
+Dispatch: piece 7, addr=0x74bbfc023920
+Dispatch: piece 7 inserted
+Dispatch: piece 8, addr=0x74bbfc023be0
+Dispatch: piece 8 inserted
+Dispatch: piece 9, addr=0x74bbfc023fb0
+Dispatch: piece 9 inserted
+Dispatch: piece 10, addr=0x74bbfc024270
+Dispatch: piece 10 inserted
+Dispatch: piece 11, addr=0x74bbfc024530
+Dispatch: piece 11 inserted
+Dispatch: piece 12, addr=0x74bbfc0247f0
+Dispatch: piece 12 inserted
+Dispatch: piece 13, addr=0x74bbfc024ab0
+Dispatch: piece 13 inserted
+Dispatch: piece 14, addr=0x74bbfc024df0
+Dispatch: piece 14 inserted
+Dispatch: piece 15, addr=0x74bbfc025130
+Dispatch: piece 15 inserted
+Dispatch: piece 16, addr=0x74bbfc025470
+Dispatch: piece 16 inserted
+Dispatch: piece 17, addr=0x74bbfc0259c0
+Dispatch: piece 17 inserted
+Dispatch: piece 18, addr=0x74bbfc025d00
+Dispatch: piece 18 inserted
+Dispatch: piece 19, addr=0x74bbfc026040
+Dispatch: piece 19 inserted
+Dispatch: piece 20, addr=0x74bbfc026560
+Dispatch: piece 20 inserted
+Dispatch: piece 21, addr=0x74bbfc026a50
+Dispatch: piece 21 inserted
+Dispatch: piece 22, addr=0x74bbfc026f40
+Dispatch: piece 22 inserted
+Dispatch: piece 23, addr=0x74bbfc027430
+Dispatch: piece 23 inserted
+Dispatch: piece 24, addr=0x74bbfc027920
+Dispatch: piece 24 inserted
+DEBUG: n_replicas=3, partitions.size()=1
+DEBUG: Taking MULTI-NODE path (Paxos)
+CoordinatorMultiPaxos::Submit: entered
+CoordinatorMultiPaxos::Submit: !in_submission_ verified
+CoordinatorMultiPaxos::Submit: cmd_ == nullptr verified
+CoordinatorMultiPaxos::Submit: cmd_ assigned
+CoordinatorMultiPaxos::Submit: kind_ verified
+:231] 2025-12-07 08:02:23.910 | ServerConnection::handle_read creating coroutine for rpc_id: 0x44a6ac3e
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.910 | Coroutine created: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.910 | Reactor::CreateRunCoroutine running coro: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.910 | Coroutine::Run start: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.910 | Coroutine::BoostRunWrapper start: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-07 08:02:23.910 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-07 08:02:23.910 | VecPieceData::FromMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:45] 2025-12-07 08:02:23.911 | ClassicServiceImpl::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc027f20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc027f20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc027f20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc027f20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:65] 2025-12-07 08:02:23.911 | ClassicServiceImpl::Dispatch coroutine start cmd_id: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:70] 2025-12-07 08:02:23.911 | ClassicServiceImpl::Dispatch calling dtxn_sched->Dispatch
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:47] 2025-12-07 08:02:23.911 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:74] 2025-12-07 08:02:23.911 | SchedulerDeterministic::Dispatch: partition_id_=0, loc_id_=0, n_replicas=3, n_partitions=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:96] 2025-12-07 08:02:23.911 | SchedulerDeterministic::Dispatch created local paxos_coord_ with n_replica_=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:104] 2025-12-07 08:02:23.911 | Paxos Submit for slot 1, cmd_id 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:140] 2025-12-07 08:02:23.911 | Broadcasting Accept to partition 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc002450, task: 0x74bbfc0024e0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-07 08:02:23.911 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-07 08:02:23.911 | ServerConnection::handle_read rpc_id: 0x1e24c4e7
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-07 08:02:23.911 | ServerConnection::handle_read creating coroutine for rpc_id: 0x1e24c4e7
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc002450
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-07 08:02:23.911 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-07 08:02:23.911 | VecPieceData::FromMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/service.cc:35] 2025-12-07 08:02:23.911 | MultiPaxosServiceImpl::Accept called for slot 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/server.cc:39] 2025-12-07 08:02:23.911 | multi-paxos scheduler accept for slot_id: 1, ballot: 1, max_seen: 0, max_accepted: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc0079a0, task: 0x74bbfc0078e0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc002450, task: 0x74bbfc0024e0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc0079a0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:78] 2025-12-07 08:02:23.911 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc0079a0, task: 0x74bbfc0029f0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc002560
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc002560
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc002560
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc002560
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:78] 2025-12-07 08:02:23.911 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:155] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Accept committed_ set to true
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:241] 2025-12-07 08:02:23.911 | GotoNextPhase ACCEPT case: committed_=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:245] 2025-12-07 08:02:23.911 | GotoNextPhase ACCEPT case: about to call Commit
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:191] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit ENTRY par_id=0 slot=1 phase=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:198] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit about to verify phase=3, COMMIT=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:201] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit for partition: 0, slot 1, about to BroadcastDecide
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:209] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit commo()=0x74bc102dd1a0, calling BroadcastDecide
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:167] 2025-12-07 08:02:23.911 | BroadcastDecide ENTRY: par_id=0 slot=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:169] 2025-12-07 08:02:23.911 | BroadcastDecide: about to GetPartitionSize
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:171] 2025-12-07 08:02:23.911 | BroadcastDecide: n=3, about to get proxies from par_id=0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:175] 2025-12-07 08:02:23.911 | BroadcastDecide: proxies.size()=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:180] 2025-12-07 08:02:23.911 | BroadcastDecide: par_id=0 slot=1 n=3 proxies=3 cur_batch_idx=0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:184] 2025-12-07 08:02:23.911 | BroadcastDecide: loop i=0, accessing proxies[0], proxies.size()=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:195] 2025-12-07 08:02:23.911 | BroadcastDecide: sending Decide to site 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:184] 2025-12-07 08:02:23.911 | BroadcastDecide: loop i=1, accessing proxies[1], proxies.size()=3
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:195] 2025-12-07 08:02:23.911 | BroadcastDecide: sending Decide to site 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:184] 2025-12-07 08:02:23.911 | BroadcastDecide: loop i=2, accessing proxies[2], proxies.size()=3
+CoordinatorMultiPaxos::Submit: GotoNextPhase returned
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:195] 2025-12-07 08:02:23.911 | BroadcastDecide: sending Decide to site 2
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:155] 2025-12-07 08:02:23.911 | VecPieceData::ToMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:203] 2025-12-07 08:02:23.911 | BroadcastDecide: loop complete, sent 3 Decide RPCs
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:212] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit BroadcastDecide returned
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:215] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit calling commit_callback_
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:217] 2025-12-07 08:02:23.911 | CoordinatorMultiPaxos::Commit commit_callback_ returned
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/coordinator.cc:248] 2025-12-07 08:02:23.911 | GotoNextPhase ACCEPT case: Commit returned
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc002560, task: 0x74bbfc007900
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/commo.cc:78] 2025-12-07 08:02:23.911 | BroadcastAccept callback: expected_ballot=1, received_ballot=1, vote_yes=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.911 | Coroutine destroyed: 0x74bbfc007800, task: 0x74bbfc007a30
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-07 08:02:23.911 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-07 08:02:23.911 | ServerConnection::handle_read rpc_id: 0x16ff5504
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-07 08:02:23.911 | ServerConnection::handle_read creating coroutine for rpc_id: 0x16ff5504
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc007800
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-07 08:02:23.911 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-07 08:02:23.911 | VecPieceData::FromMarshal size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.911 | Coroutine created: 0x74bbfc010020
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.911 | Reactor::CreateRunCoroutine running coro: 0x74bbfc010020
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.911 | Coroutine::Run start: 0x74bbfc010020
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.911 | Coroutine::BoostRunWrapper start: 0x74bbfc010020
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/service.cc:51] 2025-12-07 08:02:23.911 | MultiPaxosServiceImpl::Decide called for slot 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/server.cc:58] 2025-12-07 08:02:23.911 | multi-paxos scheduler decide for slot: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/server.cc:61] 2025-12-07 08:02:23.911 | PaxosServer::OnCommit slot 1, executed 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:219] 2025-12-07 08:02:23.911 | SchedulerDeterministic::ExecuteNext next_slot: 1, pending_txns_.count=1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:225] 2025-12-07 08:02:23.911 | ExecuteNext: entering while loop for slot 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:229] 2025-12-07 08:02:23.911 | ExecuteNext: vpd=0x74bbfc0077c0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:254] 2025-12-07 08:02:23.911 | ExecuteNext: Starting piece execution loop. partition_id_=0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=1000, inn_id=1000
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15000, inn_id=15000
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15001, inn_id=15001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15002, inn_id=15002
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15003, inn_id=15003
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15004, inn_id=15004
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.911 | ExecuteNext: Executing piece type=15005, inn_id=15005
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16000, inn_id=16000
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16001, inn_id=16001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16002, inn_id=16002
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16003, inn_id=16003
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16004, inn_id=16004
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=16005, inn_id=16005
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17000, inn_id=17000
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17001, inn_id=17001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17002, inn_id=17002
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17003, inn_id=17003
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17004, inn_id=17004
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=17005, inn_id=17005
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18000, inn_id=18000
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18001, inn_id=18001
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18002, inn_id=18002
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18003, inn_id=18003
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18004, inn_id=18004
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:260] 2025-12-07 08:02:23.912 | ExecuteNext: Executing piece type=18005, inn_id=18005
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:277] 2025-12-07 08:02:23.912 | ExecuteNext: Finished piece execution loop. Executed 25 pieces. Committing mdb_txn.
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:283] 2025-12-07 08:02:23.912 | ExecuteNext: mdb_txn committed.
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:285] 2025-12-07 08:02:23.912 | ExecuteNext: mdb_txn deleted.
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:320] 2025-12-07 08:02:23.912 | ExecuteNext: no other partitions, signaling immediately
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:348] 2025-12-07 08:02:23.912 | ExecuteNext: Waiting for agg_event (holding mtx_pending_)
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:355] 2025-12-07 08:02:23.912 | ExecuteNext: agg_event signaled
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/paxos/server.cc:72] 2025-12-07 08:02:23.912 | apply multi-paxos par:0 loc:0 executed slot 1 now
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:128] 2025-12-07 08:02:23.912 | SchedulerDeterministic::Dispatch returning true for cmd_id 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:72] 2025-12-07 08:02:23.912 | Service::Dispatch: dtxn_sched->Dispatch returned true. Output size: 25
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:74] 2025-12-07 08:02:23.912 | Service::Dispatch: defer->reply() called
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:83] 2025-12-07 08:02:23.912 | ClassicServiceImpl::Dispatch coroutine end cmd_id: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc027f20, task: 0x74bbfc027fb0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc010020, task: 0x74bbfc04c9b0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc007800, task: 0x74bbfc007a30
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.912 | Coroutine created: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.912 | Reactor::CreateRunCoroutine running coro: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.912 | Coroutine::Run start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.912 | Coroutine::BoostRunWrapper start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutineSchedulerDeterministic::Dispatch cmd_id: 0
+SchedulerDeterministic::Dispatch slot_id=0
+.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc021290, task: 0x74bbfc022950
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.912 | Coroutine created: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.912 | Reactor::CreateRunCoroutine running coro: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.912 | Coroutine::Run start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.912 | Coroutine::BoostRunWrapper start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc021290, task: 0x74bbfc022950
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.912 | Coroutine created: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.912 | Reactor::CreateRunCoroutine running coro: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.912 | Coroutine::Run start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.912 | Coroutine::BoostRunWrapper start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:16] 2025-12-07 08:02:23.912 | Coroutine destroyed: 0x74bbfc021290, task: 0x74bbfc022950
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:160] 2025-12-07 08:02:23.991 | ServerConnection::handle_read bytes read from socket 4
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:221] 2025-12-07 08:02:23.991 | ServerConnection::handle_read rpc_id: 0x44a6ac3e
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:231] 2025-12-07 08:02:23.991 | ServerConnection::handle_read creating coroutine for rpc_id: 0x44a6ac3e
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.991 | Coroutine created: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.991 | Reactor::CreateRunCoroutine running coro: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.991 | Coroutine::Run start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.991 | Coroutine::BoostRunWrapper start: 0x74bbfc021290
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/rpc/server.cpp:233] 2025-12-07 08:02:23.991 | ServerConnection::handle_read coroutine start
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/rcc/../procedure.h:168] 2025-12-07 08:02:23.991 | VecPieceData::FromMarshal size: 57
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:45] 2025-12-07 08:02:23.991 | ClassicServiceImpl::Dispatch cmd_id: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:12] 2025-12-07 08:02:23.991 | Coroutine created: 0x74bbfc01eb20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/reactor.cc:75] 2025-12-07 08:02:23.991 | Reactor::CreateRunCoroutine running coro: 0x74bbfc01eb20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:41] 2025-12-07 08:02:23.991 | Coroutine::Run start: 0x74bbfc01eb20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/rrr/reactor/coroutine.cc:22] 2025-12-07 08:02:23.991 | Coroutine::BoostRunWrapper start: 0x74bbfc01eb20
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:65] 2025-12-07 08:02:23.991 | ClassicServiceImpl::Dispatch coroutine start cmd_id: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/service.cc:70] 2025-12-07 08:02:23.991 | ClassicServiceImpl::Dispatch calling dtxn_sched->Dispatch
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/deterministic/scheduler.cc:47] 2025-12-07 08:02:23.991 | SchedulerDeterministic:Dispatch: vpd check
+Dispatch: vpd=0x74bbfc010430, vec_size=57
+Dispatch: piece 0, addr=0x74bbfc023760
+Dispatch: piece 0 inserted
+Dispatch: piece 1, addr=0x74bbfc0235f0
+Dispatch: piece 1 inserted
+Dispatch: piece 2, addr=0x74bbfc0233a0
+Dispatch: piece 2 inserted
+Dispatch: piece 3, addr=0x74bbfc023210
+Dispatch: piece 3 inserted
+Dispatch: piece 4, addr=0x74bbfc023000
+Dispatch: piece 4 inserted
+Dispatch: piece 5, addr=0x74bbfc022e10
+Dispatch: piece 5 inserted
+Dispatch: piece 6, addr=0x74bbfc0229b0
+Dispatch: piece 6 inserted
+Dispatch: piece 7, addr=0x74bbfc022f00
+Dispatch: piece 7 inserted
+Dispatch: piece 8, addr=0x74bbfc020a20
+Dispatch: piece 8 inserted
+Dispatch: piece 9, addr=0x74bbfc0230f0
+Dispatch: piece 9 inserted
+Dispatch: piece 10, addr=0x74bbfc011dc0
+Dispatch: piece 10 inserted
+Dispatch: piece 11, addr=0x74bbfc011830
+Dispatch: piece 11 inserted
+Dispatch: piece 12, addr=0x74bbfc014af0
+Dispatch: piece 12 inserted
+Dispatch: piece 13, addr=0x74bbfc0154f0
+Dispatch: piece 13 inserted
+Dispatch: piece 14, addr=0x74bbfc016b00
+Dispatch: piece 14 inserted
+Dispatch: piece 15, addr=0x74bbfc015fa0
+Dispatch: piece 15 inserted
+Dispatch: piece 16, addr=0x74bbfc022100
+Dispatch: piece 16 inserted
+Dispatch: piece 17, addr=0x74bbfc0210b0
+Dispatch: piece 17 inserted
+Dispatch: piece 18, addr=0x74bbfc022310
+Dispatch: piece 18 inserted
+Dispatch: piece 19, addr=0x74bbfc010cc0
+Dispatch: piece 19 inserted
+Dispatch: piece 20, addr=0x74bbfc022aa0
+Dispatch: piece 20 inserted
+Dispatch: piece 21, addr=0x74bbfc023850
+Dispatch: piece 21 inserted
+Dispatch: piece 22, addr=0x74bbfc023b10
+Dispatch: piece 22 inserted
+Dispatch: piece 23, addr=0x74bbfc0212f0
+Dispatch: piece 23 inserted
+Dispatch: piece 24, addr=0x74bbfc0215b0
+Dispatch: piece 24 inserted
+Dispatch: piece 25, addr=0x74bbfc021870
+Dispatch: piece 25 inserted
+Dispatch: piece 26, addr=0x74bbfc021b30
+Dispatch: piece 26 inserted
+Dispatch: piece 27, addr=0x74bbfc021df0
+Dispatch: piece 27 inserted
+Dispatch: piece 28, addr=0x74bbfc023fb0
+Dispatch: piece 28 inserted
+Dispatch: piece 29, addr=0x74bbfc024270
+Dispatch: piece 29 inserted
+Dispatch: piece 30, addr=0x74bbfc0245b0
+Dispatch: piece 30 inserted
+Dispatch: piece 31, addr=0x74bbfc0248f0
+Dispatch: piece 31 inserted
+Dispatch: piece 32, addr=0x74bbfc024c30
+Dispatch: piece 32 inserted
+Dispatch: piece 33, addr=0x74bbfc025380
+Dispatch: piece 33 inserted
+Dispatch: piece 34, addr=0x74bbfc0256c0
+Dispatch: piece 34 inserted
+Dispatch: piece 35, addr=0x74bbfc0259c0
+Dispatch: piece 35 inserted
+Dispatch: piece 36, addr=0x74bbfc025d00
+Dispatch: piece 36 inserted
+Dispatch: piece 37, addr=0x74bbfc026040
+Dispatch: piece 37 inserted
+Dispatch: piece 38, addr=0x74bbfc026380
+Dispatch: piece 38 inserted
+Dispatch: piece 39, addr=0x74bbfc0266c0
+Dispatch: piece 39 inserted
+Dispatch: piece 40, addr=0x74bbfc026a00
+Dispatch: piece 40 inserted
+Dispatch: piece 41, addr=0x74bbfc026d40
+Dispatch: piece 41 inserted
+Dispatch: piece 42, addr=0x74bbfc027080
+Dispatch: piece 42 inserted
+Dispatch: piece 43, addr=0x74bbfc0273c0
+Dispatch: piece 43 inserted
+Dispatch: piece 44, addr=0x74bbfc0278e0
+Dispatch: piece 44 inserted
+Dispatch: piece 45, addr=0x74bbfc04ea80
+Dispatch: piece 45 inserted
+Dispatch: piece 46, addr=0x74bbfc04ef70
+Dispatch: piece 46 inserted
+Dispatch: piece 47, addr=0x74bbfc04f460
+Dispatch: piece 47 inserted
+Dispatch: piece 48, addr=0x74bbfc04f950
+Dispatch: piece 48 inserted
+Dispatch: piece 49, addr=0x74bbfc04fe40
+Dispatch: piece 49 inserted
+Dispatch: piece 50, addr=0x74bbfc050330
+Dispatch: piece 50 inserted
+Dispatch: piece 51, addr=0x74bbfc050820
+Dispatch: piece 51 inserted
+Dispatch: piece 52, addr=0x74bbfc050d10
+Dispatch: piece 52 inserted
+Dispatch: piece 53, addr=0x74bbfc051200
+Dispatch: piece 53 inserted
+Dispatch: piece 54, addr=0x74bbfc0516f0
+Dispatch: piece 54 inserted
+Dispatch: piece 55, addr=0x74bbfc051be0
+Dispatch: piece 55 inserted
+Dispatch: piece 56, addr=0x74bbfc0520d0
+Dispatch: piece 56 inserted
+DEBUG: n_replicas=3, partitions.size()=1
+DEBUG: Taking MULTI-NODE path (Paxos)
+CoordinatorMultiPaxos::Submit: entered
+CoordinatorMultiPaxos::Submit: !in_submission_ verified
+CoordinatorMultiPaxos::Submit: cmd_ == nullptr verified
+CoordinatorMultiPaxos::Submit: cmd_ assigned
+CoordinatorMultiPaxos::Submit: kind_ verified
+  *** begin stack trace ***
+0    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN3rrr17print_stack_traceEP8_IO_FILE+0x6c) [0x74bc1662ad1c]
+1    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN5janus21CoordinatorMultiPaxos6AcceptEv+0x5d4) [0x74bc165b8284]
+2    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN5janus21CoordinatorMultiPaxos13GotoNextPhaseEv+0x9d) [0x74bc165b845d]
+3    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN5janus21CoordinatorMultiPaxos6SubmitERSt10shared_ptrIN3rrr12MarshallableEERKSt8functionIFvvEESA_+0x21a) [0x74bc165b88da]
+4    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN5janus22SchedulerDeterministic8DispatchEmSt10shared_ptrIN3rrr12MarshallableEERSt3mapIjS5_IiN3mdb5ValueESt4lessIiESaISt4pairIKiS7_EEES8_IjESaISA_IKjSE_EEE+0x630) [0x74bc1657e5d0]
+5    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(+0x2025c5) [0x74bc166025c5]
+6    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN3rrr9Coroutine15BoostRunWrapperERN5boost11coroutines26detail14push_coroutineIvEE+0x6e) [0x74bc1663fdfe]
+7    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZZN5boost11coroutines26detail14pull_coroutineIvE13control_blockC4INS_7context21basic_fixedsize_stackINS6_12stack_traitsEEESt5_BindIFMN3rrr9CoroutineEFvRNS1_14push_coroutineIvEEEPSC_St12_PlaceholderILi1EEEEEENS6_12preallocatedEOT_OT0_ENUlONS6_5fiberEE_clEST_+0x83) [0x74bc16640993]
+8    /home/dp012/Desktop/gitmacbranch/mako-pr/libtxlog.so(_ZN5boost7context6detail11fiber_entryINS1_12fiber_recordINS0_5fiberENS0_21basic_fixedsize_stackINS0_12stack_traitsEEEZNS_11coroutines26detail14pull_coroutineIvE13control_blockC4IS7_St5_BindIFMN3rrr9CoroutineEFvRNS9_14push_coroutineIvEEEPSG_St12_PlaceholderILi1EEEEEENS0_12preallocatedEOT_OT0_EUlOS4_E_EEEEvNS1_10transfer_tE+0x43) [0x74bc16640c63]
+  ***  end stack trace  ***

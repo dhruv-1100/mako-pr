@@ -452,6 +452,7 @@ class ClientController(object):
         self.num_proxies = len(rpc_proxy)
 
         while (len(rpc_proxy) != len(self.finish_set)):
+            logger.info("DEBUG: Loop start. finish_set size: {}, rpc_proxy size: {}".format(len(self.finish_set), len(rpc_proxy)))
             logger.debug("top client heartbeat; timeout {}; finish_set={}/{}".format(
                 self.timeout, len(self.finish_set), len(rpc_proxy)))
             for k in self.txn_infos.keys():
@@ -472,7 +473,11 @@ class ClientController(object):
                     logger.error(traceback.format_exc())
             i=0
             for future in futures:
-                res = future.result
+                try:
+                    res = future.result
+                except Exception as e:
+                    logger.error("DEBUG: Exception getting future.result: " + str(e))
+                    continue
                 period_time = res.period_sec + res.period_nsec / ONE_BILLION
                 for txn_type in res.txn_info.keys():
                     if txn_type not in self.txn_infos:
@@ -503,6 +508,7 @@ class ClientController(object):
                 self.run_sec += res.run_sec
                 self.run_nsec += res.run_nsec
                 self.n_asking += res.n_asking
+                logger.info("DEBUG: Client {} reported is_finish={}".format(i, res.is_finish))
                 if (res.is_finish == 1):
                     logger.info("Client {} reported is_finish=1, run_sec={:.2f}".format(i, res.run_sec))
                     self.finish_set.add(i)
@@ -524,9 +530,11 @@ class ClientController(object):
             self.cur_time = time.time()
             need_break = self.print_stage_result(do_sample, do_sample_lock)
             if (need_break):
+                logger.info("DEBUG: Breaking loop because need_break is True")
                 break
             else:
-                time.sleep(self.timeout)
+                logger.info("DEBUG: Sleeping for 1s")
+                time.sleep(1)
 
     def print_stage_result(self, do_sample, do_sample_lock):
         # sites = ProcessInfo.get_sites(self.process_infos,
@@ -606,7 +614,9 @@ class ClientController(object):
         self.pre_run_sec = self.run_sec
         self.pre_run_nsec = self.run_nsec
 
+        logger.info("DEBUG: total_time={:.4f}, duration={:.4f}, cur_time={:.4f}, start_time={:.4f}, diff={:.4f}".format(total_time, self.duration, self.cur_time, self.start_time, self.cur_time - self.start_time))
         if (self.cur_time - self.start_time > 1.5 * self.duration):
+            logger.info("DEBUG: Breaking because time limit exceeded")
             #if (self.print_max):
             #    self.print_max = False
             #    for k, v in self.txn_infos.items():
@@ -899,7 +909,7 @@ class ServerController(object):
              "-p " + str(self.config['args'].rpc_port + process.id) + " " \
              "-t " + str(self.config['args'].s_timeout) + " " + \
              recording + \
-             "&"
+             " > " + self.log_dir + "/server_" + process.name + ".log 2>&1 &"
 
         host_process_counts[process.host_address] += 1
         cmd.append(s)

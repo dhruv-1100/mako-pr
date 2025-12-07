@@ -28,7 +28,7 @@ class ClientWorker {
   uint32_t id;
   uint32_t duration;
   ClientControlServiceImpl *ccsi{nullptr};
-  int32_t n_concurrent_;
+  std::atomic<int32_t> n_concurrent_;
   rrr::Mutex finish_mutex{};
   rrr::CondVar finish_cond{};
   bool forward_requests_to_leader_ = false;

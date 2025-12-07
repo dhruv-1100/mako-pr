@@ -261,6 +261,8 @@ class TxData: public CmdData {
   virtual bool HasMoreUnsentPiece();
   virtual shared_ptr<TxPieceData> GetNextReadySubCmd();
   virtual ReadyPiecesData GetReadyPiecesData(int32_t max = 0);
+  // Returns ALL pieces regardless of dependency status (for deterministic mode)
+  virtual ReadyPiecesData GetAllPiecesData();
   virtual set<parid_t> GetPartitionIds() override;
   TxWorkspace& GetWorkspace(innid_t inn_id) {
     verify(inn_id != 0);

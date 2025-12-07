@@ -10,7 +10,7 @@ namespace helloworld_client {
 class HelloworldClientService: public rrr::Service {
 public:
     enum {
-        TXN_READ = 0x49077f6b,
+        TXN_READ = 0x37d8a6eb,
     };
     int __reg_to__(rrr::Server* svr) {
         int ret = 0;

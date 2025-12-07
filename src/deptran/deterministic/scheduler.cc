@@ -92,8 +92,9 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
           paxos_coord_->loc_id_ = loc_id_;
           paxos_coord_->frame_ = frame_;
           paxos_coord_->commo_ = commo_;
+          paxos_coord_->n_replica_ = n_replicas;  // Required for quorum!
           Log_info(
-              "SchedulerDeterministic::Dispatch created local paxos_coord_");
+              "SchedulerDeterministic::Dispatch created local paxos_coord_ with n_replica_=%d", n_replicas);
         }
 
         // Assign the next slot for this transaction
@@ -106,13 +107,13 @@ bool SchedulerDeterministic::Dispatch(cmdid_t cmd_id,
         {
           std::lock_guard<std::recursive_mutex> lock(mtx_pending_);
           pending_requests_[cmd_id].event = event;
-          // Pre-store the cmd so OnCommit -> app_next_ can find it
-          pending_txns_[assigned_slot] = cmd;
+          // NOTE: Do NOT store to pending_txns_ here!
+          // app_next_ from OnCommit will store and call ExecuteNext
         }
 
-        // Submit to Paxos. The callback is empty because ExecuteNext will
-        // signal completion after transaction execution, not just consensus.
-        paxos_coord_->Submit(cmd, [this]() { this->ExecuteNext(); });
+        // Submit to Paxos. Empty callback because app_next_ (from OnCommit)
+        // handles storing to pending_txns_ and calling ExecuteNext.
+        paxos_coord_->Submit(cmd, []() {});
 
         // Wait for ExecuteNext to complete and signal via event->Set(1)
         event->Wait();
@@ -260,14 +261,23 @@ void SchedulerDeterministic::ExecuteNext() {
                    piece->type_, piece->inn_id());
           auto roottype = piece->root_type_;
           auto subtype = piece->type_;
+          
+          if (!txn_reg_) {
+             Log_fatal("ExecuteNext: txn_reg_ is NULL!");
+          }
+          Log_info("ExecuteNext: getting piece_def for root=%d, sub=%d", roottype, subtype);
           TxnPieceDef &piece_def = txn_reg_->get(roottype, subtype);
+          Log_info("ExecuteNext: got piece_def");
 
           int ret_code;
+          Log_info("ExecuteNext: Aggregating input");
           piece->input.Aggregate(tx->ws_);
+          Log_info("ExecuteNext: Input aggregated. Calling proc_handler_");
 
           // Execute
           piece_def.proc_handler_(nullptr, *tx, *piece, &ret_code,
                                   local_output[piece->inn_id()]);
+          Log_info("ExecuteNext: proc_handler_ returned");
 
           tx->ws_.insert(local_output[piece->inn_id()]);
           pieces_executed++;

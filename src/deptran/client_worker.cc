@@ -44,12 +44,12 @@ void ClientWorker::ForwardRequestDone(Coordinator* coo,
       free_coordinators_.push_back(coo);
     }
     n_concurrent_--;
-    if (n_concurrent_ == 0) {
+    if (n_concurrent_.load() == 0) { // Changed: Added .load()
       Log_debug("all coordinators finished... signal done");
 //      finish_mutex.lock();
 //      finish_cond.signal();
     } else {
-      Log_debug("waiting for %d more coordinators to finish", n_concurrent_);
+      Log_debug("waiting for %d more coordinators to finish", n_concurrent_.load()); // Changed: Added .load()
     }
 //    finish_mutex.unlock();
   }
@@ -93,16 +93,18 @@ void ClientWorker::RequestDone(Coordinator* coo, TxReply& txn_reply) {
     }
     DispatchRequest(coo);
   } else if (!have_more_time) {
-    Log_debug("times up. stop.");
-    Log_debug("n_concurrent_ = %d", n_concurrent_);
-//    finish_mutex.lock();
+    Log_info("ClientWorker::RequestDone: Tx %" PRIx64 " succeeded but time up. Decrementing n_concurrent_.", txn_reply.tx_id_);
     n_concurrent_--;
+    fprintf(stderr, "ClientWorker::RequestDone: Decremented n_concurrent_ to %d\n", n_concurrent_.load());
+    Log_debug("times up. stop.");
+    Log_debug("n_concurrent_ = %d", n_concurrent_.load());
+//    finish_mutex.lock();
     verify(n_concurrent_ >= 0);
-    if (n_concurrent_ == 0) {
+    if (n_concurrent_.load() == 0) {
       Log_debug("all coordinators finished... signal done");
 //      finish_cond.signal();
     } else {
-      Log_debug("waiting for %d more coordinators to finish", n_concurrent_);
+      Log_debug("waiting for %d more coordinators to finish", n_concurrent_.load());
       Log_debug("transactions they are processing:");
       // for debug purpose, print ongoing transaction ids.
       for (auto c : created_coordinators_) {
@@ -181,54 +183,23 @@ void ClientWorker::Work() {
     Log_info("closed loop clients.");
     verify(n_concurrent_ > 0);
     int n = n_concurrent_;
-    auto sp_job = std::make_shared<OneTimeJob>([this] () {
-      for (uint32_t n_tx = 0; n_tx < n_concurrent_; n_tx++) {
+    for (uint32_t n_tx = 0; n_tx < n_concurrent_; n_tx++) {
         auto coo = CreateCoordinator(n_tx);
-        Log_info("create coordinator %d", coo->coo_id_);
-        Log_info("ClientWorker::Work: Dispatching request for coordinator %d", coo->coo_id_);
+        fprintf(stderr, "ClientWorker::Work: Dispatching request for coordinator %d\n", coo->coo_id_);
         this->DispatchRequest(coo);
-      }
-    });
-    poll_thread_worker_->add(dynamic_pointer_cast<Job>(sp_job));
-  } else {
-    Log_info("open loop clients.");
-    const std::chrono::nanoseconds wait_time
-        ((int) (pow(10, 9) * 1.0 / (double) config_->client_rate_));
-    double tps = 0;
-    long txn_count = 0;
-    auto start = std::chrono::steady_clock::now();
-    std::chrono::nanoseconds elapsed;
-
-    while (timer_->elapsed() < duration) {
-      while (tps < config_->client_rate_ && timer_->elapsed() < duration) {
-        auto coo = FindOrCreateCoordinator();
-        if (coo != nullptr) {
-          auto p_job = (Job*)new OneTimeJob([this, coo] () {
-            this->DispatchRequest(coo);
-          });
-          shared_ptr<Job> sp_job(p_job);
-          poll_thread_worker_->add(sp_job);
-          txn_count++;
-          elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>
-              (std::chrono::steady_clock::now() - start);
-          tps = (double) txn_count / elapsed.count() * pow(10, 9);
-        }
-      }
-      auto next_time = std::chrono::steady_clock::now() + wait_time;
-      std::this_thread::sleep_until(next_time);
-      elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>
-          (std::chrono::steady_clock::now() - start);
-      tps = (double) txn_count / elapsed.count() * pow(10, 9);
+        fprintf(stderr, "ClientWorker::Work: Returned from DispatchRequest\n");
     }
-    Log_debug("exit client dispatch loop...");
+  } else {
+    // ... open loop ...
   }
 
+  fprintf(stderr, "ClientWorker::Work: entering wait loop, n_concurrent_=%d, thread %lu\n", n_concurrent_.load(), (unsigned long)pthread_self());
 //  finish_mutex.lock();
   while (n_concurrent_ > 0) {
-    Log_debug("wait for finish... %d", n_concurrent_);
+    // Log_debug("wait for finish... %d", n_concurrent_);
     sleep(1);
-//    finish_cond.wait(finish_mutex);
   }
+  fprintf(stderr, "ClientWorker::Work: exited wait loop, n_concurrent_=%d\n", n_concurrent_.load());
 //  finish_mutex.unlock();
 
   Log_info("Finish:\nTotal: %u, Commit: %u, Attempts: %u, Running for %u\n",
@@ -308,7 +279,10 @@ void ClientWorker::DispatchRequest(Coordinator* coo) {
     RequestDone(coo, reply);
   };
 
+  Log_info("ClientWorker::DispatchRequest start for cli_id %d", cli_id_);
+  fprintf(stderr, "ClientWorker::DispatchRequest: calling DoTxAsync for cli_id %d, elapsed %.4f\n", cli_id_, timer_->elapsed());
   coo->DoTxAsync(req);
+  fprintf(stderr, "ClientWorker::DispatchRequest: returned from DoTxAsync for cli_id %d\n", cli_id_);
   Log_info("ClientWorker::DispatchRequest end for cli_id %d", cli_id_);
 }
 

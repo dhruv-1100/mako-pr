@@ -21,10 +21,9 @@ void CoordinatorDeterministic::DoTxAsync(TxRequest &req) {
   TxData* tx_data = frame_->CreateTxnCommand(req, txn_reg);
   Log_info("TxData created");
   
-  // 2. Get all pieces
-  // GetReadyPiecesData returns map<parid_t, vector<shared_ptr<SimpleCommand>>>
-  // We want ALL pieces.
-  auto ready_pieces = tx_data->GetReadyPiecesData();
+  // 2. Get all pieces (including dependent ones)
+  // For deterministic mode, we need ALL pieces - server handles dependencies
+  auto ready_pieces = tx_data->GetAllPiecesData();
   
   // 3. Bundle into one VecPieceData
   shared_ptr<vector<shared_ptr<TxPieceData>>> all_pieces = make_shared<vector<shared_ptr<TxPieceData>>>();
@@ -55,12 +54,13 @@ void CoordinatorDeterministic::DoTxAsync(TxRequest &req) {
   
   rrr::FutureAttr fuattr;
   fuattr.callback = [this, tx_data, callback](Future* fu) {
-    Log_info("CoordinatorDeterministic::DoTxAsync callback");
+    Log_info("CoordinatorDeterministic::DoTxAsync callback invoked for tx_id %lu", tx_data->txn_id_);
     int32_t ret;
     TxnOutput outputs;
     TxReply reply;
     try {
         fu->get_reply() >> ret >> outputs;
+        Log_info("CoordinatorDeterministic::DoTxAsync callback: ret=%d, outputs.size=%d", ret, (int)outputs.size());
     } catch (std::exception& e) {
         Log_error("DoTxAsync callback exception: %s", e.what());
         reply.res_ = REJECT;
@@ -81,6 +81,7 @@ void CoordinatorDeterministic::DoTxAsync(TxRequest &req) {
     
     // Clean up tx_data allocated by Frame::CreateTxnCommand
     delete tx_data;
+    Log_info("CoordinatorDeterministic::DoTxAsync calling client callback");
     callback(reply);
   };
   

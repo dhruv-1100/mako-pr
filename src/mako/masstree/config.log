@@ -32,10 +32,6 @@ PATH: /home/dp012/.local-rust/bin/
 PATH: /home/dp012/.local-rust/bin/
 PATH: /home/dp012/.local-rust/bin/
 PATH: /home/dp012/.local-rust/bin/
-PATH: /home/dp012/.local-rust/bin/
-PATH: /home/dp012/.local-rust/bin/
-PATH: /home/dp012/.local-rust/bin/
-PATH: /home/dp012/.local-rust/bin/
 PATH: /home/dp012/.cargo/bin/
 PATH: /home/dp012/.local/bin/
 PATH: /usr/local/sbin/
@@ -328,8 +324,8 @@ configure:4609: $? = 0
 configure:4609: result: yes
 configure:4617: checking for library containing numa_available
 configure:4646: /usr/bin/g++ -o conftest -g -W -Wall -O3   conftest.cpp  >&5
-/usr/bin/ld: /tmp/ccdySFOp.o: in function `main':
-/home/dp012/Desktop/gitmac/mako-pr/src/mako/masstree/conftest.cpp:29: undefined reference to `numa_available'
+/usr/bin/ld: /tmp/ccGnA0bb.o: in function `main':
+/home/dp012/Desktop/gitmacbranch/mako-pr/src/mako/masstree/conftest.cpp:29: undefined reference to `numa_available'
 collect2: error: ld returned 1 exit status
 configure:4646: $? = 1
 configure: failed program was:

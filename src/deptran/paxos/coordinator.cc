@@ -91,6 +91,9 @@ void CoordinatorMultiPaxos::Prepare() {
     // TODO timeout
     verify(0);
   }
+  in_prepare_ = false;
+}
+
 //  commo()->BroadcastPrepare(par_id_,
 //                            slot_id_,
 //                            curr_ballot_,
@@ -121,8 +124,8 @@ void CoordinatorMultiPaxos::Prepare() {
 //    } else {
 ////       max_ballot < curr_ballot ignore
 //    }
-//  }
-}
+//  
+
 
 void CoordinatorMultiPaxos::Accept() {
   //std::lock_guard<std::recursive_mutex> lock(mtx_);
@@ -161,7 +164,7 @@ void CoordinatorMultiPaxos::Accept() {
 //                                     this,
 //                                     phase_,
 //                                     std::placeholders::_1));
-//}
+  in_accept = false;
 //
 //void CoordinatorMultiPaxos::AcceptAck(phase_t phase, Future* fu) {
 //  std::lock_guard<std::recursive_mutex> lock(mtx_);
@@ -197,7 +200,7 @@ void CoordinatorMultiPaxos::Commit() {
   // This ensures the Decide messages are sent before the waiting coroutine wakes up
   Log_info("CoordinatorMultiPaxos::Commit about to verify phase=%d, COMMIT=%d", (int)phase_, (int)Phase::COMMIT);
   fflush(stdout);
-  verify(phase_ == Phase::COMMIT);
+  verify(phase_ % n_phase_ == Phase::COMMIT);
   Log_info("CoordinatorMultiPaxos::Commit for partition: %d, slot %d, about to BroadcastDecide",
             (int) par_id_, (int) slot_id_);
   fflush(stdout);

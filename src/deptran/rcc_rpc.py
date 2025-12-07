@@ -15,19 +15,19 @@ TxDispatchRequest = Marshal.reg_type('TxDispatchRequest', [('id', 'rrr::i32'), (
 TxnDispatchResponse = Marshal.reg_type('TxnDispatchResponse', [])
 
 class MultiPaxosService(object):
-    FORWARD = 0x29a13fb1
-    PREPARE = 0x63943e43
-    ACCEPT = 0x3ec14825
-    DECIDE = 0x41b23a21
-    HEARTBEAT = 0x458a24a6
-    FORWARDTOLEARNERSERVER = 0x33a787ef
-    BULKPREPARE = 0x634f3cea
-    BULKACCEPT = 0x10422d97
-    BULKPREPARE2 = 0x4d4a5862
-    SYNCLOG = 0x2c5ce008
-    SYNCCOMMIT = 0x18715378
-    SYNCNOOPS = 0x4ccf1b3e
-    BULKDECIDE = 0x12f25007
+    FORWARD = 0x503bf2cf
+    PREPARE = 0x2c93e8c5
+    ACCEPT = 0x1e24c4e7
+    DECIDE = 0x16ff5504
+    HEARTBEAT = 0x13d1b956
+    FORWARDTOLEARNERSERVER = 0x39e6bd67
+    BULKPREPARE = 0x543ca62c
+    BULKACCEPT = 0x370aa48d
+    BULKPREPARE2 = 0x28d471dd
+    SYNCLOG = 0x44cbc3a8
+    SYNCCOMMIT = 0x1d31ef1e
+    SYNCNOOPS = 0x14399175
+    BULKDECIDE = 0x59e2c2bc
 
     __input_type_info__ = {
         'Forward': ['MarshallDeputy'],
@@ -281,34 +281,34 @@ class MultiPaxosProxy(object):
             return __result__[1]
 
 class ClassicService(object):
-    MSGSTRING = 0x2cc23661
-    MSGMARSHALL = 0x415978c6
-    DISPATCH = 0x55a22dbd
-    PREPARE = 0x33378d59
-    COMMIT = 0x63343a39
-    ABORT = 0x16cfc7ab
-    UPGRADEEPOCH = 0x4ffd44ca
-    TRUNCATEEPOCH = 0x4485c468
-    RPC_NULL = 0x2448b16e
-    TAPIRACCEPT = 0x520ab68e
-    TAPIRFASTACCEPT = 0x3989d72d
-    TAPIRDECIDE = 0x4c38a079
-    RCCDISPATCH = 0x24124c87
-    RCCFINISH = 0x3ba5e56e
-    RCCINQUIRE = 0x3e2f5128
-    RCCDISPATCHRO = 0x1dc5fac4
-    RCCINQUIREVALIDATION = 0x349886f6
-    RCCNOTIFYGLOBALVALIDATION = 0x3ee70272
-    JANUSDISPATCH = 0x58893a51
-    JANUSCOMMIT = 0x632e3eb7
-    JANUSCOMMITWOGRAPH = 0x223e2822
-    JANUSINQUIRE = 0x1bdcf739
-    JANUSPREACCEPT = 0x1f447503
-    JANUSPREACCEPTWOGRAPH = 0x681c4547
-    JANUSACCEPT = 0x41c8d08d
-    PREACCEPTFEBRUUS = 0x24f66dda
-    ACCEPTFEBRUUS = 0x5e7f1554
-    COMMITFEBRUUS = 0x272f5068
+    MSGSTRING = 0x545a0bc5
+    MSGMARSHALL = 0x3acdbd16
+    DISPATCH = 0x44a6ac3e
+    PREPARE = 0x6c676ab2
+    COMMIT = 0x261f465a
+    ABORT = 0x31c32c3d
+    UPGRADEEPOCH = 0x47d1dab5
+    TRUNCATEEPOCH = 0x67ea7445
+    RPC_NULL = 0x1e9f8176
+    TAPIRACCEPT = 0x45d20384
+    TAPIRFASTACCEPT = 0x168b06d6
+    TAPIRDECIDE = 0x4189bf8d
+    RCCDISPATCH = 0x414f1ede
+    RCCFINISH = 0x4808beea
+    RCCINQUIRE = 0x5a1a2db4
+    RCCDISPATCHRO = 0x57a9e3b1
+    RCCINQUIREVALIDATION = 0x151ff680
+    RCCNOTIFYGLOBALVALIDATION = 0x580582cc
+    JANUSDISPATCH = 0x31b2c5b1
+    JANUSCOMMIT = 0x324ffa7b
+    JANUSCOMMITWOGRAPH = 0x2bb2d3f2
+    JANUSINQUIRE = 0x6cd0ca73
+    JANUSPREACCEPT = 0x1d6d322e
+    JANUSPREACCEPTWOGRAPH = 0x36615d0f
+    JANUSACCEPT = 0x5f59b498
+    PREACCEPTFEBRUUS = 0x55de63bf
+    ACCEPTFEBRUUS = 0x1a493fad
+    COMMITFEBRUUS = 0x639ab107
 
     __input_type_info__ = {
         'MsgString': ['std::string'],
@@ -832,10 +832,10 @@ class ClassicProxy(object):
             return __result__[1]
 
 class ServerControlService(object):
-    SERVER_SHUTDOWN = 0x1ca508f3
-    SERVER_READY = 0x2bff582c
-    SERVER_HEART_BEAT_WITH_DATA = 0x52f6486f
-    SERVER_HEART_BEAT = 0x28c68f83
+    SERVER_SHUTDOWN = 0x44bc58da
+    SERVER_READY = 0x48f5ca1a
+    SERVER_HEART_BEAT_WITH_DATA = 0x43381b54
+    SERVER_HEART_BEAT = 0x5deafe74
 
     __input_type_info__ = {
         'server_shutdown': [],
@@ -927,14 +927,14 @@ class ServerControlProxy(object):
             return __result__[1]
 
 class ClientControlService(object):
-    CLIENT_GET_TXN_NAMES = 0x57244996
-    CLIENT_SHUTDOWN = 0x4c4a1401
-    CLIENT_FORCE_STOP = 0x16a76d0b
-    CLIENT_RESPONSE = 0x4a8c6c99
-    CLIENT_READY = 0x4ae3dd80
-    CLIENT_READY_BLOCK = 0x336d24c7
-    CLIENT_START = 0x4b687ba1
-    DISPATCHTXN = 0x44710370
+    CLIENT_GET_TXN_NAMES = 0x43efe166
+    CLIENT_SHUTDOWN = 0x3b7711f5
+    CLIENT_FORCE_STOP = 0x57b8cb99
+    CLIENT_RESPONSE = 0x20768eb8
+    CLIENT_READY = 0x10800ab3
+    CLIENT_READY_BLOCK = 0x403b2798
+    CLIENT_START = 0x10baea9a
+    DISPATCHTXN = 0x3b59554a
 
     __input_type_info__ = {
         'client_get_txn_names': [],

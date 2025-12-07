@@ -14,8 +14,7 @@ pargs = ['--cflags', '--libs']
 def options(opt):
     opt.load("compiler_c")
     opt.load("compiler_cxx")
-    opt.load(['boost', 'unittest_gtest'],
-             tooldir=['.waf-tools'])
+    # opt.load(['boost'])
     opt.add_option('-g', '--use-gxx', dest='cxx',
                    default=False, action='store_true')
     opt.add_option('-c', '--use-clang', dest='clang',
@@ -50,8 +49,8 @@ def configure(conf):
     _choose_compiler(conf)
     _enable_pic(conf)
     conf.load("compiler_c")
-    conf.load("compiler_cxx unittest_gtest")
-    conf.load("boost")
+    conf.load("compiler_cxx")
+    # conf.load("boost")
 
     conf.env.append_value("CFLAGS", "-std=c99") # fix the problem of missing CLOCK_MONOTONIC
 
@@ -74,7 +73,12 @@ def configure(conf):
     conf.env.append_value("CXXFLAGS", "-Wno-unused-function")
     conf.env.append_value("CXXFLAGS", "-Wno-unused-variable")
     conf.env.append_value("CXXFLAGS", "-Wno-sign-compare")
-    conf.check_boost(lib='system filesystem context thread coroutine')
+    # conf.check_boost(lib='system filesystem context thread coroutine')
+    conf.check_cxx(lib='boost_system', uselib_store='BOOST_SYSTEM')
+    conf.check_cxx(lib='boost_filesystem', uselib_store='BOOST_FILESYSTEM')
+    conf.check_cxx(lib='boost_context', uselib_store='BOOST_CONTEXT')
+    conf.check_cxx(lib='boost_thread', uselib_store='BOOST_THREAD')
+    conf.check_cxx(lib='boost_coroutine', uselib_store='BOOST_COROUTINE')
 
     conf.env.append_value("CXXFLAGS", "-Wno-sign-compare")
     conf.env.append_value('INCLUDES', ['/usr/local/include', 'third-party/rusty-cpp/include'])
@@ -132,7 +136,7 @@ def build(bld):
                                        "src/rrr/reactor/*.cc"),
               target="rrr",
               includes="src src/rrr",
-              uselib="BOOST",
+              uselib="BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
               use="PTHREAD")
 
 #    bld.stlib(source=bld.path.ant_glob("rpc/*.cc"), target="simplerpc",
@@ -147,7 +151,7 @@ def build(bld):
               source=bld.path.ant_glob("src/rrr/pylib/simplerpc/*.cpp"),
               target="_pyrpc",
               includes="src src/rrr src/rrr/rpc",
-              uselib="BOOST",
+              uselib="BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
               use="rrr simplerpc PYTHON")
 
     bld.objects(source=bld.path.ant_glob("src/deptran/*.cc "
@@ -156,40 +160,40 @@ def build(bld):
                                        excl=['src/deptran/s_main.cc', 'src/deptran/paxos_main_helper.cc', "src/bench/paxos_lib/*"]),
               target="deptran_objects",
               includes="src src/rrr src/deptran ",
-              uselib="YAML-CPP BOOST",
+              uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
               use="externc rrr memdb PTHREAD PROFILER RT")
 
     bld.shlib(source=bld.path.ant_glob("src/deptran/paxos_main_helper.cc "),
               target="txlog",
               includes="src src/rrr src/deptran ",
-              uselib="YAML-CPP BOOST",
+              uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
               use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
 
     bld.program(source=bld.path.ant_glob("src/deptran/s_main.cc"),
               target="deptran_server",
               includes="src src/rrr src/deptran ",
-              uselib="YAML-CPP BOOST",
+              uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
               use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
 
     bld.program(source=bld.path.ant_glob("src/run.cc "
                                          "src/deptran/paxos_main_helper.cc"),
                 target="microbench",
                 includes="src src/rrr src/deptran ",
-                uselib="YAML-CPP BOOST",
+                uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
                 use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
 
     bld.program(source=bld.path.ant_glob("src/bench/paxos_lib/network_bench.cc "
                                          "src/deptran/paxos_main_helper.cc"),
                 target="microbench_paxos_network",
                 includes="src src/rrr src/deptran ",
-                uselib="YAML-CPP BOOST",
+                uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
                 use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
 
     bld.program(source=bld.path.ant_glob("src/nc_main.cc "
                                          "src/deptran/paxos_main_helper.cc"),
                 target="nc_main",
                 includes="src src/rrr src/deptran ",
-                uselib="YAML-CPP BOOST",
+                uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
                 use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
     
     # simple rpc, helloworld
@@ -197,7 +201,7 @@ def build(bld):
                                          "src/deptran/paxos_main_helper.cc"),
                 target="helloworld",
                 includes="src src/rrr src/deptran ",
-                uselib="YAML-CPP BOOST",
+                uselib="YAML-CPP BOOST_SYSTEM BOOST_FILESYSTEM BOOST_CONTEXT BOOST_THREAD BOOST_COROUTINE",
                 use="externc rrr memdb deptran_objects PTHREAD PROFILER RT")
 
 

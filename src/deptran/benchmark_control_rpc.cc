@@ -200,6 +200,7 @@ void ClientControlServiceImpl::client_force_stop(DeferredReply* defer) {
 void ClientControlServiceImpl::client_response(ClientResponse *res, DeferredReply* defer) {
   std::lock_guard<std::recursive_mutex> guard(mtx_);
   status_mutex_.lock();
+  fprintf(stderr, "ClientControlServiceImpl::client_response: status_=%d\n", status_);
   if (CCS_FINISH == status_)
     res->is_finish = (rrr::i32) 1;
   else
@@ -329,10 +330,13 @@ void ClientControlServiceImpl::wait_for_start(unsigned int id) {
 }
 
 void ClientControlServiceImpl::wait_for_shutdown() {
+  fprintf(stderr, "ClientControlServiceImpl::wait_for_shutdown called by thread %lu\n", (unsigned long)pthread_self());
   status_mutex_.lock();
   if (status_ != CCS_STOP) {
-    if (++num_finish_ == num_threads_)
+    if (++num_finish_ == num_threads_) {
+      fprintf(stderr, "ClientControlServiceImpl::wait_for_shutdown: Setting CCS_FINISH\n");
       status_ = CCS_FINISH;
+    }
     while (CCS_STOP != status_)
       status_cond_.wait(status_mutex_);
   }

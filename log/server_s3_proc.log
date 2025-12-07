@@ -1,0 +1,36 @@
+PartitionFromKey: w_id=0, num_partitions=3, p=0
+PartitionFromKey: w_id=1, num_partitions=3, p=1
+PartitionFromKey: w_id=2, num_partitions=3, p=2
+PartitionFromKey: w_id=3, num_partitions=3, p=0
+PartitionFromKey: w_id=4, num_partitions=3, p=1
+PartitionFromKey: w_id=5, num_partitions=3, p=2
+PartitionFromKey: w_id=6, num_partitions=3, p=0
+PartitionFromKey: w_id=7, num_partitions=3, p=1
+PartitionFromKey: w_id=8, num_partitions=3, p=2
+PartitionFromKey: w_id=9, num_partitions=3, p=0
+PartitionFromKey: w_id=10, num_partitions=3, p=1
+PartitionFromKey: w_id=11, num_partitions=3, p=2
+PartitionFromKey: w_id=12, num_partitions=3, p=0
+PartitionFromKey: w_id=13, num_partitions=3, p=1
+PartitionFromKey: w_id=14, num_partitions=3, p=2
+PartitionFromKey: w_id=15, num_partitions=3, p=0
+PartitionFromKey: w_id=16, num_partitions=3, p=1
+PartitionFromKey: w_id=17, num_partitions=3, p=2
+PartitionFromKey: w_id=18, num_partitions=3, p=0
+PartitionFromKey: w_id=19, num_partitions=3, p=1
+PartitionFromKey: w_id=20, num_partitions=3, p=2
+PartitionFromKey: w_id=21, num_partitions=3, p=0
+PartitionFromKey: w_id=22, num_partitions=3, p=1
+PartitionFromKey: w_id=23, num_partitions=3, p=2
+PartitionFromKey: w_id=24, num_partitions=3, p=0
+PartitionFromKey: w_id=25, num_partitions=3, p=1
+PartitionFromKey: w_id=26, num_partitions=3, p=2
+  *** begin stack trace ***
+0    ./build/deptran_server(+0x1a3338) [0x648c339fc338]
+1    ./build/deptran_server(+0x69ede) [0x648c338c2ede]
+2    ./build/deptran_server(+0x172bf4) [0x648c339cbbf4]
+3    ./build/deptran_server(+0x15a394) [0x648c339b3394]
+4    ./build/deptran_server(+0x34c98) [0x648c3388dc98]
+5    /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdc253) [0x7397942dc253]
+6    /lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x739793e94ac3]
+  ***  end stack trace  ***

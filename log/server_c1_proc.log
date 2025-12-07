@@ -1,0 +1,468 @@
+I [../src/deptran/s_main.cc:124] 2025-12-07 09:34:38.001 | PWD : 
+I [../src/deptran/s_main.cc:136] 2025-12-07 09:34:38.001 | starting process 132126
+I [../src/deptran/config.cc:77] 2025-12-07 09:34:38.001 | CreateConfig: argc=12
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[0]=./build/deptran_server
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[1]=-b
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[2]=-d
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[3]=30
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[4]=-f
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[5]=bench_det_3P-1Rep_new_order.yml
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[6]=-P
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[7]=c1_proc
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[8]=-p
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[9]=5555
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[10]=-t
+I [../src/deptran/config.cc:79] 2025-12-07 09:34:38.001 | argv[11]=10
+I [../src/deptran/config.cc:221] 2025-12-07 09:34:38.001 | CreateConfig: Final duration=30
+I [../src/deptran/config.cc:297] 2025-12-07 09:34:38.001 | LoadYML: bench_det_3P-1Rep_new_order.yml
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:696] 2025-12-07 09:34:38.004 | group size: 3
+I [../src/deptran/config.cc:720] 2025-12-07 09:34:38.004 | client forwarding: 0
+I [../src/deptran/s_main.cc:25] 2025-12-07 09:34:38.004 | client_setup_heartbeat in client_setup_heartbeat
+I [../src/deptran/s_main.cc:41] 2025-12-07 09:34:38.004 | Start control server on port 5555
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:38.004 | PollThreadWorker::poll_loop wait 1
+I [../src/deptran/s_main.cc:49] 2025-12-07 09:34:38.004 | client enabled, number of sites: 1
+I [../src/bench/tpcc/workload.cc:44] 2025-12-07 09:34:38.004 | TpccWorkload: n_w_id_=9, n_d_id_=3, n_c_id_=3000, n_i_id_=300000, partitions=3
+I [../src/deptran/communicator.cc:14] 2025-12-07 09:34:38.012 | setup paxos communicator
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:38.012 | connect to site: 127.0.0.1:18101 (attempt 0)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:38.013 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:38.584 | PollThreadWorker::poll_loop wait 1001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:39.013 | connect to site: 127.0.0.1:18101 (attempt 1)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:39.013 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:39.148 | PollThreadWorker::poll_loop wait 2001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:39.718 | PollThreadWorker::poll_loop wait 3001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:40.013 | connect to site: 127.0.0.1:18101 (attempt 2)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:40.013 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:40.284 | PollThreadWorker::poll_loop wait 4001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:40.850 | PollThreadWorker::poll_loop wait 5001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:41.013 | connect to site: 127.0.0.1:18101 (attempt 3)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:41.013 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:41.422 | PollThreadWorker::poll_loop wait 6001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:41.992 | PollThreadWorker::poll_loop wait 7001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:42.013 | connect to site: 127.0.0.1:18101 (attempt 4)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:42.014 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:42.593 | PollThreadWorker::poll_loop wait 8001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:43.014 | connect to site: 127.0.0.1:18101 (attempt 5)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:43.014 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:43.179 | PollThreadWorker::poll_loop wait 9001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:43.755 | PollThreadWorker::poll_loop wait 10001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:44.014 | connect to site: 127.0.0.1:18101 (attempt 6)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:44.014 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:44.348 | PollThreadWorker::poll_loop wait 11001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:44.952 | PollThreadWorker::poll_loop wait 12001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:45.014 | connect to site: 127.0.0.1:18101 (attempt 7)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:45.014 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:45.533 | PollThreadWorker::poll_loop wait 13001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:46.014 | connect to site: 127.0.0.1:18101 (attempt 8)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:46.014 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:46.121 | PollThreadWorker::poll_loop wait 14001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:46.725 | PollThreadWorker::poll_loop wait 15001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:47.014 | connect to site: 127.0.0.1:18101 (attempt 9)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:47.015 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:47.318 | PollThreadWorker::poll_loop wait 16001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:47.913 | PollThreadWorker::poll_loop wait 17001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:48.015 | connect to site: 127.0.0.1:18101 (attempt 10)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:48.015 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:48.510 | PollThreadWorker::poll_loop wait 18001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:49.015 | connect to site: 127.0.0.1:18101 (attempt 11)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:49.015 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:49.099 | PollThreadWorker::poll_loop wait 19001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:49.700 | PollThreadWorker::poll_loop wait 20001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:50.015 | connect to site: 127.0.0.1:18101 (attempt 12)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:50.016 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:50.302 | PollThreadWorker::poll_loop wait 21001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:50.879 | PollThreadWorker::poll_loop wait 22001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:51.016 | connect to site: 127.0.0.1:18101 (attempt 13)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:51.016 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:51.470 | PollThreadWorker::poll_loop wait 23001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:52.016 | connect to site: 127.0.0.1:18101 (attempt 14)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:52.016 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:52.053 | PollThreadWorker::poll_loop wait 24001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:52.661 | PollThreadWorker::poll_loop wait 25001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:53.017 | connect to site: 127.0.0.1:18101 (attempt 15)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:53.017 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:53.261 | PollThreadWorker::poll_loop wait 26001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:53.844 | PollThreadWorker::poll_loop wait 27001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:54.017 | connect to site: 127.0.0.1:18101 (attempt 16)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:54.017 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:54.439 | PollThreadWorker::poll_loop wait 28001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:55.017 | connect to site: 127.0.0.1:18101 (attempt 17)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:55.017 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:55.032 | PollThreadWorker::poll_loop wait 29001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:55.622 | PollThreadWorker::poll_loop wait 30001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:56.017 | connect to site: 127.0.0.1:18101 (attempt 18)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:56.017 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:56.214 | PollThreadWorker::poll_loop wait 31001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:56.806 | PollThreadWorker::poll_loop wait 32001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:57.018 | connect to site: 127.0.0.1:18101 (attempt 19)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:57.018 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:57.395 | PollThreadWorker::poll_loop wait 33001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:57.995 | PollThreadWorker::poll_loop wait 34001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:58.018 | connect to site: 127.0.0.1:18101 (attempt 20)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:58.018 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:58.571 | PollThreadWorker::poll_loop wait 35001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:34:59.018 | connect to site: 127.0.0.1:18101 (attempt 21)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:34:59.019 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:59.160 | PollThreadWorker::poll_loop wait 36001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:34:59.750 | PollThreadWorker::poll_loop wait 37001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:00.019 | connect to site: 127.0.0.1:18101 (attempt 22)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:00.019 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:00.342 | PollThreadWorker::poll_loop wait 38001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:00.926 | PollThreadWorker::poll_loop wait 39001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:01.019 | connect to site: 127.0.0.1:18101 (attempt 23)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:01.019 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:01.554 | PollThreadWorker::poll_loop wait 40001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:02.019 | connect to site: 127.0.0.1:18101 (attempt 24)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:02.020 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:02.148 | PollThreadWorker::poll_loop wait 41001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:02.739 | PollThreadWorker::poll_loop wait 42001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:03.020 | connect to site: 127.0.0.1:18101 (attempt 25)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:03.020 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:03.352 | PollThreadWorker::poll_loop wait 43001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:03.962 | PollThreadWorker::poll_loop wait 44001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:04.020 | connect to site: 127.0.0.1:18101 (attempt 26)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:04.020 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:04.558 | PollThreadWorker::poll_loop wait 45001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:05.020 | connect to site: 127.0.0.1:18101 (attempt 27)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:05.021 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:05.157 | PollThreadWorker::poll_loop wait 46001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:05.772 | PollThreadWorker::poll_loop wait 47001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:06.021 | connect to site: 127.0.0.1:18101 (attempt 28)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:06.021 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:06.404 | PollThreadWorker::poll_loop wait 48001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:07.007 | PollThreadWorker::poll_loop wait 49001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:07.021 | connect to site: 127.0.0.1:18101 (attempt 29)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:07.021 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:07.591 | PollThreadWorker::poll_loop wait 50001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:08.021 | connect to site: 127.0.0.1:18101 (attempt 30)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:08.021 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:08.186 | PollThreadWorker::poll_loop wait 51001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:08.790 | PollThreadWorker::poll_loop wait 52001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:09.021 | connect to site: 127.0.0.1:18101 (attempt 31)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:09.021 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:09.378 | PollThreadWorker::poll_loop wait 53001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:09.988 | PollThreadWorker::poll_loop wait 54001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:10.021 | connect to site: 127.0.0.1:18101 (attempt 32)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:10.022 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:10.581 | PollThreadWorker::poll_loop wait 55001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:11.022 | connect to site: 127.0.0.1:18101 (attempt 33)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:11.022 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:11.171 | PollThreadWorker::poll_loop wait 56001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:11.762 | PollThreadWorker::poll_loop wait 57001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:12.022 | connect to site: 127.0.0.1:18101 (attempt 34)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:12.022 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:12.347 | PollThreadWorker::poll_loop wait 58001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:12.943 | PollThreadWorker::poll_loop wait 59001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:13.022 | connect to site: 127.0.0.1:18101 (attempt 35)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:13.022 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:13.558 | PollThreadWorker::poll_loop wait 60001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:14.023 | connect to site: 127.0.0.1:18101 (attempt 36)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:14.023 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:14.147 | PollThreadWorker::poll_loop wait 61001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:14.752 | PollThreadWorker::poll_loop wait 62001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:15.023 | connect to site: 127.0.0.1:18101 (attempt 37)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:15.023 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:15.347 | PollThreadWorker::poll_loop wait 63001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:15.934 | PollThreadWorker::poll_loop wait 64001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:16.024 | connect to site: 127.0.0.1:18101 (attempt 38)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:16.024 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:16.530 | PollThreadWorker::poll_loop wait 65001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:17.024 | connect to site: 127.0.0.1:18101 (attempt 39)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:17.024 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:17.131 | PollThreadWorker::poll_loop wait 66001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:17.717 | PollThreadWorker::poll_loop wait 67001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:18.025 | connect to site: 127.0.0.1:18101 (attempt 40)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:18.025 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:18.309 | PollThreadWorker::poll_loop wait 68001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:18.898 | PollThreadWorker::poll_loop wait 69001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:19.025 | connect to site: 127.0.0.1:18101 (attempt 41)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:19.025 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:19.482 | PollThreadWorker::poll_loop wait 70001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:20.025 | connect to site: 127.0.0.1:18101 (attempt 42)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:20.025 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:20.074 | PollThreadWorker::poll_loop wait 71001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:20.666 | PollThreadWorker::poll_loop wait 72001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:21.026 | connect to site: 127.0.0.1:18101 (attempt 43)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:21.026 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:21.271 | PollThreadWorker::poll_loop wait 73001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:21.883 | PollThreadWorker::poll_loop wait 74001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:22.026 | connect to site: 127.0.0.1:18101 (attempt 44)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:22.026 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:22.496 | PollThreadWorker::poll_loop wait 75001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:23.026 | connect to site: 127.0.0.1:18101 (attempt 45)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:23.026 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:23.087 | PollThreadWorker::poll_loop wait 76001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:23.661 | PollThreadWorker::poll_loop wait 77001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:24.027 | connect to site: 127.0.0.1:18101 (attempt 46)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:24.027 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:24.263 | PollThreadWorker::poll_loop wait 78001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:24.846 | PollThreadWorker::poll_loop wait 79001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:25.027 | connect to site: 127.0.0.1:18101 (attempt 47)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:25.027 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:25.443 | PollThreadWorker::poll_loop wait 80001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:26.027 | connect to site: 127.0.0.1:18101 (attempt 48)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:26.028 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:26.031 | PollThreadWorker::poll_loop wait 81001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:26.639 | PollThreadWorker::poll_loop wait 82001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:27.028 | connect to site: 127.0.0.1:18101 (attempt 49)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:27.028 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:27.230 | PollThreadWorker::poll_loop wait 83001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:27.827 | PollThreadWorker::poll_loop wait 84001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:28.028 | connect to site: 127.0.0.1:18101 (attempt 50)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:28.028 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:28.436 | PollThreadWorker::poll_loop wait 85001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:29.031 | connect to site: 127.0.0.1:18101 (attempt 51)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:29.031 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:29.046 | PollThreadWorker::poll_loop wait 86001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:29.635 | PollThreadWorker::poll_loop wait 87001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:30.031 | connect to site: 127.0.0.1:18101 (attempt 52)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:30.031 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:30.231 | PollThreadWorker::poll_loop wait 88001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:30.823 | PollThreadWorker::poll_loop wait 89001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:31.031 | connect to site: 127.0.0.1:18101 (attempt 53)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:31.032 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:31.419 | PollThreadWorker::poll_loop wait 90001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:32.018 | PollThreadWorker::poll_loop wait 91001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:32.032 | connect to site: 127.0.0.1:18101 (attempt 54)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:32.032 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:32.611 | PollThreadWorker::poll_loop wait 92001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:33.032 | connect to site: 127.0.0.1:18101 (attempt 55)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:33.032 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:33.236 | PollThreadWorker::poll_loop wait 93001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:33.855 | PollThreadWorker::poll_loop wait 94001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:34.033 | connect to site: 127.0.0.1:18101 (attempt 56)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:34.033 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:34.467 | PollThreadWorker::poll_loop wait 95001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:35.033 | connect to site: 127.0.0.1:18101 (attempt 57)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:35.033 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:35.064 | PollThreadWorker::poll_loop wait 96001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:35.671 | PollThreadWorker::poll_loop wait 97001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:36.033 | connect to site: 127.0.0.1:18101 (attempt 58)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:36.033 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:36.265 | PollThreadWorker::poll_loop wait 98001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:36.874 | PollThreadWorker::poll_loop wait 99001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:37.033 | connect to site: 127.0.0.1:18101 (attempt 59)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:37.034 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:37.458 | PollThreadWorker::poll_loop wait 100001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:38.034 | connect to site: 127.0.0.1:18101 (attempt 60)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:38.034 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:38.053 | PollThreadWorker::poll_loop wait 101001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:38.655 | PollThreadWorker::poll_loop wait 102001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:39.034 | connect to site: 127.0.0.1:18101 (attempt 61)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:39.034 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:39.248 | PollThreadWorker::poll_loop wait 103001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:39.833 | PollThreadWorker::poll_loop wait 104001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:40.034 | connect to site: 127.0.0.1:18101 (attempt 62)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:40.034 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:40.441 | PollThreadWorker::poll_loop wait 105001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:41.032 | PollThreadWorker::poll_loop wait 106001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:41.035 | connect to site: 127.0.0.1:18101 (attempt 63)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:41.035 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:41.639 | PollThreadWorker::poll_loop wait 107001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:42.036 | connect to site: 127.0.0.1:18101 (attempt 64)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:42.036 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:42.239 | PollThreadWorker::poll_loop wait 108001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:42.835 | PollThreadWorker::poll_loop wait 109001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:43.037 | connect to site: 127.0.0.1:18101 (attempt 65)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:43.037 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:43.429 | PollThreadWorker::poll_loop wait 110001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:44.037 | connect to site: 127.0.0.1:18101 (attempt 66)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:44.037 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:44.040 | PollThreadWorker::poll_loop wait 111001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:44.643 | PollThreadWorker::poll_loop wait 112001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:45.037 | connect to site: 127.0.0.1:18101 (attempt 67)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:45.037 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:45.260 | PollThreadWorker::poll_loop wait 113001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:45.844 | PollThreadWorker::poll_loop wait 114001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:46.037 | connect to site: 127.0.0.1:18101 (attempt 68)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:46.037 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:46.450 | PollThreadWorker::poll_loop wait 115001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:47.038 | connect to site: 127.0.0.1:18101 (attempt 69)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:47.038 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:47.045 | PollThreadWorker::poll_loop wait 116001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:47.635 | PollThreadWorker::poll_loop wait 117001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:48.038 | connect to site: 127.0.0.1:18101 (attempt 70)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:48.038 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:48.230 | PollThreadWorker::poll_loop wait 118001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:48.835 | PollThreadWorker::poll_loop wait 119001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:49.039 | connect to site: 127.0.0.1:18101 (attempt 71)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:49.039 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:49.419 | PollThreadWorker::poll_loop wait 120001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:50.021 | PollThreadWorker::poll_loop wait 121001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:50.039 | connect to site: 127.0.0.1:18101 (attempt 72)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:50.039 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:50.631 | PollThreadWorker::poll_loop wait 122001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:51.039 | connect to site: 127.0.0.1:18101 (attempt 73)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:51.040 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:51.247 | PollThreadWorker::poll_loop wait 123001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:51.843 | PollThreadWorker::poll_loop wait 124001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:52.040 | connect to site: 127.0.0.1:18101 (attempt 74)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:52.040 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:52.448 | PollThreadWorker::poll_loop wait 125001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:53.040 | connect to site: 127.0.0.1:18101 (attempt 75)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:53.040 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:53.057 | PollThreadWorker::poll_loop wait 126001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:53.653 | PollThreadWorker::poll_loop wait 127001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:54.041 | connect to site: 127.0.0.1:18101 (attempt 76)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:54.041 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:54.253 | PollThreadWorker::poll_loop wait 128001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:54.836 | PollThreadWorker::poll_loop wait 129001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:55.041 | connect to site: 127.0.0.1:18101 (attempt 77)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:55.041 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:55.449 | PollThreadWorker::poll_loop wait 130001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:56.035 | PollThreadWorker::poll_loop wait 131001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:56.041 | connect to site: 127.0.0.1:18101 (attempt 78)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:56.041 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:56.636 | PollThreadWorker::poll_loop wait 132001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:57.041 | connect to site: 127.0.0.1:18101 (attempt 79)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:57.041 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:57.224 | PollThreadWorker::poll_loop wait 133001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:57.860 | PollThreadWorker::poll_loop wait 134001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:58.042 | connect to site: 127.0.0.1:18101 (attempt 80)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:58.042 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:58.476 | PollThreadWorker::poll_loop wait 135001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:35:59.042 | connect to site: 127.0.0.1:18101 (attempt 81)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:35:59.042 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:59.056 | PollThreadWorker::poll_loop wait 136001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:35:59.652 | PollThreadWorker::poll_loop wait 137001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:00.042 | connect to site: 127.0.0.1:18101 (attempt 82)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:00.042 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:00.261 | PollThreadWorker::poll_loop wait 138001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:00.853 | PollThreadWorker::poll_loop wait 139001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:01.042 | connect to site: 127.0.0.1:18101 (attempt 83)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:01.042 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:01.448 | PollThreadWorker::poll_loop wait 140001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:02.043 | connect to site: 127.0.0.1:18101 (attempt 84)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:02.043 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:02.080 | PollThreadWorker::poll_loop wait 141001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:02.689 | PollThreadWorker::poll_loop wait 142001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:03.043 | connect to site: 127.0.0.1:18101 (attempt 85)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:03.043 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:03.318 | PollThreadWorker::poll_loop wait 143001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:03.947 | PollThreadWorker::poll_loop wait 144001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:04.043 | connect to site: 127.0.0.1:18101 (attempt 86)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:04.044 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:04.561 | PollThreadWorker::poll_loop wait 145001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:05.044 | connect to site: 127.0.0.1:18101 (attempt 87)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:05.044 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:05.175 | PollThreadWorker::poll_loop wait 146001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:05.758 | PollThreadWorker::poll_loop wait 147001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:06.044 | connect to site: 127.0.0.1:18101 (attempt 88)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:06.044 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:06.346 | PollThreadWorker::poll_loop wait 148001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:06.937 | PollThreadWorker::poll_loop wait 149001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:07.045 | connect to site: 127.0.0.1:18101 (attempt 89)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:07.045 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:07.523 | PollThreadWorker::poll_loop wait 150001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:08.045 | connect to site: 127.0.0.1:18101 (attempt 90)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:08.045 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:08.133 | PollThreadWorker::poll_loop wait 151001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:08.750 | PollThreadWorker::poll_loop wait 152001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:09.045 | connect to site: 127.0.0.1:18101 (attempt 91)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:09.045 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:09.350 | PollThreadWorker::poll_loop wait 153001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:09.927 | PollThreadWorker::poll_loop wait 154001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:10.046 | connect to site: 127.0.0.1:18101 (attempt 92)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:10.046 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:10.526 | PollThreadWorker::poll_loop wait 155001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:11.046 | connect to site: 127.0.0.1:18101 (attempt 93)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:11.046 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:11.124 | PollThreadWorker::poll_loop wait 156001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:11.714 | PollThreadWorker::poll_loop wait 157001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:12.046 | connect to site: 127.0.0.1:18101 (attempt 94)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:12.047 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:12.323 | PollThreadWorker::poll_loop wait 158001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:12.979 | PollThreadWorker::poll_loop wait 159001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:13.047 | connect to site: 127.0.0.1:18101 (attempt 95)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:13.047 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:13.583 | PollThreadWorker::poll_loop wait 160001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:14.048 | connect to site: 127.0.0.1:18101 (attempt 96)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:14.048 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:14.176 | PollThreadWorker::poll_loop wait 161001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:14.773 | PollThreadWorker::poll_loop wait 162001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:15.048 | connect to site: 127.0.0.1:18101 (attempt 97)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:15.048 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:15.376 | PollThreadWorker::poll_loop wait 163001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:16.009 | PollThreadWorker::poll_loop wait 164001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:16.048 | connect to site: 127.0.0.1:18101 (attempt 98)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:16.052 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:16.661 | PollThreadWorker::poll_loop wait 165001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:17.052 | connect to site: 127.0.0.1:18101 (attempt 99)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:17.052 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:17.273 | PollThreadWorker::poll_loop wait 166001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:17.895 | PollThreadWorker::poll_loop wait 167001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:18.052 | connect to site: 127.0.0.1:18101 (attempt 100)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:18.053 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:18.502 | PollThreadWorker::poll_loop wait 168001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:19.053 | connect to site: 127.0.0.1:18101 (attempt 101)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:19.053 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:19.121 | PollThreadWorker::poll_loop wait 169001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:19.726 | PollThreadWorker::poll_loop wait 170001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:20.054 | connect to site: 127.0.0.1:18101 (attempt 102)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:20.054 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:20.353 | PollThreadWorker::poll_loop wait 171001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:20.949 | PollThreadWorker::poll_loop wait 172001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:21.054 | connect to site: 127.0.0.1:18101 (attempt 103)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:21.054 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:21.539 | PollThreadWorker::poll_loop wait 173001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:22.055 | connect to site: 127.0.0.1:18101 (attempt 104)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:22.055 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:22.159 | PollThreadWorker::poll_loop wait 174001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:22.794 | PollThreadWorker::poll_loop wait 175001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:23.055 | connect to site: 127.0.0.1:18101 (attempt 105)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:23.055 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:23.419 | PollThreadWorker::poll_loop wait 176001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:24.056 | connect to site: 127.0.0.1:18101 (attempt 106)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:24.057 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:24.077 | PollThreadWorker::poll_loop wait 177001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:24.755 | PollThreadWorker::poll_loop wait 178001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:25.057 | connect to site: 127.0.0.1:18101 (attempt 107)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:25.058 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:25.438 | PollThreadWorker::poll_loop wait 179001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:26.058 | connect to site: 127.0.0.1:18101 (attempt 108)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:26.059 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:26.091 | PollThreadWorker::poll_loop wait 180001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:26.764 | PollThreadWorker::poll_loop wait 181001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:27.061 | connect to site: 127.0.0.1:18101 (attempt 109)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:27.061 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:27.403 | PollThreadWorker::poll_loop wait 182001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:28.062 | connect to site: 127.0.0.1:18101 (attempt 110)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:28.062 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:28.102 | PollThreadWorker::poll_loop wait 183001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:28.735 | PollThreadWorker::poll_loop wait 184001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:29.062 | connect to site: 127.0.0.1:18101 (attempt 111)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:29.063 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:29.431 | PollThreadWorker::poll_loop wait 185001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:30.063 | connect to site: 127.0.0.1:18101 (attempt 112)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:30.064 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:30.108 | PollThreadWorker::poll_loop wait 186001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:30.772 | PollThreadWorker::poll_loop wait 187001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:31.064 | connect to site: 127.0.0.1:18101 (attempt 113)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:31.065 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:31.456 | PollThreadWorker::poll_loop wait 188001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:32.065 | connect to site: 127.0.0.1:18101 (attempt 114)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:32.065 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:32.141 | PollThreadWorker::poll_loop wait 189001
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:32.910 | PollThreadWorker::poll_loop wait 190001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:33.065 | connect to site: 127.0.0.1:18101 (attempt 115)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:36:33.066 | rrr::Client: connect(127.0.0.1:18101): Connection refused
+I [../src/rrr/reactor/reactor.cc:302] 2025-12-07 09:36:33.650 | PollThreadWorker::poll_loop wait 191001
+I [../src/deptran/communicator.cc:174] 2025-12-07 09:36:34.066 | connect to site: 127.0.0.1:18101 (attempt 116)
+E [../src/rrr/rpc/client.cpp:179] 2025-12-07 09:3  *** begin stack trace ***
+0    ./build/deptran_server(+0x1a3338) [0x623d5fcce338]
+1    ./build/deptran_server(+0xb64ae) [0x623d5fbe14ae]
+2    ./build/deptran_server(+0x10bdfd) [0x623d5fc36dfd]
+3    ./build/deptran_server(+0xd4dbc) [0x623d5fbffdbc]
+4    ./build/deptran_server(+0xabd0a) [0x623d5fbd6d0a]
+5    ./build/deptran_server(+0x34508) [0x623d5fb5f508]
+6    ./build/deptran_server(+0x30bfa) [0x623d5fb5bbfa]
+7    /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x726a98829d90]
+8    /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x726a98829e40]
+  ***  end stack trace  ***

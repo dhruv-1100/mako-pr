@@ -32,15 +32,17 @@ TpccWorkload::TpccWorkload(Config *config)
   std::vector<unsigned int> partitions;
   sharding_->GetTablePartitions(TPCC_TB_WAREHOUSE, partitions);
   uint64_t tb_w_rows = table_num_rows[std::string(TPCC_TB_WAREHOUSE)];
-  tpcc_para_.n_w_id_ = (int) tb_w_rows * partitions.size();
+  tpcc_para_.n_w_id_ = (int) tb_w_rows;
 //  verify(tpcc_para_.n_w_id_ < 3);
   tpcc_para_.const_home_w_id_ =
       RandomGenerator::rand(0, tpcc_para_.n_w_id_ - 1);
   uint64_t tb_d_rows = table_num_rows[std::string(TPCC_TB_DISTRICT)];
-  tpcc_para_.n_d_id_ = (int) tb_d_rows;
+  tpcc_para_.n_d_id_ = (int) (tb_d_rows / tb_w_rows);
   uint64_t tb_c_rows = table_num_rows[std::string(TPCC_TB_CUSTOMER)];
   tpcc_para_.n_c_id_ = (int) tb_c_rows / tb_d_rows;
   tpcc_para_.n_i_id_ = (int) table_num_rows[std::string(TPCC_TB_ITEM)];
+  Log_info("TpccWorkload: n_w_id_=%d, n_d_id_=%d, n_c_id_=%d, n_i_id_=%d, partitions=%lu", 
+           tpcc_para_.n_w_id_, tpcc_para_.n_d_id_, tpcc_para_.n_c_id_, tpcc_para_.n_i_id_, partitions.size());
   tpcc_para_.delivery_d_id_ = RandomGenerator::rand(0, tpcc_para_.n_d_id_ - 1);
   switch (single_server_) {
     case Config::SS_DISABLED:
@@ -68,6 +70,7 @@ void TpccWorkload::GetNewOrderTxnReq(TxRequest *req,
   //Value d_id((i32)RandomGenerator::rand(0, tpcc_para_.n_d_id_ - 1));
   Value d_id((i32) (cid / tpcc_para_.n_w_id_) % tpcc_para_.n_d_id_);
   Value c_id((i32) RandomGenerator::nu_rand(1022, 0, tpcc_para_.n_c_id_ - 1));
+  Log_info("GetNewOrderTxnReq: cid=%d, w_id=%d, d_id=%d, c_id=%d", cid, home_w_id, d_id.get_i32(), c_id.get_i32());
   int ol_cnt = RandomGenerator::rand(6, 15);
 //  int ol_cnt = 0;
 

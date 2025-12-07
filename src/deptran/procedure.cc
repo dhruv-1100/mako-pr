@@ -171,6 +171,41 @@ ReadyPiecesData TxData::GetReadyPiecesData(int32_t max) {
   return ready_pieces_data;
 }
 
+ReadyPiecesData TxData::GetAllPiecesData() {
+  // For deterministic mode: return ALL pieces regardless of status
+  // The server-side scheduler handles piece ordering and dependencies
+  ReadyPiecesData all_pieces_data;
+  
+  for (auto &kv : status_) {
+    auto pi = kv.first;
+    auto &status = kv.second;
+    
+    // Skip if already dispatched
+    if (status == DISPATCHED || status == OUTPUT_READY) {
+      continue;
+    }
+    
+    shared_ptr<TxPieceData> piece_data = std::make_shared<TxPieceData>();
+    piece_data->inn_id_ = pi;
+    piece_data->partition_id_ = GetPiecePartitionId(pi);
+    piece_data->type_ = pi;
+    piece_data->root_id_ = id_;
+    piece_data->root_type_ = type_;
+    piece_data->input = inputs_[pi];  // May have partial/empty input for dependent pieces
+    piece_data->output_size = output_size_[pi];
+    piece_data->root_ = this;
+    piece_data->timestamp_ = timestamp_;
+    piece_data->rank_ = ranks_[pi];
+    map_piece_data_[pi] = piece_data;
+    all_pieces_data[piece_data->partition_id_].push_back(piece_data);
+    partition_ids_.insert(piece_data->partition_id_);
+    
+    Log_debug("GetAllPiecesData: piece id: %d, status: %d", pi, status);
+  }
+  
+  return all_pieces_data;
+}
+
 shared_ptr<TxPieceData> TxData::GetNextReadySubCmd() {
   verify(0);
   verify(n_pieces_dispatched_ < n_pieces_dispatchable_);

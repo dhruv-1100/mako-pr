@@ -74,7 +74,12 @@ Reactor::CreateRunCoroutine(std::move_only_function<void()> func) {
   
   Log_info("Reactor::CreateRunCoroutine running coro: %p", sp_coro.get());
   try {
-    sp_coro->Run();
+    if (sp_coro->up_boost_coro_task_) {
+      sp_coro->status_ = Coroutine::RECYCLED;
+      sp_coro->Continue();
+    } else {
+      sp_coro->Run();
+    }
   } catch (const std::exception& e) {
     Log_error("Coroutine Run failed: %s", e.what());
     throw;

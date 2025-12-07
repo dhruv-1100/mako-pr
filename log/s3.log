@@ -1,0 +1,28 @@
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:124] 2025-12-07 08:04:38.707 | PWD : 
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:136] 2025-12-07 08:04:38.707 | starting process 108643
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:77] 2025-12-07 08:04:38.707 | CreateConfig: argc=12
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[0]=./build/deptran_server
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[1]=-f
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[2]=/tmp/test_1p_3rep.yml
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[3]=-P
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[4]=localhost
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[5]=-p
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[6]=19103
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[7]=-d
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[8]=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[9]=-r
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[10]=-t
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:79] 2025-12-07 08:04:38.707 | argv[11]=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:221] 2025-12-07 08:04:38.707 | CreateConfig: Final duration=10
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:297] 2025-12-07 08:04:38.707 | LoadYML: /tmp/test_1p_3rep.yml
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:696] 2025-12-07 08:04:38.709 | group size: 1
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/config.cc:720] 2025-12-07 08:04:38.709 | client forwarding: 0
+I [/home/dp012/Desktop/gitmacbranch/mako-pr/src/deptran/s_main.cc:181] 2025-12-07 08:04:38.709 | all server workers have shut down.
